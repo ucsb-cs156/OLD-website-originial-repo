@@ -1,8 +1,8 @@
 ---
-title: UCSB CS56 pconrad
+title: UCSB CS156 pconrad
 ---
 
-# CS56&mdash;Advanced Applications Programming
+# CS156&mdash;Advanced Applications Programming
  
 {% include collapse-button.html label="About this course" id="about" %}
 <div class="collapse" id="about">
