@@ -19,6 +19,15 @@ You'll likely need to add some "extensions" for the programming languages that y
    * On Mac, ⌥ Opt+⌘ Cmd+↑/↓
    * On Linux, Shift+Alt+↑/↓
    
+* Format / Indent Code: (copied [from here](https://stackoverflow.com/a/29973358))
+
+  The code formatting is available in Visual Studio Code through the following shortcuts:
+
+  * On Windows Shift + Alt + F
+  * On Mac Shift + Option + F
+  * On Linux Ctrl + Shift + I
+
+  Alternatively, you can find the shortcut, as well as other shortcuts, through the 'Command Palette' provided in the editor with Ctrl +Shift+ P (or   Command + Shift + P on Mac), and then searching for format document.
    
 # Settings for Java Formatting
 
