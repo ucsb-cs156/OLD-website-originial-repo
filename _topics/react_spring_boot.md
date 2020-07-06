@@ -16,6 +16,21 @@ indent: true
     When specified, "proxy" in package.json must be a string.
     ```
     To address this, follow the instructions at [this Stack Overflow answer](https://stackoverflow.com/questions/52605997/when-specified-proxy-in-package-json-must-be-a-string)
+    
+    Summary:
+    * Inside `frontend`, type this to install `http-proxy-middleware` as a dependency.
+      ```
+      npm install http-proxy-middleware --save
+      ```
+    * Create a file `frontend/src/setupProxy.js` with these contents:
+      ```javascript
+      const proxy = require('http-proxy-middleware');
+
+      module.exports = function(app) {
+        app.use(proxy('/api', { target: 'http://localhost:8080/' }));
+      };
+      ```
+    
   Repos: 
   * Original: <https://github.com/kantega/react-and-spring>
   * Modified by P. Conrad so that it works on Heroku and with current versions of React and Spring Boot: <https://github.com/pconrad/cs156-try-spring-react-01>  
