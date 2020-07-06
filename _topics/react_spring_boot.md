@@ -7,35 +7,56 @@ indent: true
 
 # Examples, Tutorials, Resources
 
-* Article: <https://blogg.kantega.no/webapp-with-create-react-app-and-spring-boot/>
- 
-    
-  Note that there are a few places where this tutorial is out of date:
-  * When you get to the step for adding a `proxy` entry in the `package.json`, if you follow the instructions as given, you'll get this error:
-    ```
-    When specified, "proxy" in package.json must be a string.
-    ```
-    To address this, follow the instructions at [this Stack Overflow answer](https://stackoverflow.com/questions/52605997/when-specified-proxy-in-package-json-must-be-a-string)
-    
-    Summary:
-    * Inside `frontend`, type this to install `http-proxy-middleware` as a dependency.
-      ```
-      npm install http-proxy-middleware --save
-      ```
-    * Create a file `frontend/src/setupProxy.js` with these contents:
-      ```javascript
-      const proxy = require('http-proxy-middleware');
+## <https://blogg.kantega.no/webapp-with-create-react-app-and-spring-boot/>
 
-      module.exports = function(app) {
-        app.use(proxy('/api', { target: 'http://localhost:8080/' }));
-      };
-      ```
-    
-  Repos: 
-  * Original: <https://github.com/kantega/react-and-spring>
-  * Modified by P. Conrad so that it works on Heroku and with current versions of React and Spring Boot: <https://github.com/pconrad/cs156-try-spring-react-01>  
+Note that the instructions for configuring the proxy are out of date.  When you get to the step for adding a `proxy` entry in the `package.json`, if you follow the instructions as given, you'll get this error:
  
-* <https://spring.io/guides/tutorials/react-and-spring-data-rest/>
+```
+When specified, "proxy" in package.json must be a string.
+```
+To address this, follow the instructions at [this Stack Overflow answer](https://stackoverflow.com/questions/52605997/when-specified-proxy-in-package-json-must-be-a-string)
+    
+Summary:
+* Inside `frontend`, type this to install `http-proxy-middleware` as a dependency.
+  ```
+  npm install http-proxy-middleware --save
+  ```
+* Create a file `frontend/src/setupProxy.js` with these contents:
+  ```javascript
+  const proxy = require('http-proxy-middleware');
+
+  module.exports = function(app) {
+    app.use(proxy('/api', { target: 'http://localhost:8080/' }));
+  };
+  ```
+    
+Repos: 
+* Original: <https://github.com/kantega/react-and-spring>
+* Modified by P. Conrad so that it works on Heroku and with current versions of React and Spring Boot: <https://github.com/pconrad/cs156-try-spring-react-01>  
+
+## <https://spring.io/guides/tutorials/react-and-spring-data-rest/>
+
+This tutorial is a good guide for setting up REST endpoints automatically for CRUD operations for an entity/repository for Spring Data.
+
+For React, this tutorial uses the plugin <https://github.com/eirslett/frontend-maven-plugin>
+
+One thing that can be bewildering is that while the main tutorial here suggests that all you have to do is put this in your `pom.xml` and you are off and running, in reality, you have to do a bit more than that.
+
+```
+<plugin>
+	<groupId>com.github.eirslett</groupId>
+	<artifactId>frontend-maven-plugin</artifactId>
+</plugin>
+```
+
+That's a good start.  But it is helpful to consult these additional sources of information about the `frontend-maven-plugin`:
+* <https://huongdanjava.com/manage-node-js-dependencies-with-frontend-maven-plugin.html>
+* <https://frakton.com/utilizing-maven-front-end-plugin-for-angular-spring-boot/> (Though this uses Angular, ignore that, and focus on how the `frontend-maven-plugin` is configured.
+
+In order to get the `npm` stuff to install, you have to do `mvn install`.   I have not yet found a way to get Maven to do the bits and pieces of this plugin independently.
+
+## Others
+
 * <https://blog.indrek.io/articles/serving-react-apps-from-spring-boot/>
 * <https://medium.com/@mukundmadhav/build-and-deploy-react-app-with-spring-boot-and-mysql-6f888eb0c600>
 * <https://hackernoon.com/package-your-react-app-with-spring-boot-a-how-to-guide-cdfm329w>
