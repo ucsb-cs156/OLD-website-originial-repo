@@ -79,7 +79,7 @@ A few other notesa
   * A `mvn clean` automatically gets rid of the generated files so you can do a clean build.
 
 
-# * <https://developer.okta.com/blog/2018/07/19/simple-crud-react-and-spring-boot>
+##  <https://developer.okta.com/blog/2018/07/19/simple-crud-react-and-spring-boot>
 
 This tutorial covers combining Spring Boot and React *with OAuth Authentication* so it's worth diving into.
 
