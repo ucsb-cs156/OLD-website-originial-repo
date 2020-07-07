@@ -79,13 +79,17 @@ A few other notesa
   * A `mvn clean` automatically gets rid of the generated files so you can do a clean build.
 
 
+# * <https://developer.okta.com/blog/2018/07/19/simple-crud-react-and-spring-boot>
+
+This tutorial covers combining Spring Boot and React *with OAuth Authentication* so it's worth diving into.
+
+
 ## Others
 
 
 * <https://hackernoon.com/package-your-react-app-with-spring-boot-a-how-to-guide-cdfm329w>
   * Uses the proxy method, with the react app under a separate `frontend` directory like the `kantega.no` tutorial
   * Also uses the `frontend-maven-plugin` like the `spring.io` tutorial
-* <https://developer.okta.com/blog/2018/07/19/simple-crud-react-and-spring-boot>
 * <https://medium.com/@mukundmadhav/build-and-deploy-react-app-with-spring-boot-and-mysql-6f888eb0c600>
   * Focused on *not* implementing on Heroku, but on doing everything from scratch.
   * Has a lot of low-level MySQL details that may not be relevant for CS156
