@@ -51,6 +51,7 @@ One thing that can be bewildering is that while the main tutorial here suggests 
 
 That's a good start.  But it is helpful to consult these additional sources of information about the `frontend-maven-plugin`:
 * <https://huongdanjava.com/manage-node-js-dependencies-with-frontend-maven-plugin.html>
+* <https://auth0.com/blog/integrating-node-dot-js-build-tools-with-maven/>
 * <https://frakton.com/utilizing-maven-front-end-plugin-for-angular-spring-boot/> (Though this uses Angular, ignore that, and focus on how the `frontend-maven-plugin` is configured.
 
 In order to get the `npm` stuff to install, you have to do `mvn install`.   I have not yet found a way to get Maven to do the bits and pieces of this plugin independently.
