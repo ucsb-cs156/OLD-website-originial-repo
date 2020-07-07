@@ -57,6 +57,24 @@ That's a good start.  But it is helpful to consult these additional sources of i
 
 In order to get the `npm` stuff to install, you have to do `mvn install`.   I have not yet found a way to get Maven to do the bits and pieces of this plugin independently.
 
+A few other notes:
+* In `webpack.config.js`, instead of setting:
+  ```
+   filename: './src/main/resources/static/built/bundle.js'
+
+  ```
+  
+  You can set the output directory for webpack to be under `target`.  
+  
+  ```
+   filename: './target/classes/static/built/bundle.js'
+  ```
+  
+  Some advantages:
+  * You don't want generated files cluttering up your `src` directory.   
+  * To avoid cluttering up your diffs, you'd have to put `./src/main/resources/static/build/` in your `.gitignore`, but if you put this under `target`, is it automatically in your `.gitignore`
+  * A `mvn clean` automatically gets rid of the generated files so you can do a clean build.
+
 ## Others
 
 * <https://blog.indrek.io/articles/serving-react-apps-from-spring-boot/>
