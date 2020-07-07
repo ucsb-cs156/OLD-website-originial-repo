@@ -82,8 +82,11 @@ A few other notesa
 ## Others
 
 
-* <https://medium.com/@mukundmadhav/build-and-deploy-react-app-with-spring-boot-and-mysql-6f888eb0c600>
 * <https://hackernoon.com/package-your-react-app-with-spring-boot-a-how-to-guide-cdfm329w>
 * <https://developer.okta.com/blog/2018/07/19/simple-crud-react-and-spring-boot>
+* <https://medium.com/@mukundmadhav/build-and-deploy-react-app-with-spring-boot-and-mysql-6f888eb0c600>
+  * Focused on *not* implementing on Heroku, but on doing everything from scratch.
+  * Has a lot of low-level MySQL details that may not be relevant for CS156
+  * But, also has a few useful tips on the use of `frontend-maven-plugin` and copying files with the Ant plugin 
 * <https://blog.indrek.io/articles/serving-react-apps-from-spring-boot/>
   * Works with Gradle, so not currently relevant to CS156 (unless/until we pivot from Maven to Gradle)
