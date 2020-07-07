@@ -57,7 +57,10 @@ That's a good start.  But it is helpful to consult these additional sources of i
 
 In order to get the `npm` stuff to install, you have to do `mvn install`.   I have not yet found a way to get Maven to do the bits and pieces of this plugin independently.
 
-A few other notes:
+A few other notesa
+* If you follow the tutorial, there are a few files you need from the [repo containing the finished code](https://github.com/spring-guides/tut-react-and-spring-data-rest) that are not spelled out in the tutorial.  These include at least the following:
+  * `src/main/js/client.js`
+  * Everything under `src/main/js/api`
 * In `webpack.config.js`, instead of setting:
   ```
    filename: './src/main/resources/static/built/bundle.js'
@@ -74,6 +77,7 @@ A few other notes:
   * You don't want generated files cluttering up your `src` directory.   
   * To avoid cluttering up your diffs, you'd have to put `./src/main/resources/static/build/` in your `.gitignore`, but if you put this under `target`, is it automatically in your `.gitignore`
   * A `mvn clean` automatically gets rid of the generated files so you can do a clean build.
+
 
 ## Others
 
