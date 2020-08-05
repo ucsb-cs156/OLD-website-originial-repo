@@ -4,6 +4,8 @@ desc: "How to write clear and helpful commit messages"
 indent: true
 ---
 
+# Articles on how to write a good commit message
+
 | Date | Title | Author |
 |------|-------|--------|
 | Aug 31, 2014 | [How to Write a Git Commit Message](http://chris.beams.io/posts/git-commit/) | [Chris Beams](http://chris.beams.io) |
@@ -13,4 +15,6 @@ indent: true
 | Jul 30 2020 | [How to write a good commit message](https://dev.to/chrissiemhrk/git-commit-message-5e21) | [Chrissie](https://dev.to/chrissiemhrk) |
 {:.table .table-sm .table-striped .table-bordered}
 
+# Advice on writing a bad commit message
 
+![xkcd comic on git commit messages](https://imgs.xkcd.com/comics/git_commit.png)
