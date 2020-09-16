@@ -18,5 +18,19 @@ Install it with `npm install eslint --save-dev` then run this command, where `di
 your React code:
 
 ```
-./node_modules/.bin/eslint  directory
+npx eslint directory
+```
+
+Be careful that you don't run eslint on code in a `build` directory (i.e. the generated JavaScript); you only want to run it on your JavaScript source code.
+
+If you get the error:
+
+```
+Error: Failed to load parser '@typescript-eslint/parser'...
+```
+
+then, try installing `typescript` manually:
+
+```
+npm install --save-dev typescript
 ```
