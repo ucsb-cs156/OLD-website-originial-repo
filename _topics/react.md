@@ -6,6 +6,10 @@ category_prefix: "React: "
 
 Main page: <https://reactjs.org/>
 
+# React Naming Conventions
+
+See: <https://maxrozen.com/guidelines-improve-react-app-folder-structure/>
+
 # Linting your react code
 
 To check your code for style issues, you can use `eslint`.
