@@ -24,7 +24,8 @@ Once you have downloaded it, you want to use it to create a new session.  The [d
 
 * Click "new session"
 * Select "ssh"
-* For "remote host", instead of `192.168.56.86` you'll enter `csil-15.cs.ucsb.edu` (actually, instead of `15`, choose any number between 01 and 48).
+* For "remote host", instead of `192.168.56.86` you'll enter `csil.cs.ucsb.edu` 
+  * NOTE: Yes, `csil.cs.ucsb.edu` for Fall 2020, not `csil-01.cs.ucsb.edu` through  `csil-48.cs.ucsb.edu`.  That's new for Fall 2020.
 * For "username", instead of `root`, you'll enter your CSIL username.
 * The first time you connect to a particular system, you may be asked 
 * It should then prompt you for your password.  (I do not recommend "saving the password".)
@@ -35,10 +36,12 @@ Once you have downloaded it, you want to use it to create a new session.  The [d
 
 At a command prompt (terminal prompt on MacOS, Linux, WSL, Windows 10, or git bash shell on Windows), you can type this:
 
-`ssh -L 8080:localhost:8080 username@csil-xx.cs.ucsb.edu`
+`ssh -L 8080:localhost:8080 username@csil.cs.ucsb.edu`
 
 where:
 * `username` is your actual CSIL username
-* `xx` is some number between `01` and `48`  
 
 That will set up port 8080 on your local machine as a tunnel to "localhost:8080" on the CSIL machine.    Then, if you put `localhost:8080` in your browser, you should be getting access to `localhost:8080` on the CSIL machine you are ssh'ing into.
+
+NOTE HOWEVER, that only one user at a time can be using port 8080 on the CSIL side.  So, if you port 8080 isn't available on the CSIL side, you may need to use a different port number.  Be aware that if you are using OAuth authentication, the port number may be baked into the OAuth credentials, so you might have to make changes to your OAuth config if you use a different port.
+
