@@ -6,6 +6,10 @@ desc: "Setting up a development environment under Windows Subsystem for Linux"
 If you are working on a Windows machine that has the capability to add the *Windows Subsystem for Linux* (WSL), you may find it easier to 
 do work for CMPSC 156 in that mode.
 
+The Windows Subsystem for Linux (WSL) is a tool that basically creates a separate Linux environment alongside your Windows environment. 
+
+It's a lightweight virtual machine, with access to local storage.  Any files you create within the WSL are still stored in your local filesystem, and can be found by entering `\\wsl$` into the filepath bar in a File Explorer window
+
 This page is our best effort at explaining how to set up an environment for CMPSC 156 for that platform.
 
 Note that the reference platform for the course remains "CSIL"; we cannot commit to being "tech support" for every conceivable platform.  On your own machine, you *are* your own tech support.  But we'll help as best we can, given the time constraints we are under.
