@@ -1,6 +1,6 @@
 ---
 topic: "MacOS"
-desc: "Setting up an environment to do CS56 work on your own Mac (not ssh'ing into CSIL)"
+desc: "Setting up an environment to do CS156 work on your own Mac (not ssh'ing into CSIL)"
 category_prefix: "MacOS: "
 ---
 
