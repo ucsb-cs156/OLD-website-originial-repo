@@ -4,18 +4,17 @@ desc: "Setting up an environment to do CS156 work on your own Mac (not ssh'ing i
 category_prefix: "MacOS: "
 ---
 
-For certain kinds of programs, i.e. graphics, and especially sound, 
-it may be more convenient to work directly on your Mac rather than 
-ssh'ing into CSIL.
+This page is our best effort at explaining how to set up an environment for CMPSC 156 for MacOS.
 
-For audio or sound programs, this is especially true.
+For information on:
+* Windows, see:  <https://ucsb-cs156.github.io/topics/windows/> 
+* Windows Subsystem for Linux, please see: <https://ucsb-cs156.github.io/topics/windows_wsl/> 
 
-What do you need to install on your Mac to be able to do this?
+Note that the reference platform for the course remains "CSIL"; we cannot commit to being "tech support" for every conceivable platform.  On your own machine, you *are* your own tech support.  But we'll help as best we can, given the time constraints we are under.
+    
+# Preliminaries
 
-* The JDK
-* `ant` and/or `mvn` (Maven)
-
-Instructions follow below.   Note that installing [MacOS: Homebrew](/topics/macos_homebrew/) may make some of this easier.
+Installing [MacOS: Homebrew](/topics/macos_homebrew/) is your first step.  `brew` is a package manager for MacOS, and it is needed for the steps that follow.
 
 # Install the JDK
 
@@ -69,7 +68,9 @@ OpenJDK Runtime Environment AdoptOpenJDK (build 11.0.2+9)
 OpenJDK 64-Bit Server VM AdoptOpenJDK (build 11.0.2+9, mixed mode)
 ```
 
-Note: after installing Java 11, you may want to do:
+# Install Mavem
+
+After installing Java 11, do this to install maven:
 
 ```
 brew install maven
