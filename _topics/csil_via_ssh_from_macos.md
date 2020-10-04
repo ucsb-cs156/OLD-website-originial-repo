@@ -6,11 +6,13 @@ indent: true
 
 # Accessing CSIL from MacOS
 
-To access CSIL from MacOS, you can use the Terminal command, and type the following, replacing `cgaucho` with your ECI/CSIL username, and `csil-12` with any CSIL hostname from `csil-01 through csil-48`:
+To access CSIL from MacOS, you can use the Terminal command, and type the following, replacing `cgaucho` with your ECI/CSIL username:
 
 ```
-ssh -X cgaucho@csil-12.cs.ucsb.edu
+ssh -X cgaucho@csil.cs.ucsb.edu
 ```
+
+NOTE: For Fall 2020, we are asked to no longer use `csil-01 through csil-48`, but only `csil.cs.ucsb.edu`.  This is a change from previous quarters.
 
 # What about the `no $DISPLAY environment variable` error?
 
@@ -21,11 +23,27 @@ and you get this message:
 no display name and no $DISPLAY environment variable
 ```
 
+then there are two options:
+
+1.  Use the Remote Desktop option (see below)
+2.  Use X11 with XQuartz (see below)(though ECI notes that X11 is deprecated as of Fall 2020)
+
 then you need to install XQuartz as explained below, log out, log in, and try again.
 
-# Installing XQuartz
+# Connecting with Remote Desktop
 
-## What is XQuartz and why do I need to install it?
+Instructions for connecting to CSIL via Remote Desktop appear here: <https://doc.engr.ucsb.edu/display/EPK/Remote+Access+to+Computer+Science+Computing+Labs>
+
+With this option, you have a window on your local computer that shows the entire Linux Desktop on the remote machine.  It is different from the X11 options we used in the past.
+
+# Using X11 with XQuartz
+
+Note that this option is now considered deprecated by ECI in favor of the Remote Desktop option (per [this article](https://doc.engr.ucsb.edu/pages/viewpage.action?pageId=5112076)
+
+
+## Installing XQuartz
+
+First: What is XQuartz and why do I need to install it?
 
 When you use the `ssh` command to access CSIL in a terminal window, essentially you are running all your software on CSIL in a terminal
 window on CSIL, and just connecting your Mac's terminal window to the CSIL terminal window over the internet.  That's what the ssh
