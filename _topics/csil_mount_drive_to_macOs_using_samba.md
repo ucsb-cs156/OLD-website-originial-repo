@@ -6,7 +6,7 @@ indent: true
 
 # Accessing CSIL Drive from MacOS using SAMBA
 
-To mount CSIL drive onto your MacOS machine, you must on the UCSB netowrk. If you are on your own local network you can use the `UCSB Pulse Secure VPN`. 
+To mount CSIL drive onto your MacOS machine, you must on the UCSB network. If you are on your own local network you can use the `UCSB Pulse Secure VPN`. 
 
 ## Ucsb Pulse Secure Vpn
 *Note: You can skip this step if you are on the `eduraom` or `ucsb wireless web` network*
