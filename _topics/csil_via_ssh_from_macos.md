@@ -9,7 +9,7 @@ indent: true
 To access CSIL from MacOS, you can use the Terminal command, and type the following, replacing `cgaucho` with your ECI/CSIL username:
 
 ```
-ssh -X cgaucho@csil.cs.ucsb.edu
+ssh cgaucho@csil.cs.ucsb.edu
 ```
 
 NOTE: For Fall 2020, we are asked to no longer use `csil-01 through csil-48`, but only `csil.cs.ucsb.edu`.  This is a change from previous quarters.
@@ -68,3 +68,10 @@ listed above.
 
 
 https://www.xquartz.org/
+
+Then, to use ssh with X11, you need to add the `-X` flag to your ssh command like this:
+
+```
+ssh -X cgaucho@csil.cs.ucsb.edu
+```
+
