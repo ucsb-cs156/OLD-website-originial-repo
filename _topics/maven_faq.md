@@ -1,6 +1,6 @@
 ---
 topic: "Maven: FAQ"
-desc: "Frequently Asked Questions"
+desc: "Frequently Asked Questions and misc tips/troubleshooting"
 indent: true
 ---
 
