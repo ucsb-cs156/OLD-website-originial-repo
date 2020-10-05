@@ -4,6 +4,25 @@ desc: "Frequently Asked Questions and misc tips/troubleshooting"
 indent: true
 ---
 
+
+#
+
+If you are working on CSIL and get this error
+```
+The JAVA_HOME environment variable is not defined correctly
+This environment variable is needed to run this program
+NB: JAVA_HOME should point to a JDK not a JRE
+```
+Then here's the fix:
+
+```
+export JAVA_HOME=/usr/lib/jvm/java-11-openjdk
+```
+
+Type that once before you use mvn commands
+
+To avoid having to type that every time you work on CSIL, you can add that line to your Shell startup files.   That file might be, for example, `.bashrc`
+
 # What the heck: `[WARNING] Using platform encoding (UTF-8 actually)`
 
 Here's what to do:
