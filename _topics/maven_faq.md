@@ -21,7 +21,22 @@ export JAVA_HOME=/usr/lib/jvm/java-11-openjdk
 
 Type that once before you use mvn commands
 
-To avoid having to type that every time you work on CSIL, you can add that line to your Shell startup files.   That file might be, for example, `.bashrc`
+To avoid having to type that every time you work on CSIL, you can add that line to your Shell startup files.   That file might be, for example, `.bashrc` by running the following:
+
+```bash
+echo 'JAVA_HOME=/usr/lib/jvm/java-11-openjdk' >> .bashrc
+```
+
+You can verify that this worked properly by doing the following:
+
+```bash
+source ~/.bashrc
+$JAVA_HOME/bin/javac -version
+```
+
+You should see `javac 11.0.8` as the output. 
+
+Disconnect and reconnect to double check that it still works; if it still does, then you've solved the problem.
 
 # What the heck: `[WARNING] Using platform encoding (UTF-8 actually)`
 
