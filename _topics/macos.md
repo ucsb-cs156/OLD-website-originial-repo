@@ -1,21 +1,20 @@
 ---
 topic: "MacOS"
-desc: "Setting up an environment to do CS56 work on your own Mac (not ssh'ing into CSIL)"
+desc: "Setting up an environment to do CS156 work on your own Mac (not ssh'ing into CSIL)"
 category_prefix: "MacOS: "
 ---
 
-For certain kinds of programs, i.e. graphics, and especially sound, 
-it may be more convenient to work directly on your Mac rather than 
-ssh'ing into CSIL.
+This page is our best effort at explaining how to set up an environment for CMPSC 156 for MacOS.
 
-For audio or sound programs, this is especially true.
+For information on:
+* Windows, see:  <https://ucsb-cs156.github.io/topics/windows/> 
+* Windows Subsystem for Linux, please see: <https://ucsb-cs156.github.io/topics/windows_wsl/> 
 
-What do you need to install on your Mac to be able to do this?
+Note that the reference platform for the course remains "CSIL"; we cannot commit to being "tech support" for every conceivable platform.  On your own machine, you *are* your own tech support.  But we'll help as best we can, given the time constraints we are under.
+    
+# Preliminaries
 
-* The JDK
-* `ant` and/or `mvn` (Maven)
-
-Instructions follow below.   Note that installing [MacOS: Homebrew](/topics/macos_homebrew/) may make some of this easier.
+Installing [MacOS: Homebrew](/topics/macos_homebrew/) is your first step.  `brew` is a package manager for MacOS, and it is needed for the steps that follow.
 
 # Install the JDK
 
@@ -26,18 +25,22 @@ To see whether you already have the JDK installed, do this in a terminal window:
 javac 1.8.0_31
 169-231-88-206:~ pconrad$ 
 ```
-If you see some version of Java 1.8.something... then you are good to go.
+If you see some version of Java 1.11.something... then you are good to go.
 
-If not, download and install a version for Mac OS from here:
+If not, download and install Java 11 using either the
+* Official Oracle distribution (see below)
+* The OpenJDK 11 distribution (see below)
 
-<http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html>
+There are three Slack channels that can help:
+* Use the `#help-macos` channel to ask questions if you run into problems.
+* Use the `#articles-macos` channel to offer tips, tricks, or links to resources that may help other students.
+* Use the `#typos` channel if there are things in these instructions that are incorrect and should be updated.
+
+# Installing Java 11 from Oracle on Mac
+
+Oracle has a link for installing Java JDK 11 on Mac on this page: <https://www.oracle.com/java/technologies/javase-jdk11-downloads.html>
 
 # Installing OpenJDK 11 on Mac
-
-This article tells you how to deal with having multiple versions of Java on your Mac, and what to do with the "tarball" file that you might find when you download OpenJDK 11 for Mac, since there are no obvious installation instructions.  Unfortunately, the link to the tarball takes you to a page where the distribution is NO LONGER AVAILABLE.  More on that below.
-* <https://dzone.com/articles/installing-openjdk-11-on-macos>
-
-So if the link in that article does not have OpenJDK 11 for Mac, who does?
 
 This worked for me.  Note that it requires [brew](https://ucsb-cs56.github.io/topics/macos_homewbrew/), a package manager for MacOS.
 * <https://installvirtual.com/install-openjdk-11-mac-using-brew/>
@@ -65,7 +68,9 @@ OpenJDK Runtime Environment AdoptOpenJDK (build 11.0.2+9)
 OpenJDK 64-Bit Server VM AdoptOpenJDK (build 11.0.2+9, mixed mode)
 ```
 
-Note: after installing Java 11, you may want to do:
+# Install Mavem
+
+After installing Java 11, do this to install maven:
 
 ```
 brew install maven
@@ -85,7 +90,7 @@ mvn --version
 
 To make sure that Maven is using Java 11 and not still using Java 8 or earlier.
 
-# What if I Maven reports it is using Java 13
+# What if Maven reports it is using Java 13
 
 I recently got a new Mac and followed the instructions above.  I ended up with Java 11 as my default java compiled:
 
@@ -162,7 +167,14 @@ However, my hope is that if we configure our `pom.xml` files to use Java 11, per
 
 I will also see if I can figure out a way to get Maven to actually point to the Java 11 software as its default Java implementation.
 
+
+# Install Heroku CLI
+
+Follow instructions here: <https://devcenter.heroku.com/articles/heroku-cli>
+
 # Install Apache Ant
+
+** NOTE: We are likely not using Apache Ant this quarter, so you probably don't need to install this.  But in case you do, here are the instructions*.
 
 If you need to install Apache Ant for any reason, first check to see if you already have it:
 
@@ -178,4 +190,12 @@ If instead, you get `command not found`, then install Apache Ant in one of the f
    * This requires Homebrew, which is described here: [/topics/homebrew](/topics/homebrew)
 * These instructions: <https://www.mkyong.com/ant/how-to-apache-ant-on-mac-os-x/>
    * A student in W20 reported that these didn't work well, and that `brew install ant` worked better.
+
+# Other Resources
+
+**NOTE: The following article might no longer be relevant, but we'll keep it around for a little while in case it is useful**
+
+This article tells you how to deal with having multiple versions of Java on your Mac, and what to do with the "tarball" file that you might find when you download OpenJDK 11 for Mac, since there are no obvious installation instructions.  Unfortunately, the link to the tarball takes you to a page where the distribution is NO LONGER AVAILABLE.  So this may no longer be relevant.
+
+* <https://dzone.com/articles/installing-openjdk-11-on-macos>
 
