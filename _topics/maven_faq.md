@@ -5,7 +5,7 @@ indent: true
 ---
 
 
-#
+# `The JAVA_HOME environment variable is not defined correctly`...
 
 If you are working on CSIL and get this error
 ```
