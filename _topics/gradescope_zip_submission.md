@@ -24,6 +24,6 @@ However, if that is not working, an alternative is to submit a zip file.
    
 3. Upload the .zip file to Gradescope as your submission.  As you do, you should see that Gradescope is automatically unzipping the files as you submit; that's fine.
 
-      ![upload zip](upload_zip_50.png)
+      ![upload file](upload_file_50.png)
 
 That's it.  With luck, your submission will be accepted by Gradescope and you'll get back useful output.
