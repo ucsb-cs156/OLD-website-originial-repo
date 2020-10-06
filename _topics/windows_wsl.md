@@ -60,6 +60,8 @@ The Heroku CLI is normally installed with snap, but the WSL doesn't currently su
 
 [Visit this page](/topics/node_windows/#windows-subsystem-for-linux-wsl) for instructions on how to install Node and npm on WSL.
 
+For this class, we recommend the latest version of Node 12.x and npm 6.x. 
+
 ### WSL with VSCode
 
 If you are currently a VS Code user (or considering becoming one), you can install an extension to be able to access/edit/track files in the WSL from VS Code. Follow the instructions [here](LINK) to get started.
