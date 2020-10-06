@@ -60,7 +60,7 @@ If you are currently a VS Code user (or considering becoming one), you can insta
 
 # Install Node/npm
 
-Before we begin, remove all previous versions (if any) of Node that you may have installed in WSL by running this command:
+Before we begin, remove all previous versions (if any) of Node that you may have installed through `apt` in WSL by running this command:
 ```
 sudo apt-get purge --auto-remove nodejs
 ```
