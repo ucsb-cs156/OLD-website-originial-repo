@@ -47,9 +47,9 @@ To check <br />
 
 ### Git on WSL
 
-WSL should come with git, but the pre-installed version is usually outdated (you can check by running `git --version`). If it is not installed, then follow the instructions at this link: https://peteoshea.co.uk/setup-git-in-wsl/
+WSL should come with git, but the pre-installed version is usually outdated (you can check by running `git --version`). If it is not installed, then follow the instructions at this link: <https://peteoshea.co.uk/setup-git-in-wsl/>
 
-If you want to work remotely via SSH, you will have to generate new SSH keys specific to the WSL environment. For instructions on how to do that, take a look at this page: https://ucsb-cs56.github.io/topics/github_ssh_keys/
+If you want to work remotely via SSH, you will have to generate new SSH keys specific to the WSL environment. For instructions on how to do that, take a look at [this page](/topics/github_ssh_keys/).
    * You don't need to set up SSH keys, since you can always work remotely with repos via HTTPS, but using SSH keys just makes it easier since you will not have to re-enter your GitHub login information whenever you want to clone a repo or push/pull.
 
 ### Heroku on WSL
