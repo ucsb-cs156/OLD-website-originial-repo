@@ -5,7 +5,7 @@ indent: true
 category_prefix: "Node: "
 ---
 
-Note that these instructions may be slightly outdated, as they were written in March / April for CS 48, but they should stil work. We're working on verifying that these instructions are still up-to-date.
+_Note that these instructions may be slightly outdated, as they were written in March / April for CS 48, but they should stil work. We're working on verifying that these instructions are still up-to-date._
 
 There are various methods of using Node on Windows:
 
