@@ -172,6 +172,15 @@ I will also see if I can figure out a way to get Maven to actually point to the 
 
 Follow instructions here: <https://devcenter.heroku.com/articles/heroku-cli>
 
+
+# Install Node/npm
+
+To install node and npm on Mac, use:
+
+```
+brew install node
+```
+
 # Install Apache Ant
 
 ** NOTE: We are likely not using Apache Ant this quarter, so you probably don't need to install this.  But in case you do, here are the instructions*.
