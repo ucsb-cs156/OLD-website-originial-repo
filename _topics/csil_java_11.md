@@ -9,9 +9,11 @@ To configure your CSIl account for Java 11,
 
 1. Using any text editor (e.g. `vim`, `emacs`) add these lines to your `~/.bashrc` file:
 
-   For example: 
+   For example, use one of these commands to edit the file:
    * `vim ~/.bashrc` 
    * `emacs ~/.bashrc`
+   
+   Here are the lines to add
 
    ```
    export JAVA_HOME=/usr/lib/jvm/java-11-openjdk
