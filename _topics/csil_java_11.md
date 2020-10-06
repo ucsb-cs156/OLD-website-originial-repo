@@ -7,7 +7,7 @@ indent: true
 
 To configure your CSIl account for Java 11, 
 
-1. Add these lines to your `~/.bashrc` file:
+1. Using any text editor (e.g. `vim`, `emacs`) add these lines to your `~/.bashrc` file:
 
    ```
    export JAVA_HOME=/usr/lib/jvm/java-11-openjdk
