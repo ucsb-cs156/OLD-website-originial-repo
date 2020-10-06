@@ -47,7 +47,7 @@ See instructions here: <https://devcenter.heroku.com/articles/heroku-cli>
 
 # Install Node/npm
 
-[Visit this page](/topics/node_windows/#windows-subsystem-for-linux-wsl) for instructions on how to install Node and npm on Windows and/or WSL.
+[Visit this page](/topics/node_windows/) for instructions on how to install Node and npm on Windows and/or WSL.
 
 For this class, we recommend the latest version of Node 12.x and npm 6.x. 
 
