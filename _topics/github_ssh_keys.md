@@ -133,7 +133,7 @@ You do NOT upload your id\_rsa file to github.com. That file is your private key
 
 You don't actually "upload" your id\_rsa.pub to github.com.   You actually just copy and paste the value. cd into the ~/.ssh directory and use the command `cat` `id_rsa.pub` to have the file be printed in the terminal like this
 
-    (~/.ssh)$ cat id_rsa.pub
+    (~/.ssh)$ cat ~/.ssh/id_rsa.pub
     ssh-rsa 
     AAAAB3NzaC1yc2EAAAADAQABAAABAQDYySoh7b1uGpI7saLozpgXz184YYgC9k22zLH8TqKiSLAcNCO5hEzgC0kZoytCMtw/hUx3kto8
     apPS4ORL6HebWXuGfzQ3nQslPpBNmto0hdo446wBu/Hl5a7pC3SZUzti4YbUjRDOBgM5zQMaopTXhtqNY/tRB8/lSSYaEtIxLN5twk29
