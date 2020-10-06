@@ -29,7 +29,7 @@ Run the following commands to get your Java environment set up:
 `sudo apt-get update` <br />
 `sudo apt-get install default-jdk` <br />
  To verify Java JDK has been installed <br />
- `java -version`
+ `java --version`
 
 * To install Ant <br />
 `sudo apt install ant` <br />
