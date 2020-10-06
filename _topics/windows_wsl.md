@@ -10,7 +10,7 @@ For advanced users who are looking to have a full Linux command-line interface o
 Note that the reference platform for the course remains "CSIL"; we cannot commit to being "tech support" for every conceivable platform.  On your own machine, you *are* your own tech support.  But we'll help as best we can, given the time constraints we are under.
 
 The first step is ensuring that you have a compatible machine. You will need:
-* Windows 10, build 16215 or later (but we recommend 18917 or later to use new [WSL 2 features](https://devblogs.microsoft.com/commandline/announcing-wsl-2/) and the new [Windows Terminal](https://www.microsoft.com/en-us/p/windows-terminal-preview/9n0dx20hk701)).
+* Windows 10, build 16215 or later (but we recommend 18917 or later to use new [WSL 2 features](https://devblogs.microsoft.com/commandline/announcing-wsl-2/) and the new [Windows Terminal](https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701)).
 * Administrator privileges on your machine
 
 The following guides from Microsoft detail the installation instructions for WSL 1 and 2: <https://docs.microsoft.com/en-us/windows/wsl/install-win10>. When choosing a distribution, we recommend Ubuntu 18.04 LTS, as this is what the course staff uses.
