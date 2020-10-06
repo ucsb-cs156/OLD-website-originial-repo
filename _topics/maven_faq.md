@@ -24,7 +24,7 @@ Type that once before you use mvn commands
 To avoid having to type that every time you work on CSIL, you can add that line to your Shell startup files.   That file might be, for example, `.bashrc` by running the following:
 
 ```bash
-echo 'JAVA_HOME=/usr/lib/jvm/java-11-openjdk' >> .bashrc
+echo 'JAVA_HOME=/usr/lib/jvm/java-11-openjdk' >> ~/.bashrc
 ```
 
 You can verify that this worked properly by doing the following:
