@@ -11,7 +11,7 @@ If you want to work on your own machine (instead of using you machine to ssh int
   
 This page is our best effort at explaining how to set up an environment for CMPSC 156 for *native windows.*
 
-For information on WSL, please see: <https://ucsb-cs156.github.io/topics/windows_wsl/> 
+For information on WSL, please see the [Windows: WSL page](/topics/windows_wsl/). 
 
 Note that the reference platform for the course remains "CSIL"; we cannot commit to being "tech support" for every conceivable platform.  On your own machine, you *are* your own tech support.  But we'll help as best we can, given the time constraints we are under.
     
@@ -47,4 +47,7 @@ See instructions here: <https://devcenter.heroku.com/articles/heroku-cli>
 
 # Install Node/npm
 
-Andrew: TODO: Fill this in  Node 12.x, npm 6.x
+[Visit this page](/topics/node_windows/#windows-subsystem-for-linux-wsl) for instructions on how to install Node and npm on Windows and/or WSL.
+
+For this class, we recommend the latest version of Node 12.x and npm 6.x. 
+
