@@ -1,6 +1,8 @@
 ---
 topic: "Windows: WSL"
 desc: "Setting up a development environment under Windows Subsystem for Linux"
+indent: true
+category_prefix: "Windows: "
 ---
 
 _Note that these instructions may be slightly outdated, as they were written in Match / April, but they should stil work. We're working on verifying that these instructions are still up-to-date._
@@ -54,29 +56,10 @@ If you want to work remotely via SSH, you will have to generate new SSH keys spe
 
 The Heroku CLI is normally installed with snap, but the WSL doesn't currently support snap so you won't be able to install it with the commands that would be used in a normal Linux environment. Instead, run `curl https://cli-assets.heroku.com/install.sh | sh` to install the CLI.
 
+### Node and npm on WSL
+
+[Visit this page](/topics/node_windows/#windows-subsystem-for-linux-wsl) for instructions on how to install Node and npm on WSL.
+
 ### WSL with VSCode
 
 If you are currently a VS Code user (or considering becoming one), you can install an extension to be able to access/edit/track files in the WSL from VS Code. Follow the instructions [here](LINK) to get started.
-
-# Install Node/npm
-
-Before we begin, remove all previous versions (if any) of Node that you may have installed through `apt` in WSL by running this command:
-```
-sudo apt-get purge --auto-remove nodejs
-```
-(Source: <https://askubuntu.com/questions/786015/how-to-remove-nodejs-from-ubuntu-16-04>)
-
-Visit the [NodeSource Node.js Binary Distributions page](https://github.com/nodesource/distributions/blob/master/README.md), navigate to "Installation and Instructions" under "Debian and Ubuntu based distributions", and run the commands listed for your desired Node version. This will install the requested version of Node and npm.
-
-After installing, run `node -v` and `npm -v` to verify that the version numbers for Node and npm match the installer that you downloaded.
-
-You should now be able to open your Linux distribution and run `node`, `npm`, and UNIX commands as usual. 
-
-## Alternative WSL installation method
-
-If the above method didn't work, one alternative method for installing Node on WSL is to use the Node Version Manager (`nvm`). 
-
-The linked page from Microsoft has information on installing Node for WSL using `nvm`: <https://docs.microsoft.com/en-us/windows/nodejs/setup-on-wsl2>
-
-* Note that this guide includes the entire process of installing a distribution. If you have already done that, you can skip to the part "[Install nvm, node.js, and npm](https://docs.microsoft.com/en-us/windows/nodejs/setup-on-wsl2#install-nvm-nodejs-and-npm)"
-* As of the time I wrote this, none of the course staff has used this alternative method to install Node using WSL. As a result, we may not be able to offer much help, should you come across problems.
