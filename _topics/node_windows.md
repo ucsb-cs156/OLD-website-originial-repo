@@ -5,6 +5,8 @@ indent: true
 category_prefix: "Node: "
 ---
 
+Note that these instructions may be slightly outdated, as they were written in March / April for CS 48, but they should stil work. We're working on verifying that these instructions are still up-to-date.
+
 There are various methods of using Node on Windows:
 
 # Windows (via Command Prompt)
@@ -17,7 +19,7 @@ After installing Node, open Command Prompt and run `node -v` and `npm -v` to ver
 
 You should now be able to open a Command Prompt window and run `node` and `npm` commands as usual. 
 
-**Keep in mind that Command Prompt does not support most UNIX commands.** As a result, Node scripts that utilize system commands (like the setup script in [demo-nextjs-app](https://github.com/ucsb-cs48-s20/demo-nextjs-app)) will not run properly. Because of this, we strongly discourage this method and recommend one of the other methods.
+**Keep in mind that Command Prompt does not support most UNIX commands.** As a result, Node scripts that utilize system commands (like the setup script in CS 48's [demo-nextjs-app](https://github.com/ucsb-cs48-s20/demo-nextjs-app)) will not run properly. Because of this, we strongly discourage this method and recommend one of the other methods.
 
 # Windows (via Git Bash)
 
@@ -41,9 +43,9 @@ You should now be able to open a Git Bash window and run `node`, `npm`, and basi
 
 For users who are looking to use Node with packages installed from package managers (such as `apt-get` for Ubuntu/Debian) and use the  full suite of UNIX commands, we recommend using Windows Subsystem for Linux (WSL).
 
-First, install WSL using the instructions here: [Windows: WSL](/topics/wsl/). This guide assumes that you have installed a Debian-based Linux distribution (like Ubuntu).
+First, install WSL using the instructions here: [Windows: WSL](/topics/windows_wsl/). This guide assumes that you have installed a Debian-based Linux distribution (like Ubuntu).
 
-Next, remove all previous versions of Node that you may have installed in WSL by running this command:
+Next, remove all previous versions of Node that you may have installed through `apt` in WSL by running this command:
 ```
 sudo apt-get purge --auto-remove nodejs
 ```
