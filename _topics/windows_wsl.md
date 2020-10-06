@@ -58,3 +58,6 @@ The Heroku CLI is normally installed with snap, but the WSL doesn't currently su
 
 If you are currently a VS Code user (or considering becoming one), you can install an extension to be able to access/edit/track files in the WSL from VS Code. Follow the instructions [here](LINK) to get started.
 
+# Install Node/npm
+
+Andrew: TODO: Fill this in  Node 12.x, npm 6.x
