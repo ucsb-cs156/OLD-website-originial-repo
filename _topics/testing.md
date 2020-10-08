@@ -4,9 +4,9 @@ desc: "Everything having to do with testing: Unit testing, Integration Testing, 
 category_prefix: "Testing: "
 ---
 
-# Test Coverage
+# Test Coverage (aka Code Coverage)
 
-It's helpful to be able to measure how much of our code is covered by tests.  This metric is known as "test coverage"
+It's helpful to be able to measure how much of our code is covered by tests.  This metric is known as "test coverage" or "code coverage".
 
 # Line Versus Branch Coverage
 
