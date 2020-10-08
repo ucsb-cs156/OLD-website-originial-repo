@@ -32,9 +32,12 @@ then you need to install XQuartz as explained below, log out, log in, and try ag
 
 # Connecting with Remote Desktop
 
-Instructions for connecting to CSIL via Remote Desktop appear here: <https://doc.engr.ucsb.edu/display/EPK/Remote+Access+to+Computer+Science+Computing+Labs>
-
 With this option, you have a window on your local computer that shows the entire Linux Desktop on the remote machine.  It is different from the X11 options we used in the past.
+
+Instructions for connecting to CSIL via Remote Desktop appear here: 
+* <https://doc.engr.ucsb.edu/display/EPK/Remote+Access+to+Computer+Science+Computing+Labs>
+* MacOS specific instructions are here: <https://doc.engr.ucsb.edu/display/EPK/CS+Lab+RDP+Access+-+MacOS+Client>
+* You will also need the Campus VPN Client (Pulse Secure) which you can install here: <https://dev-it-ucsb-edu-v01.pantheonsite.io/get-connected-vpn/pulse-secure-vpn-client-mac-os>
 
 # Using X11 with XQuartz
 
