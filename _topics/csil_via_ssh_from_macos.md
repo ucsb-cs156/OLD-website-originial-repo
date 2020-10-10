@@ -39,6 +39,18 @@ Instructions for connecting to CSIL via Remote Desktop appear here:
 * MacOS specific instructions are here: <https://doc.engr.ucsb.edu/display/EPK/CS+Lab+RDP+Access+-+MacOS+Client>
 * You will also need the Campus VPN Client (Pulse Secure) which you can install here: <https://dev-it-ucsb-edu-v01.pantheonsite.io/get-connected-vpn/pulse-secure-vpn-client-mac-os>
 
+
+# Using Samba with MacOS
+
+Another option is to mount your CSIL home directory *as if* it were a local directory on your Mac.
+
+This allows you, for example, to edit files on CSIL using VSCode running on your Mac.
+
+To do this, see the instructions here: <https://doc.engr.ucsb.edu/pages/viewpage.action?pageId=3342386>
+
+
+
+
 # Using X11 with XQuartz
 
 Note that this option is now considered deprecated by ECI in favor of the Remote Desktop option (per [this article](https://doc.engr.ucsb.edu/pages/viewpage.action?pageId=5112076)
