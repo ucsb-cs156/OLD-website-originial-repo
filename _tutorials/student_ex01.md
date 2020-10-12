@@ -2,7 +2,7 @@
 topic: "Student: ex01"
 desc: "private data members, public constructors, integers from command line arguments, main methods, built in toString method, simple compilation/execution with javac/java"
 indent: true
-code_repo: https://github.com/ucsb-cs156/cs156-student-ex01
+code_repo: https://github.com/ucsb-cs156/student-ex01
 ---
 
 <style>
