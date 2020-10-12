@@ -2,6 +2,7 @@
 topic: "Unix: Search/Replace across multiple files"
 desc: "from the command line, using grep, sed, etc."
 indent: true
+category_prefix: "Unix: "
 ---
 
 # Quick One Liners
