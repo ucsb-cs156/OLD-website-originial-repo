@@ -2,7 +2,8 @@
 topic: "Student: ex01"
 desc: "private data members, public constructors, integers from command line arguments, main methods, built in toString method, simple compilation/execution with javac/java"
 indent: true
-code_repo: https://github.com/ucsb-cs156/cs156-student-ex01
+code_repo: https://github.com/ucsb-cs156/student-tutorial
+code_branch: ex01
 ---
 
 <style>
@@ -93,9 +94,9 @@ We'll assume, for now, that instances of the class are immutable, i.e. we provid
 
 # Accessing the code from the github repo
 
-The example code that supports this lesson is in a repository ("repo" for short) at this link:
+The example code that supports this lesson is in a repository ("repo" for short) at this link.  Note that this link is showing the branch <tt>{{page.code_branch}}</tt>, *not* the <tt>main</tt> branch of the repo.
 
-* <{{page.code_repo}}>
+* <{{page.code_repo}}/tree/{{page.code_branch}}>
 
 A detailed discussion of git and github is a topic for a different tutorial; for this lesson, we'll just go over the minimal 
 information you need to get started with the code.  

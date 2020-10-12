@@ -34,7 +34,7 @@ div.tutorial-table * table * td { border: 1px solid black; padding: 4px; }
        {% if t.topic contains "Rational: "%} 
            <tr>
            <td><a href="{{t.url}}">{{ t.topic }}</a></td>
-           <td>{% if t.code_repo %} <a href="{{t.code_repo}}">code</a>  {% else %} &nbsp; {% endif %}</td>
+           <td>{% if t.code_repo and t.code_branch %} <a href="{{t.code_repo}}/tree/{{t.code_branch}}">code</a>  {% else %} &nbsp; {% endif %}</td>
            <td>{{t.desc}}</td>
            </tr>
        {% endif %}
