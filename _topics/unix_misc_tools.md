@@ -2,6 +2,7 @@
 topic: "Unix: Misc tools"
 desc: "Various useful command line tools you may not know about"
 indent: true
+category_prefix: "Unix: "
 ---
 
 There are a lot of useful tools that you can use at the Unix command line.  
@@ -16,5 +17,5 @@ Here's a list, then detailed descriptions for some of them.
 
 * `pandoc`: convert between various document formats (Markdown, MediaWiki, LaTeX, HTML, etc.)
 * `convert`: the command line tool for Image-Magick.  Resize or convert between image formats (.png, .jpg, .gif, etc.).  Produce thumbnails, or resize a huge library of images to all the same width or height with a simple shell script.
-* `wkhtmltopdf`(http://wkhtmltopdf.org/): convert HTML to PDF at the command line.  Runs headless with no browser, and no GUI needed.
+* [`wkhtmltopdf`](http://wkhtmltopdf.org/): convert HTML to PDF at the command line.  Runs headless with no browser, and no GUI needed.
 
