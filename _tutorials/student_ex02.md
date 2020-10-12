@@ -6,32 +6,7 @@ code_repo: https://github.com/ucsb-cs156/student-tutorial
 code_branch: ex02
 ---
 
-
-<style>
-div.niceTable table {
-   border-collapse: collapse;
-}
-
-
-div.niceTable table * td {
-   border: 1px solid black;
-   border-collapse: collapse;
-}
-  
-div.niceTable table * td:first-child {
-   font-family: monospace;
-   white-space: pre;
-}
-  
-  
-div.niceTable table * th {
-   border: 1px solid black;
-   border-collapse: collapse;
-}
-  
-</style>
-
-# student-example/ex02
+# {{page.topic}} - {{page.desc}}
 
 {% include student_tutorial_header.html %}
 
