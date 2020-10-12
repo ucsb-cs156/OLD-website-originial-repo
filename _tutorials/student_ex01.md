@@ -33,7 +33,7 @@ div.niceTable table * th {
 
 # student-tutorial/ex01
 
-{% include student_example_header.html %}
+{% include student_tutorial_header.html %}
 
 # Overview
 
