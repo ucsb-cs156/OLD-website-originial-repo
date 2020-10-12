@@ -142,9 +142,6 @@ Main.class	README.md	Student.java
 ucsb-cs156/student-ex01 % java Main
 Usage: java Main name perm
   perm should be a positive integer between 1 and 9999999
-ucsb-cs156/student-ex01 % java Chris 1234567
-Error: Could not find or load main class Chris
-Caused by: java.lang.ClassNotFoundException: Chris
 ucsb-cs156/student-ex01 % java Main Chris 1234567
 s1 = Student@38cccef
 s2 = Student@64b8f8f4
