@@ -23,7 +23,7 @@ div.tutorial-table * table * td { border: 1px solid black; padding: 4px; }
 
 <div class="tutorial-table" data-role="collapsible" data-collapsed="false">
   <h2 markdown="1">`Student` tutorials: table of contents</h2>
-  <table>
+  <table class="table table-sm table-striped table-bordered">
    <tr>
            <th>Section</th>
            <th>Code <br>(github repo)</th>

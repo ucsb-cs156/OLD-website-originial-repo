@@ -7,29 +7,6 @@ code_branch: ex01
 ---
 
 
-<style>
-div.niceTable table {
-   border-collapse: collapse;
-}
-
-
-div.niceTable table * td {
-   border: 1px solid black;
-   border-collapse: collapse;
-}
-  
-div.niceTable table * td:first-child {
-   font-family: monospace;
-   white-space: pre;
-}
-  
-  
-div.niceTable table * th {
-   border: 1px solid black;
-   border-collapse: collapse;
-}
-  
-</style>
 
 # student-tutorial/ex01
 
@@ -103,11 +80,15 @@ A detailed discussion of git and github is a topic for a different tutorial; for
 information you need to get started with the code.  
 
 * You can browse the code, as well as downloading it all in a .zip file at the link shown above.
-* On a system where `git` is installed (such as [CSIL](/topics/CSIL/), you can use this command to create a copy of the repository that has a link back to the original so that you can pull updates at any time:
+* On a system where `git` is installed (such as [CSIL](/topics/CSIL/), you can use this command to create a copy of the repository that has a link back to the original so that you can pull updates at any time.  
    
    * <tt>git clone {{page.code_repo}}.git</tt>
+   * <tt>git checkout {{page.code_branch}}.git</tt>
 
-That will create a subdirectory containing the contents of the repo; `cd` into it and you can start working with the code.
+
+That will create a subdirectory containing the contents of the repo; `cd` into it and you can start working with the code.  You can also switch
+between branches using the `git checkout` command; this chapter of the tutorial uses the
+<tt>{{page.code_branch}}</tt> branch.
 
 For more detail, consult these articles: [git](/topics/git/), [github](/topics/github).
 
