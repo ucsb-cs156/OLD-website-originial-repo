@@ -31,9 +31,9 @@ div.niceTable table * th {
   
 </style>
 
-# cs56-rational-example/ex01
+# student-tutorial/ex01
 
-{% include rational_example_header.html %}
+{% include student_example_header.html %}
 
 # Overview
 
