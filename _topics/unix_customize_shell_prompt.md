@@ -38,4 +38,9 @@ You can put this line in your bash startup files to make this change happen ever
 
 # Customizing the `zsh` shell prompt
 
+
+| Command | Sample Prompt | Explanation |
+|--|--|--|
+| `PROMPT='%2~ %# '` | `ucsb-cs156/student-ex01 % ` | `%2~` shows up to two directory levels of current directory. `%#` shows up as `%` in a normal shell, and `#` in a root shell.  |
+
 See: <https://scriptingosx.com/2019/07/moving-to-zsh-06-customizing-the-zsh-prompt/>
