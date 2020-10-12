@@ -88,3 +88,12 @@ Red X indicates either that at least one test failed, or the
 entire testing script failed in some way:
 
 ![red X](red-x-50.png)
+
+If you click on the green check, yellow circle, or red X, you'll 
+get a pop up with more information, and a link to the details.
+
+That's all we are going to cover this in this example.
+In the next example, we'll add some plugins to our `pom.xml`
+and modify our script so that it can also perform test coverage,
+which is also known as code coverage.
+
