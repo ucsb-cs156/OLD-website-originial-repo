@@ -92,6 +92,28 @@ As an aside, this highlights the justification for separating out the
   
 The output of the pitest report will show you how many mutants are killed, survived, or had no coverage.  The goal is to kill 100% of the mutants.
 
+# How to set up pitest coverage for a Maven project
+
+To set up pitest coverage for Maven project, we only need to make some
+change to the `pom.xml`.
+
+Optionally, we might also add pitest into our GitHub workflow; we'll mention that
+in a separate section below.
+
+
+
+# Adding pitest to our GitHub workflow
+
+To add pitest to our GitHub workflow, we only need to add a small number of lines 
+to the bottom of our existing `.github/workflow/maven.yml` file.
+
+Here are the new lines:
+
+```
+
+```
+
+
 # How do I know which mutants were killed, survived, or not covered?
 
 The output you get on your console will tell you a summary
