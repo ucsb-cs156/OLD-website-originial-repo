@@ -199,3 +199,16 @@ web browser.  That will show you the Pitest mutation report.
 ![click on artifacts](click-artifacts-50.png)
 
 ![click to download zip](click-to-download-zip-50.png)
+
+# So now what?
+
+The mutation testing report on the code in the ex08 branch shows that
+we have a lot of room for improvement.  We see that out of 10 mutations generated, only two of them (20%) were killed by our tests.
+
+So, in the next few exercises, we'll go about showing how to improve
+on that.
+
+```
+>> Generated 10 mutations Killed 2 (20%)
+>> Ran 2 tests (0.2 tests per mutation)
+```
