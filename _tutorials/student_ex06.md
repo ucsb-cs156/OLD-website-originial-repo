@@ -63,7 +63,7 @@ in a web browser:
 * `target/site/jacoco/index.html`
 
 Unfortunately, that file is only visible on the computer
-when you are running `mvn`.   
+where you are running `mvn`.   
 
 So to make it easier
 for teams to work together, as well as for course staff
