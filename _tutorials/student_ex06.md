@@ -3,7 +3,7 @@ topic: "Student: ex06"
 desc: "Setting up jacoco and Codecov.io"
 indent: true
 code_repo: https://github.com/ucsb-cs156/student-tutorial
-code_branch: ex05
+code_branch: ex06
 ---
 
 # {{page.topic}} - {{page.desc}}
