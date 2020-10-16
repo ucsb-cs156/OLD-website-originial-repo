@@ -38,4 +38,19 @@ But  "access to private repos" might not get added by default.  So you may have 
 back and fix that.  Here's how.
 
 
-To "Add Private Scope" means to add additional permissions to the "OAuth Application" 
+To "Add Private Scope" means to add additional permissions to the "OAuth Application".
+
+Here's how you do it.  
+
+* Navigate to <https://codecov.io/gh/your-github-id-here>, e.g. <https://codecov.io/gh/cgaucho>
+
+Then, if your account is *not* authorized for private repos, you see a button like the one
+in the image below. Click that button.
+
+![add private scope](codecov-add-private-scope-50.png)
+
+Then, you should be able to bring up your private repos on Codecov by navigating to links such as this one
+(substituting in the right values for the `org-name` and `repo-name`.
+
+* <https://codecov.io/gh/organization-name/repo-name>
+
