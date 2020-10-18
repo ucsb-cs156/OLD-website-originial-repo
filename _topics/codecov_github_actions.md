@@ -54,3 +54,60 @@ If neither of those, works, try the "troubleshooting page" linked to below.
   the URL <https://codecov.io/gh/ucsb-cs156-f20/REPO-NAME-HERE> you should be able to
   see your code coverage results.
 
+# Adding codecov.io to your GitHub Actions workflow
+
+For Java repos, here is an example of a `maven.yml` that uploads codecov information from
+a Jacoco report to codecov.
+
+```yml
+name: Java CI
+
+on:
+  pull_request:
+  push:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Set up JDK 11
+        uses: actions/setup-java@v1
+        with:
+          java-version: 11.0.x
+      - name: Build with Maven
+        run: mvn test jacoco:report
+      - name: Upload to Codecov
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+        run: bash <(curl -s https://codecov.io/bash)
+      - name: Pitest
+        run: mvn test org.pitest:pitest-maven:mutationCoverage
+      - name: Upload Pitest to Artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: pitest-mutation-testing
+          path: target/pit-reports/**/*  
+```
+
+The following lines are the one that generate a jacoco report (which is something we can upload to codecov). Different lines would be needed instead (or in addition) to also generate reports from JavaScript code (e.g. `jest`).
+
+```yaml
+      - name: Set up JDK 11
+        uses: actions/setup-java@v1
+        with:
+          java-version: 11.0.x
+      - name: Build with Maven
+        run: mvn test jacoco:report
+```
+
+These are the lines that upload the report to codecov.  The `env` part is what gets the secret from 
+GitHub and then loads it into an environment variable used by the script.   
+The line `run: bash <(curl -s https://codecov.io/bash)` automatically gets an appropriate script from
+the url `https://codecov.io/bash` and then executes it.
+
+```yaml
+     - name: Upload to Codecov
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+        run: bash <(curl -s https://codecov.io/bash)
+```
