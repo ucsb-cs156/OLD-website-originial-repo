@@ -3,7 +3,7 @@ topic: "Student: ex08"
 desc: "Setting up pitest mutation testing"
 indent: true
 code_repo: https://github.com/ucsb-cs156/student-tutorial
-code_branch: ex0
+code_branch: ex08
 ---
 
 # {{page.topic}} - {{page.desc}}
@@ -126,7 +126,52 @@ the configuration of this plugin:
             </plugin>
 
 ```
+# Running pitest 
 
+To generate the mutation testing coverage
+using pitest, we use the following command.
+
+```
+mvn test org.pitest:pitest-maven:mutationCoverage
+```
+
+(Don't worry that I'll expect you to memorize that.  I don't plan to try to memorize that one myself.  You should know `mvn compile`, `mvn test`, `mvn clean`, and `mvn package`, and even `mvn test jacoco:report`, but this one is beyond what one can expect to memorize.)
+
+This produces some output on the console, as well
+as a more detailed report in a file that you can
+open in a web browser.
+
+The first thing you should look at is the
+summary at the end of the console report:
+
+```
+====================================================
+- Statistics
+====================================================
+>> Generated 10 mutations Killed 2 (20%)
+>> Ran 2 tests (0.2 tests per mutation)
+```
+
+A score of 100% is a perfect score, and we are only at 20%.  So we have some work to do.
+
+# The detailed report of which mutations survived
+
+The output you get on your console will tell you a summary
+of the fate of each mutant.   You can see more detailed output by using a web browser to open up the file:
+
+* <tt>target/pit-reports/<i>yyyymmddhhmm</i>/index.html</tt>
+
+Note that <tt><i>yyyymmddhhmm</i></tt> will be replaced by a date/timestamp; each time you run the Maven command to run
+pitest, it will produce a new version of the report with a new timestamp.  
+
+It may be convenient to use `mvn clean` before running a pitest mutation report; that way there will only be one such directory rather than multiple ones.
+
+Here's an example of what that report looks like:
+
+![pit-report-example-50.png](pit-report-example-50.png)
+
+As you can see, this a web page that contains a link to the package `edu.ucsb.cs156.student`.  I made a copy of the entire report at this link so that you can explore the entire report, including how it looks when you click on the links:
+* [target/pit-reports/202010201137/index.html](target/pit-reports/202010201137/index.html)
 
 # Adding pitest to our GitHub workflow
 
@@ -170,17 +215,6 @@ means "everything, no matter how many levels of directory it might be.".
         path: target/pit-reports/**/*  
 ```
 
-# How do I know which mutants were killed, survived, or not covered?
-
-The output you get on your console will tell you a summary
-of the fate of each mutant.   You can see more detailed output by using a web browser to open up the file:
-
-* <tt>target/pit-reports/<i>yyyymmddhhmm</i>/index.html</tt>
-
-Note that <tt><i>yyyymmddhhmm</i></tt> will be replaced by a date/timestamp; each time you run the Maven command to run
-pitest, it will produce a new version of the report with a new timestamp.  
-
-It may be convenient to use `mvn clean` before running a pitest mutation report; that way there will only be one such directory rather than multiple ones.
 
 # Another way to see the Pitest report: GitHub Actions artifacts
 
