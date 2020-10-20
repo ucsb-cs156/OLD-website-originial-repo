@@ -11,11 +11,15 @@ Try navigating to <https://codecov.io/gh/organization-name/repo-name>
 
 For example: <https://codecov.io/gh/ucsb-cs156-f20/jspa01-cgaucho>
 
-If you get a 404, then there are a few things you may need to try:
+If you get a `401` or a `404`, then there are a few things you may need to try:
 
-1. Try logging in with your GitHub account.
+1. Try logging out of your GitHub account, and then back into your GitHub account, and then
+   revisit the page.
 
-2. If that still doesn't work, you may need to "Add Private Scope".  See instructions below.
+2. If that still doesn't work, you may need to "Add Private Scope", using the instructions below.
+
+3. If that still doesn't work, try clearing cookies from your browser (instructions for [Chrome](https://support.google.com/accounts/answer/32050?co=GENIE.Platform%3DDesktop&hl=en), [Firefox](https://support.mozilla.org/en-US/kb/clear-cookies-and-site-data-firefox), [MS Edge](https://support.microsoft.com/en-us/microsoft-edge/delete-cookies-in-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09), [MacOS Safari](https://support.apple.com/guide/safari/manage-cookies-and-website-data-sfri11471/mac)), and then try again.
+
 
 
 # Adding Private Scope
