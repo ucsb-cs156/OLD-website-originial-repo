@@ -1,6 +1,6 @@
 ---
-topic: "Student: ex08"
-desc: "Fixing up code coverage"
+topic: "Student: ex09"
+desc: "Covering toString with a test and excluding Main gets us to 100% coverage"
 indent: true
 code_repo: https://github.com/ucsb-cs156/student-tutorial
 code_branch: ex09
@@ -14,7 +14,20 @@ code_branch: ex09
 
 In this example we show how to use the 
 code coverage and mutation testing reports
-to add missing tests.
+to find which tests are missing and get to 100%
+test coverage.
+
+In the case of `Student.java` we add the missing
+unit tests for the toString method. 
+
+In the case of `Main.java`, we exclude the class
+from the code coverage analysis altogether.
+
+Both of these are important things to know how to
+do; sometimes it's important to have code covered by
+tests, and other times, it's important not to waste time
+getting test coverage for code where it isn't really
+adding any value.
 
 # Starting where we left off
 
@@ -121,3 +134,95 @@ If we look at what this Main is doing, we can see that it's purposes were really
 2. Serve as an example of how to pass command line parameters
 3. Serve as an example of how to convert a `String` to an `int`
 4. Provide a way of testing our `Studnet` class before we had JUnit testing set up.
+
+So while we *could* write test cases for this `main`
+method and this `Main` class, it may be better to instead either:
+* Remove the file from the project altogether.
+* Mark it as an exception, a file to be excluded when
+  we compute test coverage, *or*
+
+Because it is handy to keep the file around,
+we'll try the second approach instead.  
+
+In the `pom.xml`, we find this `<plugin>` element
+for Pitest:
+
+```xml
+            <plugin>
+                <groupId>org.pitest</groupId>
+                <artifactId>pitest-maven</artifactId>
+                <version>1.5.2</version>
+                <configuration>
+                    <targetClasses>
+                        <param>edu.*</param>
+                    </targetClasses>
+                    <targetTests>
+                        <param>edu.*</param>
+                    </targetTests>
+                    <outputFormats>
+                        <outputFormat>HTML</outputFormat>
+                        <outputFormat>CSV</outputFormat>
+                        <outputFormat>XML</outputFormat>
+                    </outputFormats>
+                </configuration>
+            </plugin>
+```
+
+The part to focus on is this:
+
+```xml
+                    <targetClasses>
+                        <param>edu.*</param>
+                    </targetClasses>
+```
+
+As a sibling to this `<targetClasses>` element, we can
+add an `<excludedClasses>` element (as described in 
+[this post](https://groups.google.com/g/pitusers/c/R_HOHUTgSRk)):
+
+
+```xml
+                    <targetClasses>
+                        <param>edu.*</param>
+                    </targetClasses>
+                    <excludedClasses>
+                        <param>edu.ucsb.cs156.student.Main</param>
+                    </excludedClasses>
+```
+
+We simply specify the name of the class we want to exclude, using it's full package name.  When we run
+pit again, we see that we now have 100% coverage
+
+```
+>> Generated 3 mutations Killed 3 (100%)
+>> Ran 3 tests (1 tests per mutation)
+```
+
+If you open up the full report, you'll see that
+`Main.java` no longer appears.
+
+Our jacoco report, however, still shows `Main.java`
+as having no coverage.  We can take a similar step
+to configure the jacoco report in the `pom.xml`
+as highlighted in [this post](https://ngeor.com/2018/04/21/exclude-class-from-jacoco-coverage.html).
+
+This code can go inside the `<plugin>` element
+for jacoco, just before the closing `</plugin>`
+tag:
+
+```xml
+                <configuration>
+                    <excludes>
+                      <exclude>edu/ucsb/cs156/student/Main.class</exclude>
+                    </excludes>
+                </configuration>
+```
+
+This excludes the `Main`.  Note that for jacoco, we
+need to specify `.class` on the end, while for Pit,
+we leave that out.
+
+Now that we have 100% test coverage both in our
+jacoco and our pit report, we can proceed to
+actually adding some more functionality to our
+Student class.  We'll do that in ex10.
