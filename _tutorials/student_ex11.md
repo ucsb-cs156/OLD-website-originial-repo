@@ -24,11 +24,14 @@ Take `123456`.  Applying the [Luhn algorithm](https://en.wikipedia.org/wiki/Luhn
  
 ```
 1 + 2x2 + 3 + 4x2 + 5 + 6x2 =
-1 +  4  + 3 +  8  + 5 + 12  =  33
+1 +  4  + 3 +  8  + 5 + (1+2)  =  24
 ```
 
-To get to a number divisble by 10, we need to add 7,
-so the check digit is 7: `1234567`
+To get to a number divisble by 10, we need to add 6,
+so the check digit is 6: `1234566`
+
+(Another algorithm that gets to the same result: `(sumOfDigits * 9 ) % 10`.  For example, `24*9 = 216, 216%10 = 6`)
+
 
 For another example, consider: `111111`
 
@@ -39,6 +42,8 @@ For another example, consider: `111111`
 
 To get to a number divisible by 10, we need to add 1,
 so the check digit is 1: `1111111`.
+
+(Using the formula  `(sumOfDigits * 9 ) % 10` again:   `9*9 = 81, 81%10 = 1`)
 
 With this in mind, we now have at least two test cases
 for computing check digits over six digit numbers.
