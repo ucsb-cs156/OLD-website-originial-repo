@@ -173,6 +173,25 @@ Here's an example of what that report looks like:
 As you can see, this a web page that contains a link to the package `edu.ucsb.cs156.student`.  I made a copy of the entire report at this link so that you can explore the entire report, including how it looks when you click on the links:
 * [target/pit-reports/202010201137/index.html](target/pit-reports/202010201137/index.html)
 
+As you click on the package name, you see this screen
+which shows you the two source files in the package:
+
+![package-50.png](package-50.png)
+
+Clicking on the link for `Student.java`, we see
+that it's only the body of the `toString` method
+that is showing up in red as not being covered
+by tests.   We'll add this test coverage in ex09.
+
+![student.java-50.png](student.java-50.png)
+
+Clicking on the link for `Main.java`, we see
+that the entire Main method is uncovered.  We'll
+discuss that in ex09 as well.
+
+![main.java-50.png](main.java-50.png)
+
+
 # Adding pitest to our GitHub workflow
 
 Though it isn't required for using pitest, it can be handy to add this into our
