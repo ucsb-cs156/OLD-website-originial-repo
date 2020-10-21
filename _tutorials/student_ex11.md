@@ -1,6 +1,6 @@
 ---
 topic: "Student: ex11"
-desc: "More on Exceptions, static methods"
+desc: "More on Exceptions, static methods, tdd"
 indent: true
 code_repo: https://github.com/ucsb-cs156/student-tutorial
 code_branch: ex11
@@ -17,8 +17,12 @@ to compute the
 
 [Luhn Checksum](https://en.wikipedia.org/wiki/Luhn_algorithm)) and how to test it.
 
-We first should write some tests.  For that we can
-do the calculation by hand on a few six digit perms:
+To illustrate the Test-Driven Development approach (tdd) we start by
+first writing some tests.  To set up our tests, we start by doing
+the Lund calculation by hand on a few six digit perms.   This does two things:
+* It gives us some data for our tests
+* It gives us practice in applying the algorithm; this will help us
+  understand how to write the code.
 
 Take `123456`.  Applying the [Luhn algorithm](https://en.wikipedia.org/wiki/Luhn_algorithm), we get:
  
