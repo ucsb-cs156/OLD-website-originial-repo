@@ -75,7 +75,7 @@ We can see that there are three places in `Student.java` that are not covered by
 
 
 ```java
-public static boolean validPerm(int perm) {	
+    public static boolean validPerm(int perm) {	
         if (perm < 1 || perm > 9999999) {    // RED
             return false;
         }
