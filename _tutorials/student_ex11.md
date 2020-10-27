@@ -49,6 +49,8 @@ so the check digit is 1: `1111111`.
 
 (Using the formula  `(sumOfDigits * 9 ) % 10` again:   `9*9 = 81, 81%10 = 1`)
 
+To check our work, we can use this [online Luhn calculator](https://simplycalc.com/luhn-calculate.php).
+
 With this in mind, we now have at least two test cases
 for computing check digits over six digit numbers.
 

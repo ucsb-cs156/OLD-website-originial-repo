@@ -24,6 +24,7 @@ A `perm` number should be a positive integer between
 a six digit form, or a seven digit form; if it has
 a seven digit form, the last digit is a check digit (we think, produced by the [Luhn Algorithm](https://en.wikipedia.org/wiki/Luhn_algorithm)).
 
+
 So we may want to prevent a `Student` object from being produced with an invalid perm.
 
 We'll start by defining the desired behavior with some test cases.  Each test case name is something that
