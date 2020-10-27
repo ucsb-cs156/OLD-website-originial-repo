@@ -126,7 +126,7 @@ The pop up looks like this:
 4. validPerm : negated conditional &rarr; KILLED<br/>
 </p>
 
-This shows us that the mutation that survived is one where the mutation was `changed conditional boundary`.  This typically means changing:
+This shows us that the mutation that survived is one where the mutation was `changed conditional boundary`.  This  means changing:
 
 | From | To |
 |------|----|
@@ -134,6 +134,9 @@ This shows us that the mutation that survived is one where the mutation was `cha
 | `<=` | `<` |
 | `>` | `>=` |
 | `>=` | `>` |
+{:.table .table-sm .table-striped .table-bordered}
+
+
 
 So the mutations of this line under this rule could be:
 
