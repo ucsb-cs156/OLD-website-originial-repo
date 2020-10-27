@@ -123,6 +123,8 @@ The pop up looks like this:
 
 This shows us that the mutation that survived is one where the mutation was `changed conditional boundary`.  This  means changing:
 
+<div style="max-width:15em;" markdown="1">
+
 | From | To |
 |------|----|
 | `<` | `<=` |
@@ -131,7 +133,7 @@ This shows us that the mutation that survived is one where the mutation was `cha
 | `>=` | `>` |
 {:.table .table-sm .table-striped .table-bordered}
 
-
+</div>
 
 So the mutations of this line under this rule could be:
 
