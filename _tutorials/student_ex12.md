@@ -164,7 +164,7 @@ perm.  So the test that should catch
 in ex11:
 
 ```java
-  @Test
+    @Test
     public void test_validPerm_1() {
       assertTrue(Student.validPerm(1));
     }
@@ -182,17 +182,18 @@ a test for `9999999` will not change our outcome.
 What will work is to first change our code to a more correct boundary:
 
 ```java
-public static boolean validPerm(int perm) {	
+    public static boolean validPerm(int perm) {	
         if (perm < 1 || perm > 9999996) {   
             return false;
         }
         ...
+    }
 ```
 
 Then we change our test to this new boundary, `9999996`:
 
 ```java
-  @Test
+    @Test
     public void test_validPerm_9999996() {
       assertTrue(Student.validPerm(9999996));
     }
@@ -218,7 +219,7 @@ above, this doesn't always work, but it often does, so its the first
 thing we try:
 
 ```java
-  @Test
+    @Test
     public void test_validPerm_999999() {
       assertTrue(Student.validPerm(999999));
     }
