@@ -115,10 +115,14 @@ it says this about this line.  Hover over the 4 and you'll see a pop up.
 </span>
 </span>
 </td>
-<td class='covered'><pre><span  class='survived'>        if (perm &#60; 1 || perm &#62; 9999999) {</span></pre></td></tr>
-
-
-<tr>
+<td class='covered'>
+<pre>
+<span  class='survived'>
+if (perm &#60; 1 || perm &#62; 9999999) {
+</span>
+</pre>
+</td>
+</tr>
 </table>
 
 The pop up looks like this:
@@ -128,7 +132,7 @@ The pop up looks like this:
 2. validPerm : changed conditional boundary &rarr; KILLED<br/>
 3. validPerm : negated conditional &rarr; KILLED<br/>
 4. validPerm : negated conditional &rarr; KILLED<br/>
-<p>
+</p>
 
 This shows us that the mutation that survived is one where the mutation was `changed conditional boundary`.  This typically means changing:
 
