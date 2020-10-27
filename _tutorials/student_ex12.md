@@ -100,19 +100,14 @@ it says this about this line.  Hover over the 4 and you'll see a pop up.
 <table>
 <tr>
 <td class='covered'><a name='org.pitest.mutationtest.report.html.SourceFile@63814bbe_35'/>35</td>
-<td class='survived'>
-<span class='pop'><a href='#grouporg.pitest.mutationtest.report.html.SourceFile@63814bbe_35'>4</a><span>
+<td class='survived'><span class='pop'><a href='#grouporg.pitest.mutationtest.report.html.SourceFile@63814bbe_35'>4</a><span>
 1. validPerm : changed conditional boundary &rarr; SURVIVED<br/>
 2. validPerm : changed conditional boundary &rarr; KILLED<br/>
 3. validPerm : negated conditional &rarr; KILLED<br/>
 4. validPerm : negated conditional &rarr; KILLED<br/>
-</span>
-</span>
-</td>
+</span></span></td>
 <td class='covered'>
-<pre>
-<span  class='survived'>if (perm &#60; 1 || perm &#62; 9999999) {</span>
-</pre>
+<pre><span  class='survived'>if (perm &#60; 1 || perm &#62; 9999999) {</span></pre>
 </td>
 </tr>
 </table>
