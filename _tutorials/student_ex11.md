@@ -13,9 +13,7 @@ code_branch: ex11
 # Overview
 
 In this example we show how to write a static method
-to compute the
-
-[Luhn Checksum](https://en.wikipedia.org/wiki/Luhn_algorithm)) and how to test it.
+to compute the [Luhn Checksum](https://en.wikipedia.org/wiki/Luhn_algorithm) and how to test it.
 
 To illustrate the Test-Driven Development approach (tdd) we start by
 first writing some tests.  To set up our tests, we start by doing
