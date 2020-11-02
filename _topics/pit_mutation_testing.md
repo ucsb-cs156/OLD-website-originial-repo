@@ -6,7 +6,7 @@ desc: "Testing your test suite by mutating your solution, pitest.org"
 # Quick reference
 
 The maven command to run pitest is:
-* `mvn test org.pitest:pitest-maven:mutationCoverage`
+* `mvn clean test org.pitest:pitest-maven:mutationCoverage`
 
 # Introduction
 
