@@ -38,6 +38,15 @@ proposed the idea of Representational State Transfer (REST) as part of his Ph.D.
 
 It has since become a widely adopted model for building web services based on HTTP.
 
+# Testing RESTful APIs Interactively
+
+Two tools for testing RESTful APIs interactively (without writing additional code) are:
+* `curl`, a command line tool
+* [Postman](https://www.postman.com/downloads/), a GUI tool you can download and run on Windows/Mac/Linux
+
+When testing APIs that use authentication, you may need to get an extension called the "JWT Debugger" and use it to copy the `Authorization: Bearer` token value.  (TODO: Fill in more detail about this process.)
+``
+
 # References on RESTful APIs
 
 * Wikipedia article <https://en.wikipedia.org/wiki/Representational_state_transfer>
