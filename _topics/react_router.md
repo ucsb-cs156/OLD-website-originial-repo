@@ -31,8 +31,22 @@ return (
 
 As you can see, there are three types of routes shown:
 
-* `<Route ... />`
-* `<PrivateRoute ... />`
-* `<AuthorizedRoute ... />`
+* `Route` does not require you to be logged in
+* `PrivateRoute` requires you to be logged in
+* `AuthorizedRoute` requires you to be logged in with a specific role
 
-TODO: Add a discussion of when to use each of these, and for what purpose.
+Here's some more detail on each of these:
+
+`<Route ... />` does not require you to be logged in; these routes are always available.  Use this for routes to read-only views of public information.
+
+`<PrivateRoute ... />`requires the user to be logged in, but with no particular role.   Anyone on the internet that has a Google account (assuming
+  the app uses Google as the souce of OAuth info) would be able to access these routes.
+
+`<AuthorizedRoute ... />`requires the user to be logged in with a specific role (e.g. `member`, `admin`).  
+
+* Use this with `member` when you want to restrict the users
+  based on application-specific notion of *member* (e.g. they have a UCSB email address, or their email appears in a database table/ or file of "members").
+* Use this with `admin` for functions that should be restricted to a very small number of admin users.  Initial admins may be defined
+  in an `.properties` value (e.g. `secrets-localhost.properties`); these might be supplemented by admins in an admin database table.
+    
+    
