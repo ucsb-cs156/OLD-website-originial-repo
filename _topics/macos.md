@@ -45,13 +45,21 @@ Oracle has a link for installing Java JDK 11 on Mac on this page: <https://www.o
 This worked for me.  Note that it requires [brew](https://ucsb-cs56.github.io/topics/macos_homewbrew/), a package manager for MacOS.
 * <https://installvirtual.com/install-openjdk-11-mac-using-brew/>
 
-Here's the short version:
+Here's the short version--on first install:
 
 ```
 brew update
 brew tap AdoptOpenJDK/openjdk
 brew cask install adoptopenjdk11
 ```
+
+On later upgrades (e.g. from 11.0.6,10 -> 11.0.9.1,1) use:
+
+```
+brew update
+brew cask upgrade adoptopenjdk11
+```
+
 
 To check if you now have Java 11, open a new Terminal window and do:
 
