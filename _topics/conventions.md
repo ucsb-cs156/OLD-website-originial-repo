@@ -1,5 +1,5 @@
 ---
-topic: "Conventions"
+topic: "Conventions: "
 desc: "The conventions we use in our code"
 category_prefix: "Conventions: "
 ---
