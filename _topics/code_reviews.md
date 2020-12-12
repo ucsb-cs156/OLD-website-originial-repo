@@ -6,14 +6,21 @@ category_prefix: "Code Reviews: "
 
 # Tips for Performing Code Reviews
 
-Always try to be helpful, not harsh.
+Always try to be helpful, not harsh.  Be diplomatic and kind.
 
-- Realize that having your code reviewed by others, especially if you are new to that process, can be intimidating.  People can feel very vulnerable.
-- It can help to ask questions rather than making statements.  
+Realize that having your code reviewed by others, especially if you are new to that process, can be intimidating.  People can feel very vulnerable.
 
-  Instead of "This code is a mess; do you even know how to indent?" try "I wonder if this code would be easier to read if the indentation were more consistent."
+It can help to:
+* ask questions rather than making statements
+* invite folks to consider alternatives rather than telling them what to do
 
-  Instead of "This isn't how you are supposed to write JavaScript" try "I wonder if you are familiar with the reasons that `const` and `let` are preferred to  `var`?"
+Examples: 
+
+| This may come across as harsh |  Consider whether this might be better |
+|-------------------------------|-----------------------------------------|
+| This code is a mess; do you even know how to indent? | I wonder if this code would be easier to read if the indentation were more consistent. |
+| This isn't how you are supposed to write JavaScript | I wonder if you are familiar with the reasons that `const` and `let` are preferred to  `var`? |
+| Delete this  commented out code | Consider removing this commented out code  |
 
 # Tips for Responding to Code Reviews
 
