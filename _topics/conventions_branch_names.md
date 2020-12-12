@@ -12,7 +12,7 @@ The default branch for all projects in CMPSC 156 is `main`.
 Some older code bases created prior to the GitHub switch from `master` to
 `main` might still be using `master`; we'll phase that out over time.
 
-# Feature Branches: `team-name-summary-of-feature` or `team-name-summaryOfFeature`
+# Feature Branches
 
 For feature branches on teams, use the team name as the prefix for the branch, e.g. `5pm-a`, `6pm-c`, etc. followed by either a `kebob-case` or `camelCase` summary
 of what feature or bugfix is being implemented on the branch:
