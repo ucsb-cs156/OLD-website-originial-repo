@@ -62,5 +62,6 @@ This suggests a strategy: set up a script that sends a request to your server pe
 
 This comes at a cost; the idling of your application is part of how Heroku is able to provide free service.   I am not 100% sure whether setting up such a script violates Heroku's terms of service for free tier apps.  That should be investigated before anyone adopts this strategy.
 
-In any case, here is a link to an article that explains how to do this using a service called New Relic.  I'm definitely not endorsing this approach unless and until we can be sure it doesn't violate Heroku's TOS.
+In any case, here is a link to an article that explains how to do this using a service called New Relic.  I'm definitely not endorsing this approach unless and until we can be sure it doesn't violate Heroku's TOS.  It's worth noting that the approach taken here (i.e. adding the New Relic add on) requires entering a credit card even if it is "free", since Heroku only allows a very limited number of "add-ons" on the free/no-credit-card tier, and New Relic is not among those.
+
 * <https://coderwall.com/p/u0x3nw/avoid-heroku-idling-with-new-relic-pings>
