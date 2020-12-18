@@ -53,3 +53,14 @@ Disadvantages:
   an artifact of how GitHub manages forks and restoration after deletion.
   
 
+# Idling
+
+
+Heroku will put your web process to sleep after a period of inactivity (it might be 30 minutes to an hour). This shuts down your website until the next request happens; unfortunately, this means the next visitor will incur a *very long delay* while the entire app startup process happens.
+
+This suggests a strategy: set up a script that sends a request to your server periodically to keep it alive.
+
+This comes at a cost; the idling of your application is part of how Heroku is able to provide free service.   I am not 100% sure whether setting up such a script violates Heroku's terms of service for free tier apps.  That should be investigated before anyone adopts this strategy.
+
+In any case, here is a link to an article that explains how to do this using a service called New Relic.  I'm definitely not endorsing this approach unless and until we can be sure it doesn't violate Heroku's TOS.
+* <https://coderwall.com/p/u0x3nw/avoid-heroku-idling-with-new-relic-pings>
