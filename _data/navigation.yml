@@ -50,16 +50,13 @@ offering_menus:
       - title: Cal
         url: /info/calendar/
         description: "Assignment Calendar"
-      - title: OfcHrs
-        url: /info/office_hours/
-        description: "Office Hours"
-      - title: Projects
-        url: /info/projects/
-        description: "Projects"
       - title: Github
         dropdown:
            - title: ucsb-cs156-w21
              url: https://github.com/ucsb-cs156-w21
+      - title: "More..."
+        url: /info/
+        description: "More Information"
           
   -
     term: F20
