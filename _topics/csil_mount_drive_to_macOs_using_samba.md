@@ -8,6 +8,9 @@ indent: true
 
 To mount CSIL drive onto your MacOS machine, you must on the UCSB network. If you are on your own local network you can use the `UCSB Pulse Secure VPN`. 
 
+Video instructions: <https://youtu.be/FTlxjhjwbt0>
+
+
 ## Ucsb Pulse Secure Vpn
 *Note: You can skip this step if you are on the `eduraom` or `ucsb wireless web` network*
 
@@ -21,6 +24,7 @@ Once we have our VPN running we can mount our csil drive to our local machine.
 
 
 ## Mount Drive Using Samba
+
 To mount your csil drive simply open this link **[smb://samba.engr.ucsb.edu](smb://samba.engr.ucsb.edu)** in your finder. 
 Or follow the ucsb [Engineering documentation](https://doc.engr.ucsb.edu/pages/viewpage.action?pageId=3342386) to do it manually. 
 
