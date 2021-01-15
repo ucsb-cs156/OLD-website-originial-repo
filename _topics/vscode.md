@@ -65,3 +65,19 @@ to open vscode in the current directory, here's what you need to do:
 * Select that option, and behind the scenes, it will do the needed stuff to update your path.
 * You will need to open a new Terminal window to see that take effect.
 * Source: <https://code.visualstudio.com/docs/setup/mac>
+
+# Windows Specific
+
+On Windows, if you are using the "Git Bash Shell", and you want to be able to use VSCode by typing `code .` 
+a the shell prompt, there are several approaches to getting that to work.
+
+One approach is to try to get the code executable into your path.
+
+Another approach, which worked for one student, is to create an `alias` in your `.bashrc` file.  Edit your `.bashrc` file
+and insert the following line.  Note that the expression in `""` on the right hand side of the `=` may need to be customized based on the location of the `code` executable for VSCode on your machine.   Also note that any spaces in the filename have to be quoted with backslash (i.e. `\` as in the example below.)
+
+```
+alias code="/c/Users/hidde/AppData/Local/Programs/Microsoft\ VS\ Code/bin/code"
+```
+
+After this, if you close the git bash shell and reopen it, it should work. You may have to close and reopen the git bash shell more than once, as the system may need to automatically set up a `.bash_profile` that references your `.bashrc` if you don't already have one.
