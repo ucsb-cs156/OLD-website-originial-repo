@@ -1,6 +1,6 @@
 ---
-topic: "git: throwaway untracked files"
-desc: "how to clean up untracked files easily"
+topic: "git: clean"
+desc: "throw away untracked files easily"
 indent: true
 ---
 
@@ -15,6 +15,9 @@ How to remove local untracked files from the current Git branch ([source](https:
   
 (Note the case difference on the `-x` and `-X` for the two latter commands.)  
 
+To see other options, use:
+* `git clean -h` (short version of help text)
+* `git clean --help` (longer version of help text)
 
 *CAUTION!* When using the commands the remove ignored files, you may end up removing files such as the following
 that are typically in the `.gitignore` and contain your application configuration secrets:
