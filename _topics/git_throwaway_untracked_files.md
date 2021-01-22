@@ -7,6 +7,7 @@ indent: true
 How to remove local untracked files from the current Git branch ([source](https://koukia.ca/how-to-remove-local-untracked-files-from-the-current-git-branch-571c6ce9b6b1))
 
 
+* To see what files will be removed, use `git clean -n`
 * To remove files, run `git clean -f ` 
 * To remove files and directories, run `git clean -f -d` or `git clean -fd`
 * To remove ignored files, run `git clean -f -X` or `git clean -fX`
