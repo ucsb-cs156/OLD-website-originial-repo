@@ -10,7 +10,7 @@ You can create an account on the free tier at <https://auth0.com>.
 * For simplicity of course management, we suggest you create this account using your `userid@ucsb.edu` email address.
 * The first step is to create a _tenant_, as explained below.
 
-# What is a _tenant_ 
+# What is an Auth0 _tenant_ 
 
 A tenant is simply a related group of applications.  Think of a tenant as way to segment your Auth0 account
 into multiple subaccounts for different purposes. For example, you might have:
@@ -23,5 +23,10 @@ Tenants can be private to just one user, or shared among multiple users.
 
 We suggest that you name your initial tenant `ucsb-cs156-cgaucho` where `cgaucho` is the `userid` part of your `userid@ucsb.edu`.
 
+# Switching your tenant
 
+There is a pull-down menu at the upper right hand side of the Auth0 dashboard where you can create a new tenant, switch your tenant, or add additional admins to one of the tenants that you are currently an admin on.
+
+There is a "default tenant" that is the one that is selected when you first log in.  If that tenant is not the one you use most often,
+you can [change the default tenant following these instructions](https://community.auth0.com/t/how-can-i-change-the-default-tenant-in-auth0-dashboard/8164).
 
