@@ -28,5 +28,5 @@ We suggest that you name your initial tenant `ucsb-cs156-cgaucho` where `cgaucho
 There is a pull-down menu at the upper right hand side of the Auth0 dashboard where you can create a new tenant, switch your tenant, or add additional admins to one of the tenants that you are currently an admin on.
 
 There is a "default tenant" that is the one that is selected when you first log in.  If that tenant is not the one you use most often,
-you can [change the default tenant following these instructions](https://community.auth0.com/t/how-can-i-change-the-default-tenant-in-auth0-dashboard/8164).
+you can change the default tenant at this link: <https://manage.auth0.com/dashboard/us/#/profile>
 
