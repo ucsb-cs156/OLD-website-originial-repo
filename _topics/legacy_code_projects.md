@@ -5,10 +5,15 @@ category_prefix: "Legacy Code: "
 indent: true
 apps: 
   - org: ucsb-cs156-w21
+    repo: demo-spring-react-minimal
+    heroku-prod: demo-spring-react-minimal
+    heroku-qa: demo-spring-react-minimal-qa
+    purpose: Minimal Starter Code for new apps
+  - org: ucsb-cs156-w21
     repo: demo-spring-react-todo-app
     heroku-prod: demo-spring-react-todo-app
     heroku-qa: demo-spring-react-todo-app-qa
-    purpose: Todo manager
+    purpose: Todo manager  
 ---
 
 This page provides a list of some of the legacy code repos associated with this course.  This is not necessarily a complete list; we provide links to the ones that 
