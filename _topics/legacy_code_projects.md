@@ -17,6 +17,7 @@ have active development.
 | Repo | Production Deployment | QA Deployment | Purpose |
 |------|-----------------------|---------------|---------|
 {% for app in page.apps %}| [{{app.repo}}](https://github.com/{{app.org}}/{{app.repo}}) | [{{app.heroku-prod}}](https://{{app.heroku-prod}}.herokuapp.com) | [{{app.heroku-qa}}](https://{{app.heroku-qa}}.herokuapp.com) | {{app.purpose}} |
-{% endfor %}
+{% endfor %}{:.table .table-sm .table-striped .table-bordered}
+
 
 
