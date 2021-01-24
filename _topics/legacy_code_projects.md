@@ -21,7 +21,7 @@ have active development.
 
 | Repo | Prod Deployment | Prod Heroku | QA Deployment | QA Heroku | Purpose |
 |------|-----------------|-------------|---------------|-----------|----------|
-{% for app in page.apps %}| [{{app.repo}}](https://github.com/{{app.org}}/{{app.repo}}) | [{{app.heroku-prod}}](https://{{app.heroku-prod}}.herokuapp.com) | [Prod Heroku](https://dashboard.heroku.com/apps/{{app.heroku-prod}}) | [{{app.heroku-qa}}](https://{{app.heroku-qa}}.herokuapp.com) | [QA Heroku](https://dashboard.heroku.com/apps/{{app.heroku-qa}}) | {{app.purpose}} |
+{% for app in page.apps %}| [{{app.repo}}](https://github.com/{{app.org}}/{{app.repo}}){:target="_blank"} | [{{app.heroku-prod}}](https://{{app.heroku-prod}}.herokuapp.com){:target="_blank"} | [Prod Heroku](https://dashboard.heroku.com/apps/{{app.heroku-prod}}){:target="_blank"} | [{{app.heroku-qa}}](https://{{app.heroku-qa}}.herokuapp.com){:target="_blank"} | [QA Heroku](https://dashboard.heroku.com/apps/{{app.heroku-qa}}){:target="_blank"} | {{app.purpose}} |
 {% endfor %}{:.table .table-sm .table-striped .table-bordered}
 
 
