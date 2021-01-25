@@ -14,6 +14,11 @@ apps:
     heroku-prod: demo-spring-react-todo-app
     heroku-qa: demo-spring-react-todo-app-qa
     purpose: Todo manager  
+  - org: ucsb-cs156-f20
+    repo: proj-ucsb-courses-search
+    heroku-prod: proj-ucsb-courses-search
+    heroku-qa: proj-ucsb-courses-search-qa
+    purpose: UCSB Courses Search  
 ---
 
 This page provides a list of some of the legacy code repos associated with this course.  This is not necessarily a complete list; we provide links to the ones that 
