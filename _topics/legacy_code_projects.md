@@ -14,7 +14,7 @@ apps:
     heroku-prod: demo-spring-react-todo-app
     heroku-qa: demo-spring-react-todo-app-qa
     purpose: Todo manager  
-  - org: ucsb-cs156-f20
+  - org: ucsb-cs156-w21
     repo: proj-ucsb-courses-search
     heroku-prod: proj-ucsb-courses-search
     heroku-qa: proj-ucsb-courses-search-qa
