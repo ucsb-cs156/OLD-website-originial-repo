@@ -19,6 +19,11 @@ apps:
     heroku-prod: proj-ucsb-courses-search
     heroku-qa: proj-ucsb-courses-search-qa
     purpose: UCSB Courses Search  
+  - org: ucsb-cs156-w21
+    repo: proj-ucsb-cs-las
+    heroku-prod: proj-ucsb-cs-las
+    heroku-qa: proj-ucsb-cs-las-qa
+    purpose: UCSB CS Dept Learning Assistant Program  
 ---
 
 This page provides a list of some of the legacy code repos associated with this course.  This is not necessarily a complete list; we provide links to the ones that 
