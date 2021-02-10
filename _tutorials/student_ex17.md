@@ -6,7 +6,11 @@ code_repo: https://github.com/ucsb-cs156/student-tutorial
 code_branch: ex17
 ---
 
-Code for this exercise: <https://github.com/ucsb-cs156/student-tutorial/tree/ex17>
+
+# {{page.topic}} - {{page.desc}}
+
+{% include student_tutorial_header.html %}
+
 
 
 In this exercise, we build on ex15, where we showed writing a `java.util.Compartor<Student>` that allows us to sort by name.
