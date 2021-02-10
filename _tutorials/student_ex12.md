@@ -6,6 +6,12 @@ code_repo: https://github.com/ucsb-cs156/student-tutorial
 code_branch: ex12
 ---
 
+# {{page.topic}} - {{page.desc}}
+
+{% include student_tutorial_header.html %}
+
+
+
 <style>
 .pop {
     outline:none;
