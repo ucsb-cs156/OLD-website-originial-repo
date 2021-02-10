@@ -6,6 +6,7 @@ code_repo: https://github.com/ucsb-cs156/student-tutorial
 code_branch: ex16
 ---
 
+Code for this exercise: <https://github.com/ucsb-cs156/student-tutorial/tree/ex16>
 
 In the previous exercise, we looked a sorting by name using a simple `java.util.Comparator<Student>`, implemented as a separate named class.
 
