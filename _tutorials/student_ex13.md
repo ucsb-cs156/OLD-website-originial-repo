@@ -6,6 +6,12 @@ code_repo: https://github.com/ucsb-cs156/student-tutorial
 code_branch: ex13
 ---
 
+# {{page.topic}} - {{page.desc}}
+
+{% include student_tutorial_header.html %}
+
+
+
 In this exercise we show how to read a list of students from a text file
 in `.csv` format (comma separated values) into a list of `Student` object
 in memory.   This is a preliminary step to showing how to do sorting of
