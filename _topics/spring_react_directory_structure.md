@@ -19,6 +19,7 @@ Under the `src/main/java` directory, under a package name suitable for the proje
 * `advice`
 * `config`
 * `controllers`
+* `documents`
 * `entities`
 * `models`
 * `repositories`
