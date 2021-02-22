@@ -31,7 +31,15 @@ for example, a PR that adds a new kind of CRUD operation to an application might
 a developer wants to add a CRUD operation to the same product.   So having a good description, along with good commit messages is 
 key to helping the next wave of developers understand the changes that were made to the product.
 
-# PR Descriptions
+# PR Description Examples
+
+From: <https://github.com/ucsb-cs156-w21/proj-ucsb-courses-search/pull/132>
+
+>It's time to register for Spring classes! This short PR adds the S21 option for the Basic Course Search on the main page and sets it as the default option.
+>
+> This change is only being made in `BasicCourseSearchForm` for now, since the MongoDB archive doesn't have anything for S21 yet. I'll make a separate PR for the dropdowns of the archived course searches, which we can merge in when the MongoDB archive is made.
+
+# PR Description Prompts
 
 At a minimum, you can write something like this 
 
