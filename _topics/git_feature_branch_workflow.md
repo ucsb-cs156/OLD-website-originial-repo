@@ -4,9 +4,36 @@ desc: "One branch per feature/issue/story"
 indent: true
 ---
 
-This article describes a more advanced workflow than the [Git: Basic Workflow](/topics/git_basic_workflow/) where all work is done on the master branch.
+This article describes a more advanced workflow than the [Git: Basic Workflow](/topics/git_basic_workflow/) where all work is done on the `main` branch.
 
 You should be completely comfortable with the [Git: Basic Workflow](/topics/git_basic_workflow/) before diving into this more advanced topic.
+
+# A quick refresher: create a new branch off `main`
+
+If you are already familiar with this topic, here's a brief refresher on how to create a new feature branch.  If this is your first time reading about this topic, don't worry if this doesn't entirely make sense yet.
+
+To create a new feature branch, first decide on a name for your branch, e.g. `4pm-3-sortCoursesByQtr`.  We'll just call the new branch `4pm-3-newBranch`
+
+```
+git status
+git fetch
+git checkout main
+git pull origin main
+git checkout -b newBranch
+```
+
+An explanation of each of these comamnds:
+
+| Command | Explanation |
+|---------|-------------|
+| `git status` | Be sure there is no unsaved work; if so, deal with it first. |
+| `git fetch` | Update all of the local branch information in your repo |
+| `git checkout main` | Put your repo on the `main` branch |
+| `git pull origin main` | Update the local `main` branch to be synced with the `main` branch on the `origin` remote (i.e. GitHub) |
+| `git checkout -b newBranch` | Create a new branch called `newbranch` that starts out pointing to the same commit as `main` |
+{:.table .table-sm .table-striped .table-bordered}
+
+
 
 # A workflow based on feature branches
 
