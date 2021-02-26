@@ -14,9 +14,10 @@ desc: "aka PRs; a checklist for doing them properly"
    - You can link to an issue with certain magic words such as `Closes #15`, `Fixes #27`
    - But if you don't phrase it just right, the link doesn't happen.
    - In that case, use the manual feature for linking to an issue (see below)
-
-
-
+3. Linked Issue is in the "In Review" column on team's Kanban board.
+4. PR is tagged with the Team's tag, like this one:
+   ![tagged PR](tagged-PR.png)
+   
 
 # Linking a PR to an issue
 
