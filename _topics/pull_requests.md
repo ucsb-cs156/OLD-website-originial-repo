@@ -43,7 +43,7 @@ desc: "aka PRs; a checklist for doing them properly"
  ![Animated Gif that shows how to link a PR to an issue](link-PR.gif)
  
  
- # Doing a Code Review
+# Doing a Code Review
  
 Many companies use "branch protection" rules in GitHub for their `main` branch (or `master` branch, if using the older convention).
 
