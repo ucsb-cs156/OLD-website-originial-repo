@@ -24,4 +24,5 @@ desc: "aka PRs; a checklist for doing them properly"
  
  But if that doesn't work, here's how to do it manually:
  
+ ![Animated Gif that shows how to link a PR to an issue](link-PR.gif)
  
