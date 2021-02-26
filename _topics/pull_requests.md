@@ -42,3 +42,17 @@ desc: "aka PRs; a checklist for doing them properly"
  
  ![Animated Gif that shows how to link a PR to an issue](link-PR.gif)
  
+ 
+ # Doing a Code Review
+ 
+Many companies use "branch protection" rules in GitHub for their `main` branch (or `master` branch, if using the older convention).
+
+Rules may include the number of code reviews that must be done.  In our case, we are requiring two code reviews, one from the team, and one from a member of staff.
+
+For these code reviews to "count", i.e. to make the PR mergable, the code review needs to be done *with the right set of mouse clicks* in GitHub. (It isn't enough, for exmaple, to just put a "comment" `LGTM` ("Looks Good To Me"); that comment has to be done *as an approving code review*. 
+
+Here's what that looks like. 
+
+![Approving Code Review](LGTM-Code-Review.gif)
+
+
