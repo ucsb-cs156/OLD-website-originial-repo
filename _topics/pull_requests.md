@@ -32,6 +32,7 @@ desc: "aka PRs; a checklist for doing them properly"
 9. Address any merge conflicts that exist between your feature branch and the then current `main` branch.  You may need to "rebase" your branch on main.
    - Merge conflicts with `package-lock.json` are a special case covered here: <https://ucsb-cs156.github.io/topics/spring_react_package_lock_json_merge_conflicts/>
    - If you have other merge conflicts that you don't know how to resolve, ask for help.
+1. Is it still a "draft PR"?  If so, you need to convert it to a regular PR before it can be merged.
    
 
 # Linking a PR to an issue
