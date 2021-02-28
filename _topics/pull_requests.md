@@ -57,3 +57,16 @@ Here's what that looks like.
 ![Approving Code Review](LGTM-Code-Review.gif)
 
 
+# What to look for in a Code Review?
+
+Students often ask what they should look for in a code review.  
+
+In general, you are looking for any opportunities to make the code better, and/or to find things the developer may have missed. It should be approached in a spirit of "helpful suggestions".
+
+1. It can be helpful to test the code on your team's Heroku deployment at the same time you are reviewing the code.
+2. It's good to look for any "commented out code" that the developer may have left in the code while they were debugging, and suggest that it be removed.
+3. It's helpful to look for opportunities to make the code "DRYer", i.e. to follow the rule "Don't Repeat Yourself".   Is there copy/pasted code that could be factored out into a common function or method?
+4. It's helpful to look for opportunities to improve naming.  Are the variables names, class names, and method names chosen meaningful and helpful to others reading the code?
+
+These are just a few examples to give the idea of the kinds of things you can be looking for.
+
