@@ -38,6 +38,19 @@ You should see `javac 11.0.8` as the output.
 
 Disconnect and reconnect to double check that it still works; if it still does, then you've solved the problem.
 
+# `Error: A JNI error has occurred, please check your installation and try again`
+
+This error usually indicates a mismatch between the Java versions being used. For example, you may have compiled with Java 11 but are using an older version of the JRE. First make sure your `JAVA_HOME` variable is set to JAVA 11 (following the instructions in the first part of this post if necessary), then make sure your `PATH` environment variable is updated to make sure the JRE for Java 11 is being used: 
+
+```
+export PATH=$JAVA_HOME/bin:$PATH
+```
+To make this change permanent, add it to your `.bashrc`:
+```
+echo 'PATH=$JAVA_HOME/bin:$PATH' >> ~/.bashrc
+source ~/.bashrc
+```
+
 # What the heck: `[WARNING] Using platform encoding (UTF-8 actually)`
 
 Here's what to do:

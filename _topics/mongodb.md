@@ -1,5 +1,5 @@
 ---
-topic: "MongoDB"
+topic: "MongoDB: "
 desc: "A particular NoSQL database platform"
 category_prefix	: "MongoDB: "
 ---

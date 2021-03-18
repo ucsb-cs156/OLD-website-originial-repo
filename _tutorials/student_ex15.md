@@ -6,6 +6,12 @@ code_repo: https://github.com/ucsb-cs156/student-tutorial
 code_branch: ex15
 ---
 
+# {{page.topic}} - {{page.desc}}
+
+{% include student_tutorial_header.html %}
+
+
+
 In ex14, we looked at implementing the `java.lang.Comparable<T>` interface.  This allows us to define what Java calls a *natural order* for a class.   
 
 If you have an `ArrayList<Foo> myarray;` for any class `Foo` that implements the `java.lang.Comparable<Foo>` interface, you can sort that array  can be sorted by simply invoking `myarray.sort();`.    

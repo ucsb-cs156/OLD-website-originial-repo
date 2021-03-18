@@ -7,6 +7,12 @@ code_branch: ex17
 ---
 
 
+# {{page.topic}} - {{page.desc}}
+
+{% include student_tutorial_header.html %}
+
+
+
 In this exercise, we build on ex15, where we showed writing a `java.util.Compartor<Student>` that allows us to sort by name.
 
 The Comparator in ex15 was implemented as a separate named class.  However, since Java 8, it is much easier to write Comparators as

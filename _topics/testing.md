@@ -1,45 +1,19 @@
 ---
-topic: "Testing"
+topic: "Testing: "
 desc: "Everything having to do with testing: Unit testing, Integration Testing, Test Coverage"
 category_prefix: "Testing: "
 ---
 
-# Test Coverage (aka Code Coverage)
+# Testing
 
-It's helpful to be able to measure how much of our code is covered by tests.  This metric is known as "test coverage" or "code coverage".
 
-# Line Versus Branch Coverage
+# Test Coverage
 
-Two common metrics are
+It's helpful to be able to measure how much of our code is covered by tests.  This metric is known as "test coverage" or "code coverage".  
 
-* line coverage (how many lines of our code are covered by tests)
-* branch coverage (how many branches, i.e. directions we can go, are covered by tests.)
+* General Introduction, including line vs. branch coverage: <https://ucsb-cs156.github.io/topics/testing_coverage/>
+* JaCoCo, a test Coverage Tool for Java: <https://ucsb-cs156.github.io/topics/testing_jacoco/>
 
-It might be immediately obvious why those are not the same.
 
-The answer is that not every if statement has an else.
 
-```
-  color="blue";
-  if (x<10) {
-      color="red";
-  }
-  foo(color);
-```
-
-Suppose we have a test that covers the case where `x<10` evaluates to true.   Then for those code, we have 100% line coverage, but we 
-do not necessarily have 100% branch coverage unless we ALSO have a test that covers the case when `x<10` evaluates to false.   That means
-that there is a branch into calling `foo(color)` when `color` still has the value "blue", and that branch is untested.
-
-# Tools for measuring test coverage
-
-One such tool is `Jacoco` (http://www.jacoco.org/jacoco/index.html)
-
-The [documentation for Jacoco](http://www.jacoco.org/jacoco/trunk/doc/index.html) can be difficult to follow.
-
-Here is some help:
-
-* https://www.codeproject.com/Articles/832744/Getting-Started-with-Code-Coverage-by-Jacoco
-* http://www.baeldung.com/jacoco
-* https://github.com/powermock/powermock/wiki/Code-coverage-with-JaCoCo
 
