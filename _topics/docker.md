@@ -23,3 +23,13 @@ The files required to setup Docker (as implemented in this class), are as follow
 
 ## I opened up `./dev_environment` in multiple windows and both windows are showing the same output
 Sometimes, when you `./dev_environment` multiple times quickly, there is a race condition which causes the command to open up the same bash instance. To avoid this, make sure the first `./dev_environment` has loaded before running `./dev_environment` a second time.
+
+# Instructions for WSL
+
+To use the docker support in our projects on the Windows Subsystem for Linux environment (instead of native powershell/cmd/etc) you need to do the following:
+
+* Make sure you have WSL2- this is a separate environment from regular WSL.
+  - If you already have regular WSL, you can have separate Linux distributions with different WSL versions.
+  - WSL2 setup is here: <https://docs.microsoft.com/en-us/windows/wsl/install-win10>
+* Follow the instructions here for WSL2 Docker setup: <https://docs.docker.com/docker-for-windows/wsl/>
+* Make sure you have `/mnt/c/"Program Files"/Docker/Docker/resources/bin` in your `PATH` variable in their WSL2 `.bashrc`
