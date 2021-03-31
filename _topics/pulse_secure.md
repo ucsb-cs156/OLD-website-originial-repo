@@ -32,9 +32,9 @@ After installing, visit https://ps.vpn.ucsb.edu/install to set up your VPN clien
 
 As an alternative to configuring your machine using the pre-made installers or installing a deivce management profile, you can manually set up your Pulse Secure VPN client by inputting the following parameters in your VPN client configuration:
 
-Server name or address: https://ps.vpn.ucsb.edu/ra
-Username: <your UCSB NetID>
-Password: <your UCSB NetID password>
+* Server name or address: https://ps.vpn.ucsb.edu/ra
+* Username: <your UCSB NetID>
+* Password: <your UCSB NetID password>
 
 ## Notes about the VPN
 
