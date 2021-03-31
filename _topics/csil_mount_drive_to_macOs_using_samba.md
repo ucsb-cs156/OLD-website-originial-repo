@@ -11,7 +11,7 @@ To mount CSIL drive onto your MacOS machine, you must on the UCSB network. If yo
 Video instructions: <https://youtu.be/FTlxjhjwbt0>
 
 
-## Ucsb Pulse Secure Vpn
+## UCSB Pulse Secure VPN
 *Note: You can skip this step if you are on the `eduraom` or `ucsb wireless web` network*
 
 To download, install, and run the USCB Pulse Secure VPN  follow download link below and the guide created by the [UCSB IT](https://www.it.ucsb.edu/) department.  
