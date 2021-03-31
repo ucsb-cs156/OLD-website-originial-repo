@@ -2,6 +2,7 @@
 topic: "Testing: React"
 desc: "How to use Jest and React Testing Library for various scenarios"
 category_prefix: "Testing: "
+indent: true
 ---
 
 # Testing for presence of a link
