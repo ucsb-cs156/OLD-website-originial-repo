@@ -22,3 +22,8 @@ desc: "Various sources for datasets to build applications with"
    * List of Station Ids: <https://tidesandcurrents.noaa.gov/tide_predictions.html?gid=1393>
    * Santa Barbara is: 9411340, Gaviota is: 9411399
    * Note: Python code to read this data: <https://github.com/GClunies/noaa_coops/blob/master/noaa_coops/noaa_coops.py>
+
+# Lists of APIS
+
+* <https://mixedanalytics.com/blog/list-actually-free-open-no-auth-needed-apis/>
+* <https://github.com/public-api-lists/public-api-lists>
