@@ -12,3 +12,4 @@ Here are some resources that describe how this works:
 * <https://dzone.com/articles/spring-boot-restful-api-documentation-with-swagger> 
 * <https://www.springboottutorial.com/spring-boot-swagger-documentation-for-rest-services>
 * <https://www.dariawan.com/tutorials/spring/documenting-spring-boot-rest-api-swagger/>
+* <https://howtodoinjava.com/swagger2/swagger-spring-mvc-rest-example/>
