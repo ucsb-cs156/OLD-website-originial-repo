@@ -50,14 +50,14 @@ Here's the short version--on first install:
 ```
 brew update
 brew tap AdoptOpenJDK/openjdk
-brew cask install adoptopenjdk11
+brew install --cask adoptopenjdk11
 ```
 
 On later upgrades (e.g. from 11.0.6,10 -> 11.0.9.1,1) use:
 
 ```
 brew update
-brew cask upgrade adoptopenjdk11
+brew upgrade --cask adoptopenjdk11
 ```
 
 
@@ -76,7 +76,7 @@ OpenJDK Runtime Environment AdoptOpenJDK (build 11.0.2+9)
 OpenJDK 64-Bit Server VM AdoptOpenJDK (build 11.0.2+9, mixed mode)
 ```
 
-# Install Mavem
+# Install Maven
 
 After installing Java 11, do this to install maven:
 
