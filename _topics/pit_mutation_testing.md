@@ -26,3 +26,4 @@ One tool for mutation testing in Java is PIT Test, which is explained at <https:
 # See also
 
 * Discussion of Mutation testing in <https://ucsb-cs156.github.io/tutorials/student_ex08/>
+* Baeldung Article: <https://www.baeldung.com/java-mutation-testing-with-pitest>
