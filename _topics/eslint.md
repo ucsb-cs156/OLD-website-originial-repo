@@ -24,7 +24,22 @@ As an example, in Storybook code, there is a convention that results in this war
 The string `import/no-anonymous-default-export` is a label that identifies this particular issue.  What we want to do
 is suppress these warnings, but only under the directory tree `src/stories`.
 
-To do this, we can modify the file `.eslintrc.json` in the `javascript` directory.
+To do this, we can modify the file `.eslintrc.json` in the `javascript` directory as follows:
+
+```
+{
+    "extends": ["react-app"],
+    "overrides": [
+      {
+        "files": ["src/stories/**"],
+        "rules": {
+          "import/no-anonymous-default-export": "off"
+        }
+      }
+    ]
+}
+```
+
 
 The process is documented here: <https://eslint.org/docs/user-guide/configuring/>
 
