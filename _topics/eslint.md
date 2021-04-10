@@ -29,5 +29,10 @@ To do this, we can modify the file `.eslintrc.json` in the `javascript` director
 The process is documented here: <https://eslint.org/docs/user-guide/configuring/>
 
 Note that because we are using Create-React-App, there are some subtle issues that arise,
-as explained here: <https://create-react-app.dev/docs/setting-up-your-editor/#extending-or-replacing-the-default-eslint-config>
+as explained here: <https://create-react-app.dev/docs/setting-up-your-editor/#extending-or-replacing-the-default-eslint-config>.  What it boils down to is that you need this line in your configuration so that your customizations extend the ones already being done under the hood
+for `react-app`, rather than replacing them, resulting in strange issues.
+
+```
+  "extends": ["react-app"],
+```
 
