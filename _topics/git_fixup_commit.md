@@ -32,3 +32,10 @@ The technique is explained in:
 
 But here's the short version:
 
+1. Use `git log` to identify sha of commit you want to fix up (call this abcd1234), and the sha of the commit immediately before that one (e.g. dcba5678)
+
+2. Use `git add` to add the files you want to add to your fixup commit
+3. `git commit --fixup abcd1234` (sha of commit you want to fix up)
+4. `git rebase -i --autosquash dcba5678` (sha of commit right before the one you want to fix up)
+5. Exit the editor window (you don't have to change anything; the `--autosquash` has taken care of that).  For vim, it's type escape key, then `:wq`
+6. force push your branch, e.g. `git push origin my-branch-name`
