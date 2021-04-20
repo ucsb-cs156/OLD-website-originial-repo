@@ -147,7 +147,7 @@ Then, open `/etc/rc.local` in your favorite text editor using sudo.
 sudo vim /etc/rc.local
 ```
 
-Add the following line to the file, substituting your account username for <USERNAME> and the copied path for `<RUNNER_DIR>`:
+Add the following line to the file, substituting your account username for `\<USERNAME\>` and the copied path for `\<RUNNER_DIR\>`:
 
 ```
 sudo -i -u <USERNAME> <RUNNER_DIR>/run.sh > <RUNNER_DIR>/output.txt
