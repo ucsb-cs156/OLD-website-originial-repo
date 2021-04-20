@@ -53,7 +53,7 @@ Add the following line to the end of `~/.bashrc`
 export JAVA_HOME="/usr/lib/jvm/jdk-11.0.10"
 ```
 
-Add the following directory into the PATH in `/etc/environment` (using sudo): `:/usr/lib/jvm/jdk-11.0.10/bin`.
+Add the following directory into the PATH in `/etc/environment` (using sudo): `:/usr/lib/jvm/jdk-11.0.10/bin`
 
 Your new PATH should look something like this:
 
