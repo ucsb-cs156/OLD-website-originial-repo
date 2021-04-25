@@ -53,7 +53,12 @@ To remedy this, you can make a "dummy" commit, PR, and merge to establish the ba
 
  5. Merge the PR
  6. Then, check the badge and the CI/CD runs.  Note that you might also need to take these additional steps:
-    - Getting a new `CODECOV_TOKEN` for the repo and updating the Secret on the GitHub settings for the repo.
-    - Getting the new Markdown for the badge from Codecov (it is not longer a matter of just updating the markdown, since codecov now also has a token built into the markdown.)
+    - Getting a new `CODECOV_TOKEN` for the repo and updating the Secret on the GitHub settings for the repo.  
+      
+      To obtain this token, visit: <https://app.codecov.io/gh/org-name/repo-namesettings/general> (substituting in the values of `org-name` and `repo-name`). 
+    
+    - Getting the new Markdown for the badge from Codecov (it is not longer a matter of just updating the markdown, since codecov now also has a token built into the markdown.)   
+
+      To obtain this markdown, visit <https://app.codecov.io/gh/org-name/repo-name/settings/badge> (substituting in the values of `org-name` and `repo-name`). 
     
     
