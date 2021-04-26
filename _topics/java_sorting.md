@@ -530,3 +530,13 @@ public class SortStudents01 {
     
 }
 {% endhighlight %}
+
+# Advanced Comparators
+
+Once you understand the idea of a Comparator and a lambda, you can get more advanced.
+
+
+* Automatic generation of comparators from getters (<https://howtodoinjava.com/java/sort/sort-on-multiple-fields/>)
+* using `.thenComparing()` to sort on multiple fields  (<https://howtodoinjava.com/java/sort/sort-on-multiple-fields/>)
+* using `.reversed()` to reverse the order of an existing comparator (https://howtodoinjava.com/java/sort/collections-sort/)
+
