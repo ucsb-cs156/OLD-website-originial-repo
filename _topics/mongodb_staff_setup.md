@@ -62,6 +62,14 @@ data is retained, and older data is automatically deleted.
 For proj-ucsb-cs-las, we need to create new databases for each quarter, and for each team, since read/write access is required.
 
 
+## Onboarding new teams and devs
+
+* First, create a new organization for the quarter, e.g. `ucsb-cs156-s21`.  Add all staff members with admin access.
+* Second, create a project for each team, e.g. `team-s21-6pm-1`, `team-s21-6pm-2`, etc.   Under each project, you'll need to also create a new cluster, and
+  this takes some time, so it's a good idea to batch this so that the cluster creation can happen in parallel; you can then return to the first team
+  to do the credential generation while the others are generating.
+
+
 # proj-mapache-search
 
 For mapache-search, the MongoDB database is used to store information from a Slack workspace.   MongoDB is chosen because the data originates as hierarchical data in JSON; flattening it into data suitable for a relational database (i.e. flat tables) would be quite cumbersome.
