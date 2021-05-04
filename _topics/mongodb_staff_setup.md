@@ -44,7 +44,7 @@ There is a MongoDB Organization called "ucsb-cs156", which has under it, a proje
   the instructions will tell you to look for this message in your team's Slack channel.
   ```
   
-  Then something like this:
+  Then something like this.  Note that if you just copy the URL from the MongoDB interface, it may have `myFirstDatabase` as a placeholder for the database name; you'll need to change this as well before sharing the URL with the student teams (or else specify the true database name separately, and advise them to substitute it in.)
   
   ```
   Password: `paste-it-here`
