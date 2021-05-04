@@ -35,7 +35,14 @@ There is a MongoDB Organization called "ucsb-cs156", which has under it, a proje
 
 * Navigate under [cloud.mongodb.com](https://cloud.mongodb.com) to Organization `ucsb-cs156`, Project `ucsb-courses-search`.
 * Create a new database user for each team with names such as `team-s21-5pm-1`, `team-s21-5pm-2`, etc., each with the privilege level `readAnyDatabase`
-* Distribute the MongoDB credentials to the teams' slack channels. 
+* Distribute the MongoDB credentials to the teams' slack channels.   You can use a message like this one:
+  ```
+  In the reply to this message, you will find a MongoDB username/password with read-only access
+  to the for the database used by proj-ucsb-courses-search, one specific to your team.  
+  
+  You'll need this for an upcoming team activity; 
+  the instructions will tell you to look for this message in your team's Slack channel.
+  ```
 
 # proj-ucsb-cs-las
 
