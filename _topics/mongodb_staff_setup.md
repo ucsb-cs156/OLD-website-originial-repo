@@ -27,7 +27,15 @@ In the future, it may be helpful to implement some new features that would requi
   for any queries for past quarters.
 * a "background jobs" feature built into the app that can obtain data (slowly) from the API and populate the MongoDB database (as the script does), but built
   into the app as an Admin only feature.
+  
+  
+## Onboarding new teams and devs
 
+There is a MongoDB Organization called "ucsb-cs156", which has under it, a project `ucsb-courses-search`.  The production database for `ucsb-courses-search` is shared by all instances of the repo (prod, qa, dev) since it is read only.    To onboard a new course instance:
+
+* Navigate under [cloud.mongodb.com](https://cloud.mongodb.com) to Organization `ucsb-cs156`, Project `ucsb-courses-search`.
+* Create a new database user for each team with names such as `team-s21-5pm-1`, `team-s21-5pm-2`, etc., each with the privilege level `readAnyDatabase`
+* Distribute the MongoDB credentials to the teams' slack channels. 
 
 # proj-ucsb-cs-las
 
