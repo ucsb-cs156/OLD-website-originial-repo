@@ -65,7 +65,9 @@ For proj-ucsb-cs-las, we need to create new databases for each quarter, and for 
 ## Onboarding new teams and devs
 
 * First, create a new organization for the quarter, e.g. `ucsb-cs156-s21`.  Add all staff members with admin access.
-* Second, create a project for each team, e.g. `team-s21-6pm-1`, `team-s21-6pm-2`, etc.   Under each project, you'll need to also create a new cluster, and
+* Second, create a project for each team, e.g. `team-s21-6pm-1`, `team-s21-6pm-2`, etc. and then immediately create a cluster. (You can skip adding users for now)
+
+  Under each project, you'll need to also create a new cluster, and
   this takes some time, so it's a good idea to batch this so that the cluster creation can happen in parallel; you can then return to the first team
   to do the credential generation while the others are generating.
 
