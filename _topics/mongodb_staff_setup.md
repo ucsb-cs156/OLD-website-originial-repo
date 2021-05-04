@@ -70,6 +70,7 @@ For proj-ucsb-cs-las, we need to create new databases for each quarter, and for 
   Under each project, you'll need to also create a new cluster, and
   this takes some time, so it's a good idea to batch this so that the cluster creation can happen in parallel; you can then return to the first team
   to do the credential generation while the others are generating.
+* Third, if it doesn't already exist, create a "Team" at the "Organization" level.  This is done in the `Access Manager` tab near the top of the page.
 
 
 # proj-mapache-search
