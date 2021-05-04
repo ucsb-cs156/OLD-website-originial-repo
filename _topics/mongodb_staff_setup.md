@@ -43,6 +43,16 @@ There is a MongoDB Organization called "ucsb-cs156", which has under it, a proje
   You'll need this for an upcoming team activity; 
   the instructions will tell you to look for this message in your team's Slack channel.
   ```
+  
+  Then something like this:
+  
+  ```
+  Password: `paste-it-here`
+  Username: `team-s21-5pm-1`
+  Url: `mongodb+srv://<username>:<password>@cluster0.ulqcw.mongodb.net/database?retryWrites=true&w=majority`
+  
+  You should substitute in the username and password into the Url.  Remove the <> characters around the words <username>  and <password> as well. 
+  ```
 
 # proj-ucsb-cs-las
 
