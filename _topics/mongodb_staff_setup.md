@@ -100,4 +100,26 @@ For proj-mapache-search, the app has read-only access to the data; the data is u
 
 1. Set up a new cluster for the Mapache database under the current quarter organization.
 2. Set up database called `slack` and regular collections called `channels` and `messages` and `users` (not capped).
+3. To populate the database, see [TODO INSERT THESE INSTRUCTIONS]
+4. Create a new database user for each team with names such as `team-s21-7pm-1`, `team-s21-7pm-2`, etc., each with the privilege level `readAnyDatabase`
+
+Then, distribute the MongoDB credentials to the teams' slack channels.   You can use a message like this one:
+
+```
+In the reply to this message, you will find a MongoDB username/password with read-only access
+to the for the database used by proj-ucsb-courses-search, one specific to your team.  
+
+You'll need this for an upcoming team activity; 
+the instructions will tell you to look for this message in your team's Slack channel.
+```
+  
+Then something like this.  Note that if you just copy the URL from the MongoDB interface, it may have `myFirstDatabase` as a placeholder for the database name; you'll need to change this to `slack` as well before sharing the URL with the student teams (or else specify the true database name separately, and advise them to substitute it in.)
+  
+```
+Password: `paste-it-here`
+Username: `team-s21-7pm-1`
+Url: `mongodb+srv://<username>:<password>@cluster0.ulqcw.mongodb.net/slack?retryWrites=true&w=majority`
+
+You should substitute in the username and password into the Url.  Remove the <> characters around the words <username>  and <password> as well.  
+```
 
