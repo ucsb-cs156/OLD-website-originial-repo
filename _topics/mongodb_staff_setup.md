@@ -77,7 +77,16 @@ For proj-ucsb-cs-las, we need to create new databases for each quarter, and for 
    * username: `dbuser`
    * password: Autogenerate
    * Click `Add User`
-  
+7. Get the URl from each cluster from `Clusters`, then `CONNECT` then `Connect your application`.  Paste the url into the slack channel with these instructions:
+
+   * Initial message: `MongoDB credentials in reply to this message`
+   * Reply 1: paste url
+   * Reply 2: paste these instructions: 
+     ```
+     Replace `<password>` with the password for the `dbuser` user, coming in a future message (take out the `<>`).  Replace `myFirstDatabase` with `database`
+     ```
+   * Reply 3 will have the password, and comes after step 8.
+8. For each project, reset the password for the `dbuser`, copy it, and paste it into each of the reply 3's  
 
 # proj-mapache-search
 
