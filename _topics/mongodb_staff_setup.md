@@ -95,3 +95,8 @@ For mapache-search, the MongoDB database is used to store information from a Sla
 A new database instance should be created for each quarter, since the database contains data from the current slack workspace.
 
 For proj-mapache-search, the app has read-only access to the data; the data is updated by a script run by the staff.   
+
+## Onboarding new teams and devs
+
+1. Set up a new cluster for the Mapache database under the current quarter organization.
+2. 
