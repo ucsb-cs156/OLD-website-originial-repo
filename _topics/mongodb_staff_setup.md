@@ -73,7 +73,11 @@ For proj-ucsb-cs-las, we need to create new databases for each quarter, and for 
 3. If it doesn't already exist, create a "Team" at the "Organization" level.  This is done in the `Access Manager` tab near the top of the page.
 4. For each cluster, use the "Use My Own Data" option.  Create a database called `database` and a capped collection called `logins` (`2000000 bytes`).
 5. For each project, click `Network Access`, then `Add IP Address`, then `Allow Access from Anywhere` then `Confirm`.
-
+6. For each project, click `Database Access`, then `Add New Database User` then put in:
+   * username: `dbuser`
+   * password: Autogenerate
+   * Click `Add User`
+  
 
 # proj-mapache-search
 
