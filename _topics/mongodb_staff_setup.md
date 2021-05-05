@@ -99,4 +99,5 @@ For proj-mapache-search, the app has read-only access to the data; the data is u
 ## Onboarding new teams and devs
 
 1. Set up a new cluster for the Mapache database under the current quarter organization.
-2. 
+2. Set up database called `slack` and regular collections called `channels` and `messages` and `users` (not capped).
+
