@@ -64,13 +64,15 @@ For proj-ucsb-cs-las, we need to create new databases for each quarter, and for 
 
 ## Onboarding new teams and devs
 
-* First, create a new organization for the quarter, e.g. `ucsb-cs156-s21`.  Add all staff members with admin access.
-* Second, create a project for each team, e.g. `team-s21-6pm-1`, `team-s21-6pm-2`, etc. and then immediately create a cluster. (You can skip adding users for now)
+1. Create a new organization for the quarter, e.g. `ucsb-cs156-s21`.  Add all staff members with admin access.
+2. Create a project for each team, e.g. `team-s21-6pm-1`, `team-s21-6pm-2`, etc. and then immediately create a cluster. (You can skip adding users for now)
 
-  Under each project, you'll need to also create a new cluster, and
-  this takes some time, so it's a good idea to batch this so that the cluster creation can happen in parallel; you can then return to the first team
-  to do the credential generation while the others are generating.
-* Third, if it doesn't already exist, create a "Team" at the "Organization" level.  This is done in the `Access Manager` tab near the top of the page.
+   Under each project, you'll need to also create a new cluster, and
+   this takes some time, so it's a good idea to batch this so that the cluster creation can happen in parallel; you can then return to the first team
+   to do the credential generation while the others are generating.
+3. If it doesn't already exist, create a "Team" at the "Organization" level.  This is done in the `Access Manager` tab near the top of the page.
+4. For each cluster, use the "Use My Own Data" option.  Create a database called `database` and a capped collection called `logins` (`2000000 bytes`).
+5. For each project, click `Network Access`, then `Add IP Address`, then `Allow Access from Anywhere` then `Confirm`.
 
 
 # proj-mapache-search
