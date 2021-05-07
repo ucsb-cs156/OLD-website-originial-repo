@@ -69,14 +69,14 @@ New components should be placed in:
 For page components, a recommended CMPSC 156 naming convention is to add `Page` to the end of the component name, as shown in this 
 screen shot from the starter code for `team02` from S21, and keep them in a flat directory. Note that this convention may not always have been followed in the legacy code projects in the past, but it would be desirable to move in the direction of this convention over time.
      
-![Page components from team02](team02-page-components.png)   
+![Page components from team02](team02-page-components-50pct.png)   
      
 For the rest of the components, it may be useful to have a second level of directory to organize related components,
 as shown in these examples:
 
 | team02 | proj-ucsb-courses-search | proj-ucsb-cs-las | proj-mapache-search |
 |-|-|-|-|
-| ![team02-components](team02-components.png) | ![courses-components](courses-components.png)  | ![las-components](las-components.png)  | ![mapache-components](mapache-components.png) |
+| ![team02-components](team02-components-50pct.png) | ![courses-components](courses-components-50pct.png)  | ![las-components](las-components-50pct.png)  | ![mapache-components](mapache-components-50pct.png) |
 {:.table .table-sm .table-striped .table-bordered}
 
 
