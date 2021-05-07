@@ -53,3 +53,30 @@ Here are just a few of the components on this page:
 
 # Writing a new component
 
+React Components can be written in two ways:
+* Class based, with a structure where they inherit from `Component`, have constructors, and methods such as `componentDidMount`, and `componentDidUpdate`.  
+  - *We generally do not use this form of React component in CMPSC 156*.
+* Function based components, with a structure where the top level of the component is an *arrow function*.  
+  - *This is the style of React component we generally use in CMPSC 156*.
+  - This style of component uses *hooks*, which we'll explain more in detail at a later stage.
+
+New components should be placed in:
+* `javascript/src/main/pages` for components that represent a *full page* in the app
+* `javascript/src/main/components` for all other components (i.e. those that represent a portion of a page).
+
+A recommended CMPSC 156 naming convention is to add `Page` to the end of the component name, as shown in this 
+screen shot from the starter code for `team02` from S21, and keep them in a flat directory. Note that this convention may not always have been followed in the legacy code projects in the past, but it would be desirable to move in the direction of this convention over time.
+     
+![Page components from team02](team02-page-components)   
+     
+For the rest of the components, it may be useful to have a second level of directory to organize related components,
+as shown in these examples:
+
+| team02 | proj-ucsb-courses-search | proj-ucsb-cs-las | proj-mapache-search |
+|-|-|-|-|
+| ![team02-components](team02-components) | ![courses-components](courses-components)  | ![las-components](las-components)  | ![mapache-components](mapache-components) |
+     
+
+   
+
+ 
