@@ -51,7 +51,7 @@ Here are just a few of the components on this page:
   -  The footer for the page:  [`main/components/Footer/AppFooter.js`](https://github.com/ucsb-cs156-s21/proj-ucsb-courses-search/blob/main/javascript/src/main/components/Footer/AppFooter.js), which is included in `main/App.js`
  
 
-# Writing a new component
+# We use function based components, not class based
 
 React Components can be written in two ways:
 * Class based, with a structure where they inherit from `Component`, have constructors, and methods such as `componentDidMount`, and `componentDidUpdate`.  
@@ -60,11 +60,13 @@ React Components can be written in two ways:
   - *This is the style of React component we generally use in CMPSC 156*.
   - This style of component uses *hooks*, which we'll explain more in detail at a later stage.
 
-New components should be placed in:
-* `javascript/src/main/pages` for components that represent a *full page* in the app
-* `javascript/src/main/components` for all other components (i.e. those that represent a portion of a page).
+# New React Components go under `javascript/src/main/components` and  `javascript/src/main/pages`
 
-A recommended CMPSC 156 naming convention is to add `Page` to the end of the component name, as shown in this 
+New components should be placed in:
+* `javascript/src/main/components` for all nearly all components (i.e. those that represent a portion of a page).
+* `javascript/src/main/pages` only for components that represent a *full page* in the app
+
+For page components, a recommended CMPSC 156 naming convention is to add `Page` to the end of the component name, as shown in this 
 screen shot from the starter code for `team02` from S21, and keep them in a flat directory. Note that this convention may not always have been followed in the legacy code projects in the past, but it would be desirable to move in the direction of this convention over time.
      
 ![Page components from team02](team02-page-components)   
@@ -75,7 +77,9 @@ as shown in these examples:
 | team02 | proj-ucsb-courses-search | proj-ucsb-cs-las | proj-mapache-search |
 |-|-|-|-|
 | ![team02-components](team02-components) | ![courses-components](courses-components)  | ![las-components](las-components)  | ![mapache-components](mapache-components) |
-     
+{:.table .table-sm .table-striped .table-bordered}
+
+
 
    
 
