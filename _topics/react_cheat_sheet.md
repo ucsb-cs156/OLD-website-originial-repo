@@ -24,3 +24,15 @@ While this may seem extreme, I suggest having six terminal windows, each with sp
 {:.table .table-sm .table-striped .table-bordered}
 
 We'll refer to these windows throughout the rest of this cheat sheet.
+
+# Writing a new component
+
+What is a React Component?
+
+* A React Component is portion of a User Interface.
+* By convention, it has a name that starts with a capital letter (e.g. `StudentList`, `CourseForm`, `AdminPage`).
+* It can be an entire web page, or just a portion of a page.
+* It is considered good practice to write *small* components, i.e. to break down a larger user interface, e.g. an entire web page,
+  into smaller components that can be developed, tested, documented and maintained separately.
+  
+  
