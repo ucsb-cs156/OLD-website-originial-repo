@@ -80,7 +80,190 @@ as shown in these examples:
 {:.table .table-sm .table-striped .table-bordered}
 
 
+# Basic Outline of a Component
 
-   
+Here is a basic outline of a component that just displays a HTML `<h2>` heading element with text in it.
 
+```jsx
+import React from "react";
+
+const Header = ({ text }) => {
+  return (
+    <h2> 
+      {text}
+    </h2>
+  );
+};
+
+export default Header;
+```
+
+And here is a line-by-line explanation.
+
+Line 1 is: `import React from "react";`
+
+This indicates that we are writing a React component, and makes
+`React` available in the file.  In more recent versions of React, you
+technically no longer need this line, but you'll frequently see it.
+
+The next few lines, if we strip out the parameters, and the body, have the form:
+
+```jsx
+const Header = () => {};
+```
+
+That is, we are declaring a new variable `Header`, and it happens to refer to an *arrow function*, which is
+a type of value in Javascript.
+
+By convention, React components take one exactly one parameter called `props`.  However, through something called
+destructuring, it is possible to pass multiple parameters, by enclosing the params in `{}`.  So, here
+we see that `Header` takes one parameter called `text`:
+
+```
+const Header = ({ text }) => {};
+```
+
+We now see that inside the `{}` we have a return statement that returns some HTML.  This is the end result
+of all React components:
+
+```
+const Header = ({ text }) => {    // Overall, this is a function declaration, e.g. const Header = () => {};
+  return (
+    <h2> 
+      {text}
+    </h2>
+  );
+};
+```
+
+Each React component should return a single component, or HTML element.  It may have other HTML elements or components nested inside, but at the top
+level, just there should be just one.  If you need to return multiple elements or components, you need to wrap them in what's called a *fragment* tag, as in this example
+from the [React documentation](https://reactjs.org/blog/2017/11/28/react-v16.2.0-fragment-support.html).  Here the `<>` and `</>` are used at the top level to indicate that the three children should be returned as if they were one HTML element.
+
+
+```jsx
+render() {
+  return (
+    <>
+      <ChildA />
+      <ChildB />
+      <ChildC />
+    </>
+  );
+}
+```
  
+# New Components should have tests, and stories 
+ 
+When adding a file for a new component such as `src/main/components/General/Header.js`, you should also add:
+* A file with tests for that component, e.g. `src/test/components/General/Header.test.js`
+* A file with stories for the storybook.  This may be in one of two formats:
+  - `src/stories/components/General/Header.stories.js` (Javascript format)
+  - `src/stories/components/General/Header.stories.mdx` (MDX format, which is a mix of Markdown and JSX)
+  The MDX format is a lot more expressive, and is recommended for new components. Some older stories may have been
+  written in the JS format.
+
+# Writing a test 
+
+Here's a very simple example test for our Header component.  You run the test in the `javascript` directory using `npm test`:
+
+```js
+import React from "react";
+import { render } from "@testing-library/react";
+import Header from "main/components/General/Header";
+
+describe("Header tests", () => {
+  test("The component should include the text", () => {
+    const { getByText } = render(
+      <Header 
+         text={"Go Gauchos!"}
+      />
+    );
+    expect(getByText("Go Gauchos!")).toBeInTheDocument();
+  });
+});
+```
+
+# Writing a story
+
+Here's a simple example of a Story file written in JavaScript.  You check the storybook using `npm run storybook`.  
+
+Note that while some errors may show up in the console where you ran `npm run storybook`.
+most of the errors (if any) building the storybook  show up in the *console of the browser*, not the console
+of the terminal session.  You'll need to right click in the browser window, select `Inspect Element`, and then
+find the console in the developer panel that pops up.
+
+```
+
+import React from 'react';
+
+import Header from "main/components/General/Header";
+
+export default {
+    title: 'components/General/Header',
+    component: Header
+};
+
+const Template = (args) => {
+    return (
+        <Header {...args} />
+    )
+};
+
+
+export const example1 = Template.bind({});
+example1.args = { text: "Go Gauchos!" };
+
+export const example2 = Template.bind({});
+example2.args = { text: "Ole Ole Ole!" };
+```
+
+And here is a story for the same component written in .mdx
+
+```mdx
+import { Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
+import Header from "main/components/General/Header";
+
+<Meta title="components/General/Header" component={Header} />
+
+# Header
+
+The `Header` component can be used to create an `<h2>` header.
+It takes a single parameter, `text`, which should be a string
+containing the header text.
+
+Example:
+
+```jsx
+    <Header text={Go Gauchos!} />
+```
+
+export const Template = (args) => <Header {...args} />;
+
+<Canvas>
+  <Story
+    name="Example 1"
+    args={{
+      label: "Example 1",
+      text: "Go Gauchos!",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+A second example:
+
+<Canvas>
+  <Story
+    name="Example 2"
+    args={{
+      label: "Example 2",
+      text: "Ole Ole Ole!",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+```
+
