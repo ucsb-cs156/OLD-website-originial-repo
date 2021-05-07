@@ -25,7 +25,6 @@ While this may seem extreme, I suggest having six terminal windows, each with sp
 
 We'll refer to these windows throughout the rest of this cheat sheet.
 
-# Writing a new component
 
 What is a React Component?
 
@@ -34,5 +33,23 @@ What is a React Component?
 * It can be an entire web page, or just a portion of a page.
 * It is considered good practice to write *small* components, i.e. to break down a larger user interface, e.g. an entire web page,
   into smaller components that can be developed, tested, documented and maintained separately.
-  
-  
+
+As an example, here is a animated screenshot of the Home Page of [proj-ucsb-courses-search](http://proj-ucsb-courses-search.herokuapp.com/).
+
+![courses-page-components](proj-ucsb-courses-search-home-page-components.gif)
+
+Here are just a few of the components on this page:
+
+* The entire page is a component, [`main/pages/Home/Home.js`](https://github.com/ucsb-cs156-s21/proj-ucsb-courses-search/blob/main/javascript/src/main/pages/Home/Home.js)
+* With the page, there are several components, shown with various colors of dotted outlines, including:
+  -  The navigation bar: [`main/components/Nav/AppNavbar.js`](https://github.com/ucsb-cs156-s21/proj-ucsb-courses-search/blob/main/javascript/src/main/components/Nav/AppNavbar.js), which is included in `main/App.js`
+  -  The authorization part of the navbar: [`main/components/Nav/AuthNav.js`](https://github.com/ucsb-cs156-s21/proj-ucsb-courses-search/blob/main/javascript/src/main/components/Nav/AuthNav.js), which is included in `AppNavbar.js`
+  -  The form that is used to select courses:  [`main/components/BasicCourseSearch/BasicCourseSearchForm.js`](https://github.com/ucsb-cs156-s21/proj-ucsb-courses-search/blob/main/javascript/src/main/components/BasicCourseSearch/BasicCourseSearchForm.js), which is included in `main/pages/Home/Home.js`
+  -   The table legend:  [`main/components/BasicCourseSearch/TableLegend.js`](https://github.com/ucsb-cs156-s21/proj-ucsb-courses-search/blob/main/javascript/src/main/components/BasicCourseSearch/TableLegend.js), which is included in `main/pages/Home/Home.js`
+  -   The course filters:  [`main/components/BasicCourseSearch/CourseFilters.js`](https://github.com/ucsb-cs156-s21/proj-ucsb-courses-search/blob/main/javascript/src/main/components/BasicCourseSearch/CourseFilters.js), which is included in `main/pages/Home/Home.js`
+  -  The table of course results:  [`main/components/BasicCourseSearch/BasicCourseTable.js`](https://github.com/ucsb-cs156-s21/proj-ucsb-courses-search/blob/main/javascript/src/main/components/BasicCourseSearch/BasicCourseTable.js), which is included in `main/pages/Home/Home.js`
+  -  The footer for the page:  [`main/components/Footer/AppFooter.js`](https://github.com/ucsb-cs156-s21/proj-ucsb-courses-search/blob/main/javascript/src/main/components/Footer/AppFooter.js), which is included in `main/App.js`
+ 
+
+# Writing a new component
+
