@@ -1,5 +1,5 @@
 ---
-topic: "React: Cheat Sheet"
+topic: "React: Introduction"
 desc: "Helpful tips for working with frontend code in CS156"
 category_prefix: "React: "
 indent: true
