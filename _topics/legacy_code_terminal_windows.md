@@ -23,3 +23,58 @@ While there is nothing sacred about this *particular* way of organizing things, 
 you keep your work organized, and is especially helpful when communicating with others on your team or with staff about
 what you are working on.
 
+
+# MacOS Script
+
+The following script can be used on MacOS to open up these 6 windows.  
+
+```
+#!/bin/bash
+# See: https://stackoverflow.com/a/42340540
+# See: https://apple.stackexchange.com/a/58151
+
+osascript <<EOF
+
+tell application "Terminal"
+    activate
+    
+    my makeNewColor(65535,32768,65535)
+    do script "git status" in front window
+
+    my makeNewColor(65535,65535,32768)
+    my makeTab()
+    do script "mvn spring-boot:run" in front window
+    
+    my makeNewColor(32768,65535,65535)
+    my makeTab()
+    do script "mvn test jacoco:report" in front window
+    
+    my makeNewColor(32768,32768,65535)
+    my makeTab()
+    do script "cd javascript; npm start" in front window
+    
+    my makeNewColor(65535,32768,32768)
+    my makeTab()
+    do script "cd javascript; npm test" in front window
+    
+    my makeNewColor(32768,65535,32768)
+    my makeTab()
+    do script "cd javascript; npm run storybook" in front window
+  
+end tell
+
+on makeTab()
+    tell application "System Events" to keystroke "t" using {command down}
+    delay 0.2
+end makeTab
+
+
+on makeNewColor(r,g,b)
+    tell application "Terminal" 
+     set the background color of window 1 to {r, g, b}
+    end tell
+    delay 0.1
+end makeTab
+
+EOF
+```
