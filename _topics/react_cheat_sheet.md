@@ -21,5 +21,6 @@ While this may seem extreme, I suggest having six terminal windows, each with sp
 | 4 | Frontend | `javascript` | Run frontend with `npm start` |
 | 5 | Frontend Tests | `javascript` | Run front end unit tests `npm test`<br /> jest coverage with `npm run coverage`, <br />Stryker coverage with `npx stryker run`, <br /> or eslint with `npx eslint --fix src` |
 | 6 | Storybook | `javascript` | Run storybook with `npm run storybook` |
+{:.table .table-sm .table-striped .table-bordered}
 
 We'll refer to these windows throughout the rest of this cheat sheet.
