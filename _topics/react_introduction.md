@@ -250,3 +250,10 @@ A second example:
 </Canvas>
 ```
 
+# Next Steps
+
+Read the article on common React component pattern in our Code Base.  It explains, among other things:
+* Implementing a data entry form
+* Implementing a data table
+* Implementing a top level page
+
