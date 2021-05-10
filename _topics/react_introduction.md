@@ -217,9 +217,9 @@ containing the header text.
 
 Example:
 
-```jsx
+`{% raw %}`{% endraw %}`jsx
     <Header text={Go Gauchos!} />
-```
+`{% raw %}`{% endraw %}`
 
 export const Template = (args) => <Header {...args} />;
 
