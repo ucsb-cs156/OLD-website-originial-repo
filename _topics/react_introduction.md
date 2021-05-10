@@ -252,8 +252,9 @@ A second example:
 
 # Next Steps
 
-Read the article on common React component pattern in our Code Base.  It explains, among other things:
+Read the [article on common React component pattern in our Code Base](https://ucsb-cs156.github.io/topics/react_patterns/).  It explains, among other things:
 * Implementing a data entry form
 * Implementing a data table
-* Implementing a top level page
+* etc.
 
+We also have an article about [implementing a top level page](https://ucsb-cs156.github.io/topics/react_page_components/)
