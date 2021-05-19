@@ -94,6 +94,8 @@ For mapache-search, the MongoDB database is used to store information from a Sla
 
 A new database instance should be created for each quarter, since the database contains data from the current slack workspace.
 
+
+
 For proj-mapache-search, the app has read-only access to the data; the data is updated by a script run by the staff.   
 
 ## Onboarding new teams and devs
@@ -101,7 +103,8 @@ For proj-mapache-search, the app has read-only access to the data; the data is u
 1. Set up a new cluster for the Mapache database under the current quarter organization.
 2. Set up database called `slack` and regular collections called `channels` and `messages` and `users` (not capped).
 3. To populate the database, see [TODO INSERT THESE INSTRUCTIONS]
-4. Create a new database user for each team with names such as `team-s21-7pm-1`, `team-s21-7pm-2`, etc., each with the privilege level `readAnyDatabase`
+4. Add an index on the `messages` collection that has this mapping: `"text":"text"`
+5. Create a new database user for each team with names such as `team-s21-7pm-1`, `team-s21-7pm-2`, etc., each with the privilege level `readAnyDatabase`
 
 Then, distribute the MongoDB credentials to the teams' slack channels.   You can use a message like this one:
 
