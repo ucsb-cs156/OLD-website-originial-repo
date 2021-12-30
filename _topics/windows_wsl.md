@@ -5,23 +5,60 @@ indent: true
 category_prefix: "Windows: "
 ---
 
-_Note that these instructions may be slightly outdated, as they were written in Match / April, but they should stil work. We're working on verifying that these instructions are still up-to-date._
-
 For advanced users who are looking to have a full Linux command-line interface on their Windows machine (which may be helpful for CMPSC 156 work), we recommend using Windows Subsystem for Linux (WSL). WSL is a tool that basically creates a separate Linux environment alongside your Windows environment, with access to your local filesystem. This will allow you to access package managers (such as `apt-get` for Ubuntu/Debian) and the full suite of UNIX commands.
 
-Note that the reference platform for the course remains "CSIL"; we cannot commit to being "tech support" for every conceivable platform.  On your own machine, you *are* your own tech support.  But we'll help as best we can, given the time constraints we are under.
+Note that the reference platform for the course remains "CSIL"; we cannot commit to being "tech support" for every conceivable platform. On your own machine, you *are* your own tech support. But we'll help as best we can, given the time constraints we are under.
+
+## Compatibility
 
 The first step is ensuring that you have a compatible machine. You will need:
-* Windows 10, build 16215 or later (but we recommend 18917 or later to use new [WSL 2 features](https://devblogs.microsoft.com/commandline/announcing-wsl-2/) and the new [Windows Terminal](https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701)).
+* One of the following operating systems:
+   * Windows 11, any build
+   * Windows 10, build 16215 or later (but we recommend 18917 or later to use new [WSL 2 features](https://devblogs.microsoft.com/commandline/announcing-wsl-2/) and the new [Windows Terminal](https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701)).
 * Administrator privileges on your machine
 
-The following guides from Microsoft detail the installation instructions for WSL 1 and 2: <https://docs.microsoft.com/en-us/windows/wsl/install-win10>. When choosing a distribution, we recommend Ubuntu 18.04 LTS, as this is what the course staff uses.
+## Installation
+
+On Windows 11 machines and Windows 10 machines with build 19041 or higher, installing WSL is very simple:
+
+1. Open Command Prompt or PowerShell as administrator
+   * This can be done by searching for either program in the Start Menu, right-clicking on the result, and selecting "Run as administrator"
+2. Run the following command:
+
+```
+wsl --install
+```
+
+This will enable and install WSL with the default configuration:
+
+* WSL 2
+* The latest LTS release of Ubuntu (currently 20.04 LTS)
+
+More information on the above steps can be found [here](https://docs.microsoft.com/en-us/windows/wsl/install).
+
+If your machine doesn't meet the criteria to use the one-line install command, you can follow the manual installation instructions [here](https://docs.microsoft.com/en-us/windows/wsl/install-manual). Unless you know exactly what you're doing, we recommend Ubuntu 20.04 LTS as your distribution.
+
+The better / safer solution is to update your Windows 10 machine to a more recent build, so we recommend doing that and using the one-line install command instead.
 
 Once installation is complete, you should be able to launch your distribution from the Windows Start Menu.
 
-For users who want a nicer looking terminal, complete with tabs, emojis, and more customization features, you can optionally install the new [Windows Terminal from the Microsoft Store](https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701).
+## (Recommended) Windows Terminal Install
 
-Keep in mind that WSL uses UNIX line endings (LF) while Windows uses CRLF line endings. If you checked out your code natively in Windows (i.e. using Git Bash or GitHub Desktop), your Git repository may be using CRLF line endings, and therefore may cause Shell scripts (and other programs that parse based on line endings) and Git commits to act differently or fail.
+For users who want a nicer looking terminal, complete with tabs, full Unicode support (for emojis!), custom colors / fonts, and more customization features, you can optionally install the new Windows Terminal.
+
+Windows Terminal is already the default terminal for Windows 11 users, so no installation is needed.
+
+For Windows 10 users, you can install Windows Terminal from the [Microsoft Store](https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701).
+
+## A note about Line Endings on Windows
+
+Keep in mind that WSL uses UNIX line endings (LF) while Windows uses CRLF line endings. If you check out your code natively in Windows (i.e. using Git Bash or GitHub Desktop), your checked-out code will use CRLF line endings, and therefore may cause Shell scripts (and other programs that parse based on line endings) and Git commits to act differently or fail.
+
+For this course, since most of our work will be done in WSL, you should try to use LF line endings whenever possible.
+
+
+
+# THE FOLLOWING INSTRUCTIONS HAVE NOT BEEN UPDATED YET DO NOT USE
 
 ### Java on WSL
 
