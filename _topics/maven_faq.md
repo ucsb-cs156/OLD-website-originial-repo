@@ -5,6 +5,14 @@ indent: true
 ---
 
 
+# TODO: Update this page for Java 17
+
+If you are in the W22 section of this course, you are probably aware that we are starting
+the quarter without Java 17 loaded on CSIL yet.
+
+As soon as it is loaded, the staff can update this page.   If you have gotten the message
+that CSIL has Java 17, but you are still seeing this text, please alert the staff via Slack.
+
 # `The JAVA_HOME environment variable is not defined correctly`...
 
 If you are working on CSIL and get this error
