@@ -49,10 +49,6 @@ Keep in mind that WSL uses UNIX line endings (LF) while Windows uses CRLF line e
 
 Since most of our work will be done in WSL, you should try to use LF line endings whenever possible.
 
-
-
-# THE FOLLOWING INSTRUCTIONS HAVE NOT BEEN FULLY UPDATED YET DO NOT USE
-
 ## Install / Update Git on WSL
 
 Ubuntu should come with `git`, but the pre-installed version is usually outdated (you can check by running `git --version`).
@@ -92,8 +88,9 @@ git config --global user.email "joegaucho@ucsb.edu"
 
 **Be sure that the listed email is linked to your GitHub account.** This is how GitHub is able to attribute a commit to your account, and this will be necessary to receive credit for the code you write. You can check the emails associated with your GitHub account [here](https://github.com/settings/emails).
 
-<!-- If you want to work remotely via SSH, you will have to generate new SSH keys specific to the WSL environment. For instructions on how to do that, take a look at [this page](/topics/github_ssh_keys/).
-   * You don't need to set up SSH keys, since you can always work remotely with repos via HTTPS, but using SSH keys just makes it easier since you will not have to re-enter your GitHub login information whenever you want to clone a repo or push/pull. -->
+Next, we will need to generate new SSH keys specific to the WSL environment. For instructions on how to do that, take a look at [this page](/topics/github_ssh_keys/). You are welcome to use any type of key pair you would like - GitHub should support most of them, including those backed by physical security keys.
+
+Note: While it's not entirely necessary to set up SSH keys, since you can always work remotely with repos via HTTPS, using SSH keys just makes using Git easier since you will not have to re-enter your GitHub login information whenever you want to clone a repo or push/pull.
 
 ## Install Java on WSL
 
@@ -122,6 +119,8 @@ OpenJDK 64-Bit Server VM (build 17.0.1+12-Ubuntu-118.04, mixed mode, sharing)
 
 ## Install Maven on WSL
 
+The projects in this class use Maven 3.8.x, which is necessary for Java 17.
+
 The `apt` package manager does not yet have Maven 3.8.x, so we need to manually download and extract Maven:
 
 ```sh
@@ -139,7 +138,7 @@ Then, add Maven to your PATH by adding the following line to `~/.bashrc`:
 export PATH=$PATH:/opt/maven/bin
 ```
 
-Successfully running the above commands should install Maven 3.8.x. To verify that the install was successful, run the following command:
+Successfully running the above commands should install Maven 3.8.x. To verify that the install was successful, open a new terminal and run the following command:
 
 ```
 mvn --version
@@ -155,18 +154,94 @@ Default locale: en_US, platform encoding: UTF-8
 OS name: "linux", version: "5.4.144+", arch: "amd64", family: "unix"
 ```
 
+## Install nvm and Node on WSL
 
+The projects in this class use Node 14.x LTS and npm 8.x.
 
-### Heroku on WSL
+While we could install Node 14.x directly, a better way to install Node on development computers is through Node Version Manager, or `nvm`. This is a program that allows you to easily install and switch between different versions of Node.
 
-The Heroku CLI is normally installed with snap, but the WSL doesn't currently support snap so you won't be able to install it with the commands that would be used in a normal Linux environment. Instead, run `curl https://cli-assets.heroku.com/install.sh | sh` to install the CLI.
+To install `nvm`, run the following command. As of the time of writing, the latest version is 0.39.1.
 
-### Node and npm on WSL
+```
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+```
 
-[Visit this page](/topics/node_windows/#windows-subsystem-for-linux-wsl) for instructions on how to install Node and npm on WSL.
+The install script should add the following lines to the end of your `~/.bashrc` file. If the following lines are not present, add them:
 
-For this class, we recommend the latest version of Node 12.x and npm 6.x. 
+```sh
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+```
 
-### WSL with VSCode
+Successfully running the above commands should install nvm 0.39.1. To verify that the install was successful, open a new terminal and run the following command:
 
-If you are currently a VS Code user (or considering becoming one), you can install an extension to be able to access/edit/track files in the WSL from VS Code. Follow the instructions [here](https://code.visualstudio.com/docs/remote/wsl) to get started.
+```
+nvm -v
+```
+
+Your output should say `0.39.1`.
+
+Now that we have `nvm` installed, we can use `nvm` to install the latest version of Node 14 with the following command. As of the time of writing, the latest version of Node 14 LTS is 14.18.2.
+
+```
+nvm install 14
+```
+
+Successfully running the above command should install the latest version of Node 14. To verify that the install was successful, run the following command:
+
+```
+node -v
+```
+
+Your output should say `v14.18.2` or something similar.
+
+## Update npm on WSL
+
+Node Package Manager (`npm`) is a package / dependency manager for Node projects, similar to Maven for Java projects. `npm` comes bundled with Node, but the version of `npm` provided with Node 14 - version 6.14.15 - is too low for our project, due to some major changes introduced in `npm` version 7.
+
+Run the following command to update `npm` to the latest version (which is 8.3.0 as of the time of writing):
+
+```
+npm install -g npm
+```
+
+Successfully running the above command should install the latest version of Node 14. To verify that the install was successful, run the following command:
+
+```
+npm -v
+```
+
+Your output should say `8.3.0` or something similar.
+
+**Keep in mind that each version of Node installed through `nvm` has its own installation of `npm`.** This means that, whenever you install a new version of Node, you will need to update `npm` to the correct version. The pre-bundled versions of `npm` tend to be out-of-date.
+
+## Install and Setup Heroku on WSL
+
+Heroku is the deployment platform used for the projects in this class. Some of the scripts in the projects make use of the Heroku CLI.
+
+To install Heroku CLi, run the following command:
+
+```
+curl https://cli-assets.heroku.com/install.sh | sh
+```
+
+Successfully running the above command should install the latest version of Node 14. To verify that the install was successful, run the following command:
+
+```
+heroku --version
+```
+
+Your output should say `heroku/7.59.2 linux-x64 node-v12.21.0` or something similar.
+
+Now that we have Heroku installed, we can log in. Run the following command to log in:
+
+```
+heroku login
+```
+
+You will be asked to log in through a web browser. The CLI will attempt to open your browser for you, but if it is unable to do so, a link will be visible in the terminal for you to manually copy and paste into your web browser.
+
+## WSL with VS Code
+
+If you are currently a VS Code user (or are considering becoming one), you can install an extension to be able to access, edit, and track files in the WSL from VS Code. Follow the instructions [here](https://code.visualstudio.com/docs/remote/wsl) to get started.
