@@ -220,13 +220,13 @@ Your output should say `8.3.0` or something similar.
 
 Heroku is the deployment platform used for the projects in this class. Some of the scripts in the projects make use of the Heroku CLI.
 
-To install Heroku CLi, run the following command:
+To install Heroku CLI, run the following command:
 
 ```
 curl https://cli-assets.heroku.com/install.sh | sh
 ```
 
-Successfully running the above command should install the latest version of Node 14. To verify that the install was successful, run the following command:
+Successfully running the above command should install the latest version of the Heroku CLI. To verify that the install was successful, run the following command:
 
 ```
 heroku --version
