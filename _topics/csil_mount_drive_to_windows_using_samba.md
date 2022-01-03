@@ -9,6 +9,6 @@ If you have VSCode (or any other editor that you really like) installed on your 
 
 The software used to do that is called *Samba*.
 
-For an explanation of how to do it, see this article: <https://doc.engr.ucsb.edu/pages/viewpage.action?pageId=3342386>
+For an explanation of how to do it, see this article: <https://ucsb-engr.atlassian.net/wiki/spaces/EPK/pages/573603804/Connecting+to+a+Network+Samba+Share>
 
 For a video, click here: <https://www.youtube.com/watch?v=fgORcrGWBH0>
