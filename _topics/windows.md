@@ -21,14 +21,13 @@ Note that the reference platform for the course remains "CSIL"; we cannot commit
 
 (Note: I recommend git for windows, not "github for windows".  "git for windows" provides the "Git Bash Shell" as well as the command line git tools that we use in CMPSC 156.)
 
-# Install the JDK for Java 11
+# Install the JDK for Java 17
 
-We strongly encourage you not to install a later version than Java 11.  Java 11 is a "long-term support" version of Java, while versions such as 12, 13, etc. are considered more experimental.
+We strongly encourage you not to install a later version than Java 17.  Java 17 is a "long-term support" version of Java, while versions such as 18, 19, etc. are considered more experimental.
 
 There are two options for Java 11 for Windows:
-* The Open Source Version from <https://jdk.java.net/java-se-ri/11>
-* The official Oracle version from <https://www.oracle.com/java/technologies/javase-jdk11-downloads.html>
-
+* The Open Source Version from <http://jdk.java.net/17/>
+* The official Oracle version from <https://www.oracle.com/java/technologies/downloads/#jdk17-windows>
 
 # Install Apache Maven
 
@@ -49,5 +48,5 @@ See instructions here: <https://devcenter.heroku.com/articles/heroku-cli>
 
 [Visit this page](/topics/node_windows/) for instructions on how to install Node and npm on Windows and/or WSL.
 
-For this class, we recommend the latest version of Node 12.x and npm 6.x. 
-
+See the "Software" link for your version of the class for advice on versions of Node, e.g.
+* W22: <https://ucsb-cs156.github.io/w22/info/software/>
