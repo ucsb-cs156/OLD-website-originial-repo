@@ -10,6 +10,8 @@ code_branch: ex01
 
 {% include student_tutorial_header.html %}
 
+(Note: updated for Java 17, 01/05/22)
+
 # Overview
 
 In this first article, we will first explain what the `Student` class is supposed to do, i.e. provide an abstraction for a UCSB Student   
@@ -136,7 +138,7 @@ A few things to note:
 * We can only *run* a class that contains a `main` method.
 * We do not specify the `.class` extension when running.
 * We instead, specify the name of the class.
-* The `Rational.class` and `Main.class` files remain separate.
+* The `Student.class` and `Main.class` files remain separate.
 
     * There is no "linking" phase as in C++/C that combines them into a single program
     * There is a way to combine multiple `.class` files into a single `.jar` file, but this is
@@ -178,8 +180,8 @@ The thing is, the toString() method we inherit from java.lang.String is seldom w
 For example, in the output above, we see that the output of:
 
 ```java
-        System.out.println("s1 = " + s1); // implicit: r1.toString()
-        System.out.println("s2 = " + s2); // implicit: r2.toString()
+        System.out.println("s1 = " + s1); // implicit: s1.toString()
+        System.out.println("s2 = " + s2); // implicit: s2.toString()
 ```
 
 Is this:
