@@ -25,19 +25,51 @@ Plugins extend the functionality of Maven.  Here are a few common ones that you 
 
 # maven-compiler-plugin/
 
-The main purpose of this is to specify the version of Java that we'll be using to compile our code.  For example, this sets the version to Java 17:
+The main purpose of this is configure the compiler used to compile our Java code.   
+
+The most important thing we configure though this plugin is the **version of Java** that we'll be using to compile our code.  
+
+For example, this sets the version to Java 17:
 
 ```
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.8.0</version>
-        <configuration>
-          <release>17</release>
-        </configuration>
-      </plugin>
+    <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-compiler-plugin</artifactId>
+      <version>3.8.0</version>
+      <configuration>
+        <release>17</release>
+      </configuration>
+    </plugin>
 ```
 
 
 Learn More: <https://maven.apache.org/plugins/maven-compiler-plugin/
 
+# jacoco-maven-plugin
+
+This plugin allows us to invoke the Jacoco (Java Code Coverage) tool to measure how well our JUnit tests are covering
+our code.
+
+This version works with JUnit 5 and Java 17:
+
+```
+   <plugin>
+      <groupId>org.jacoco</groupId>
+      <artifactId>jacoco-maven-plugin</artifactId>
+      <version>0.8.7</version>
+      <executions>
+          <execution>
+              <goals>
+                  <goal>prepare-agent</goal>
+              </goals>
+          </execution>
+          <execution>
+              <id>report</id>
+              <phase>prepare-package</phase>
+              <goals>
+                  <goal>report</goal>
+              </goals>
+          </execution>
+      </executions>
+  </plugin>
+```
