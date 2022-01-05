@@ -23,7 +23,7 @@ The following pom.xml shows the minimal code we can come up with to compile a si
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.0</version>
                 <configuration>
-                    <release>11</release>
+                    <release>17</release>
                 </configuration>
             </plugin>
         </plugins>
@@ -85,12 +85,12 @@ The outer-most element, `build` specifies that this is the section of the `pom.x
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.0</version>
                 <configuration>
-                    <release>11</release>
+                    <release>17</release>
                 </configuration>
             </plugin>
 ```
 
-Inside the `plugin` element, we see the `groupId/artifact/version` of the plugin (i.e. the plugin's *coordinates*); these are used to go and retrieve the specific version of the Maven Compiler Plugin (at run time) from the internet.  Finally, the `configuration` element contains a `release` element where we specify the Java release (in this case Java 11) that we want to use for compiling the project.
+Inside the `plugin` element, we see the `groupId/artifact/version` of the plugin (i.e. the plugin's *coordinates*); these are used to go and retrieve the specific version of the Maven Compiler Plugin (at run time) from the internet.  Finally, the `configuration` element contains a `release` element where we specify the Java release (in this case Java 17) that we want to use for compiling the project.
 
 # Basic commands
 
