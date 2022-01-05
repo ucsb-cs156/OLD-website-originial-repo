@@ -10,8 +10,6 @@ code_branch: ex10
 
 {% include student_tutorial_header.html %}
 
-# NOTE: NOT YET UPDATED FOR JAVA 17 and JUNIT 5 (TODO for W22, 01/05/22)
-
 # Overview
 
 In this example we show how to use exceptions
@@ -114,11 +112,13 @@ Here are the rest of the tests that we introduce in this version:
 We add these tests, and we get some test failures, as we expected:
 
 ```
-Failed tests:   test_constructor_tooBigPerm(edu.ucsb.cs156.student.StudentTest): Expected exception: java.lang.IllegalArgumentException
-  test_constructor_negPerm(edu.ucsb.cs156.student.StudentTest): Expected exception: java.lang.IllegalArgumentException
-  test_constructor_zeroPerm(edu.ucsb.cs156.student.StudentTest): Expected exception: java.lang.IllegalArgumentException
+Failed tests:   
+  edu.ucsb.cs156.student.StudentTest.test_constructor_zeroPerm(): Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+  edu.ucsb.cs156.student.StudentTest.test_constructor_negPerm(): Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+  edu.ucsb.cs156.student.StudentTest.test_constructor_tooBigPerm(): Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
 
 Tests run: 9, Failures: 3, Errors: 0, Skipped: 0
+
 ```
 
 So now we set about making the tests pass.
@@ -150,8 +150,10 @@ Further, we check the mutation test coverage:
 ```
 ucsb-cs156/student-tutorial % mvn clean test org.pitest:pitest-maven:mutationCoverage
 ...
+>> Line Coverage: 13/13 (100%)
 >> Generated 7 mutations Killed 7 (100%)
->> Ran 10 tests (1.43 tests per mutation)
+>> Mutations with no coverage 0. Test strength 100%
+>> Ran 11 tests (1.57 tests per mutation)
 ```
 
 So, that's a win.  But how about that check digit?
