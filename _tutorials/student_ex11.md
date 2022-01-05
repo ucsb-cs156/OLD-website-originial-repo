@@ -237,11 +237,4 @@ As we see from the report archived at the link below,
 we now have some gaps in our test coverage.  In ex12, we will
 discuss how to address those.
 
-* [`target/pit-reports/202010201607/index.html`](target/pit-reports/202010201607/index.html)
-
-
-
-
-
-
-  
+* [`target/pit-reports/202201051554/index.html`](target/pit-reports/202201051554/index.html)
