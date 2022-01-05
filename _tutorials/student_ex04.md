@@ -12,7 +12,7 @@ code_branch: ex04
 
 # Overview
 
-In this example we introduce JUnit tests.
+In this example we introduce JUnit 5 tests.
 
 JUnit tests allow us to automate the testing of our code.
 
@@ -24,9 +24,9 @@ This involves three steps:
 
 - Setting up a directory for test code, following the
   Maven directory conventions.
-- Adding a _dependency_ for JUnit to our `pom.xml`
-  - This tells Maven to download the `.jar` file for
-    JUnit from `maven.org` and include it in the files
+- Adding a _dependencies_ for JUnit to our `pom.xml`
+  - This tells Maven to download the `.jar` files for
+    JUnit from `maven.org` and include them in the files
     for the project.
 - Setting up the actual test code.
 
@@ -66,18 +66,24 @@ with the new dependency added.
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.0</version>
                 <configuration>
-                    <release>11</release>
+                    <release>17</release>
                 </configuration>
             </plugin>
         </plugins>
     </build>
 
     <dependencies>
-        <!-- https://mvnrepository.com/artifact/junit/junit -->
+         <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.13.1</version>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.8.2</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>5.8.2</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
@@ -91,6 +97,10 @@ for any given dependency? The answer is that the documentation
 for the package will usually tell you. If you don't know,
 you can look up the code at the website: <https://mvnrepository.com>.
 
+The ` <scope>test</scope>` means that these jar files will only be in the `CLASSPATH` when we are working
+with testing; this is one of the reasons that Maven requires us to have separate directory
+trees for `src/main/java` and `src/test/java`.
+
 # Adding Tests
 
 We can now add tests using JUnit.
@@ -101,8 +111,8 @@ We put the tests in a class called `StudentTest`, in a file called `StudentTest.
 `src/test/java`.  The full listing is followed by an explanation of the content:
 
 ```java
-import static org.junit.Assert.assertEquals;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 
 public class StudentTest {
 
@@ -130,22 +140,22 @@ public class StudentTest {
 The first two lines are imports.  
 
 ```
-import static org.junit.Assert.assertEquals;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 ```
 
 The first of these imports indicate that 
 we will be using `assertEquals`, a method that comes
-from the class `org.junit.Assert.assertEquals`.
+from the class `org.junit.jupiter.api.Assertions`.
 
 * It is important to note that we *do not have to use
   an import statement* if we are willing to type out the
-  full name `org.junit.Assert.assertEquals` every time we
+  full name `org.junit.jupiter.api.Assertions.assertEquals` every time we
   refer to this method.   However, it is much simpler to just
   be able to type `assertEquals`.
 * The first import is an `import static` because it refers to
   importing a method rather than a class.
-* The second import, `org.junit.Test` imports a class, and allows
+* The second import, ` org.junit.jupiter.api.Test` imports a class, and allows
   us to use the `@Test` annotation to mark which methods are
   test methods.  Marking these works with Maven and JUnit so that
   these method are invoked when we type `mvn test`
@@ -258,3 +268,4 @@ Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
 
 Now, this is good, but this still relies on us to remember to run the tests.   In the next tutorial, we'll see that we can use GitHub Actions to automate this process for us.
 
+(updated for JUnit 5/Java 17, 01/05/22)
