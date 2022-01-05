@@ -121,7 +121,13 @@ OpenJDK 64-Bit Server VM (build 17.0.1+12-Ubuntu-118.04, mixed mode, sharing)
 
 The projects in this class use Maven 3.8.x, which is necessary for Java 17.
 
-The `apt` package manager does not yet have Maven 3.8.x, so we need to manually download and extract Maven:
+The `apt` package manager does not yet have Maven 3.8.x, so we need to manually download and extract Maven.
+
+Here are two links that have been reported to work for downloadig Maven 3.8.4 (the only difference is `downloads` vs. `dlcdn`)
+* <https://downloads.apache.org/maven/maven-3/3.8.4/binaries/apache-maven-3.8.4-bin.tar.gz>
+* <https://dlcdn.apache.org/maven/maven-3/3.8.4/binaries/apache-maven-3.8.4-bin.tar.gz>
+
+If the first one doesn't work, try the second.
 
 ```sh
 export MAVEN_VERSION=3.8.4
