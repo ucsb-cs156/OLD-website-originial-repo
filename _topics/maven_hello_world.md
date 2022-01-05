@@ -6,7 +6,7 @@ indent: true
 
 # A very simple pom.xml
 
-The following pom.xml shows the minimal code we can come up with to compile a simple project using Java 11:
+The following pom.xml shows the minimal code we can come up with to compile a simple project using Java 17:
 
 
 ```xml
