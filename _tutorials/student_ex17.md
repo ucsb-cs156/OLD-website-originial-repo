@@ -11,6 +11,8 @@ code_branch: ex17
 
 {% include student_tutorial_header.html %}
 
+# NOTE: NOT YET UPDATED FOR JAVA 17 and JUNIT 5 (TODO for W22, 01/05/22)
+
 
 
 In this exercise, we build on ex15, where we showed writing a `java.util.Compartor<Student>` that allows us to sort by name.

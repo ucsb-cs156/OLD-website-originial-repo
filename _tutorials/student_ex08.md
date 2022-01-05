@@ -106,24 +106,33 @@ working with code from other packages, we'll need to modify
 the configuration of this plugin:
 
 ```xml
-            <plugin>
-                <groupId>org.pitest</groupId>
-                <artifactId>pitest-maven</artifactId>
-                <version>1.5.2</version>
-                <configuration>
-                    <targetClasses>
-                        <param>edu.*</param>
-                    </targetClasses>
-                    <targetTests>
-                        <param>edu.*</param>
-                    </targetTests>
-                    <outputFormats>
-                        <outputFormat>HTML</outputFormat>
-                        <outputFormat>CSV</outputFormat>
-                        <outputFormat>XML</outputFormat>
-                    </outputFormats>
-                </configuration>
-            </plugin>
+      <plugin>
+          <groupId>org.pitest</groupId>
+          <artifactId>pitest-maven</artifactId>
+          <version>1.7.3</version>
+          <!-- this is needed to run pitest with JUnit 5 -->
+          <dependencies>
+              <dependency>
+                  <groupId>org.pitest</groupId>
+                  <artifactId>pitest-junit5-plugin</artifactId>
+                  <version>0.14</version>
+              </dependency>
+          </dependencies>
+          <configuration>
+              <verbose>true</verbose>
+              <targetClasses>
+                  <param>edu.*</param>
+              </targetClasses>
+              <targetTests>
+                  <param>edu.*</param>
+              </targetTests>
+              <outputFormats>
+                  <outputFormat>HTML</outputFormat>
+                  <outputFormat>CSV</outputFormat>
+                  <outputFormat>XML</outputFormat>
+              </outputFormats>
+          </configuration>
+      </plugin>
 
 ```
 # Running pitest 

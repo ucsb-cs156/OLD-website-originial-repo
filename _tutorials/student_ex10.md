@@ -38,20 +38,62 @@ in the textbook(s):
 * HFJ2 Chapter 11 covers Exceptions
 * pp. 75-77 in Chapter 2 of JN7 also cover Exceptions
 
+Here's how we write a test for an expected exception.  We'll need to unpack this a bit, since it introduces a few elements of Java syntax that aren't in our Head First Java textbook (though they are in the JN7 textbook) and that you may not have seen before, namely:
+
+* the `IllegalArgumentException.class` expression
+* the lambda expression: `() -> { }`
+
+First, here's the whole test.  Then we'll unpack it a little at a time:
+
 ```java
-@Test(expected = IllegalArgumentException.class)
+    @Test
     public void test_constructor_zeroPerm() {
-        Student s = new Student("Test",0);
+        assertThrows( IllegalArgumentException.class, () -> {
+                Student s = new Student("Test",0);
+        });
     }
+```
 
-    @Test(expected = IllegalArgumentException.class)
+So let's start by looking just at just the `assertThrows` method.
+
+It takes two parameters.  
+* The first is `IllegalArgumentException.class`.  This is an instance of the `java.lang.Class<T>` class [documented here](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html).   That is, the expression `IllegalArgumentException.class` refers to a Java Object that respresents the class `IllegalArgumentException`, and has methods such as `getMethods()`, `getFields()`, etc.
+* The second is the entire expression:
+  
+  ```
+  () -> {
+     Student s = new Student("Test",0);
+  }
+  ```
+ 
+  This is a so-called Lambda Expression, and is a way of representing a Java function(method) that can be called with no parameters (hence the empty `()`), and the body of the method is the part in `{}`.
+  
+  A lambda expression allows us, among other things, to pass a block of code as a parameter to a function.  In this case the type of the parameter is `org.junit.jupiter.api.Executable` documented [here]() that that isn't really important to understand at this point.  Later in the course, we'll come back and talk much more about lambda expressions, and their relationship to Java Interfaces, and specifically a kind of interface called a "functional interface".
+  
+For now, it's enough to know this:
+
+* When you want to test whether some code throws an exception in a JUnit test, use `assertThrows`
+* Pass the name of the expected exception followed by `.class` as the first parameter
+* For the second parameter, write `() -> { codeGoesHere(); }` where `codeGoesHere();` can be as much Java code
+  as you need to generate the exception.
+
+
+
+Here are the rest of the tests that we introduce in this version:
+
+```
+    @Test
     public void test_constructor_negPerm() {
-        Student s = new Student("Test",-1);
+        assertThrows( IllegalArgumentException.class, () -> {
+            Student s = new Student("Test",-1);
+        });
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test
     public void test_constructor_tooBigPerm() {
-        Student s = new Student("Test",10000000);
+        assertThrows( IllegalArgumentException.class, () -> {
+            Student s = new Student("Test",10000000);
+        });
     }
 
     @Test
@@ -70,11 +112,13 @@ in the textbook(s):
 We add these tests, and we get some test failures, as we expected:
 
 ```
-Failed tests:   test_constructor_tooBigPerm(edu.ucsb.cs156.student.StudentTest): Expected exception: java.lang.IllegalArgumentException
-  test_constructor_negPerm(edu.ucsb.cs156.student.StudentTest): Expected exception: java.lang.IllegalArgumentException
-  test_constructor_zeroPerm(edu.ucsb.cs156.student.StudentTest): Expected exception: java.lang.IllegalArgumentException
+Failed tests:   
+  edu.ucsb.cs156.student.StudentTest.test_constructor_zeroPerm(): Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+  edu.ucsb.cs156.student.StudentTest.test_constructor_negPerm(): Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+  edu.ucsb.cs156.student.StudentTest.test_constructor_tooBigPerm(): Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
 
 Tests run: 9, Failures: 3, Errors: 0, Skipped: 0
+
 ```
 
 So now we set about making the tests pass.
@@ -106,8 +150,10 @@ Further, we check the mutation test coverage:
 ```
 ucsb-cs156/student-tutorial % mvn clean test org.pitest:pitest-maven:mutationCoverage
 ...
+>> Line Coverage: 13/13 (100%)
 >> Generated 7 mutations Killed 7 (100%)
->> Ran 10 tests (1.43 tests per mutation)
+>> Mutations with no coverage 0. Test strength 100%
+>> Ran 11 tests (1.57 tests per mutation)
 ```
 
 So, that's a win.  But how about that check digit?

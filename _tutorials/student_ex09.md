@@ -151,8 +151,17 @@ for Pitest:
             <plugin>
                 <groupId>org.pitest</groupId>
                 <artifactId>pitest-maven</artifactId>
-                <version>1.5.2</version>
+                <version>1.7.3</version>
+                <!-- this is needed to run pitest with JUnit 5 -->
+                <dependencies>
+                    <dependency>
+                        <groupId>org.pitest</groupId>
+                        <artifactId>pitest-junit5-plugin</artifactId>
+                        <version>0.14</version>
+                    </dependency>
+                </dependencies>
                 <configuration>
+                    <verbose>true</verbose>
                     <targetClasses>
                         <param>edu.*</param>
                     </targetClasses>

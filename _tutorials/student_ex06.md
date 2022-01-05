@@ -30,25 +30,25 @@ as a "sibling" to the existing
 
 ```xml
 <!-- Test case coverage report -->
-			<plugin>
-				<groupId>org.jacoco</groupId>
-				<artifactId>jacoco-maven-plugin</artifactId>
-				<version>0.8.5</version>
-				<executions>
-					<execution>
-						<goals>
-							<goal>prepare-agent</goal>
-						</goals>
-					</execution>
-					<execution>
-						<id>report</id>
-						<phase>prepare-package</phase>
-						<goals>
-							<goal>report</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
+	<plugin>
+		<groupId>org.jacoco</groupId>
+		<artifactId>jacoco-maven-plugin</artifactId>
+		<version>0.8.7</version>
+		<executions>
+		    <execution>
+			<goals>
+			    <goal>prepare-agent</goal>
+			</goals>
+		    </execution>
+		    <execution>
+			<id>report</id>
+			<phase>prepare-package</phase>
+			<goals>
+			    <goal>report</goal>
+			</goals>
+		    </execution>
+		</executions>
+	</plugin>
 ```
 
 After adding this to our `pom.xml`, we can now 
@@ -149,10 +149,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - name: Set up JDK 11
+      - name: Set up JDK 17
         uses: actions/setup-java@v1
         with:
-          java-version: 11.0.x
+          java-version: 17.0.x
       - name: Build with Maven
         run: mvn test 
 ```
@@ -174,10 +174,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v1
-      - name: Set up JDK 11
+      - name: Set up JDK 17
         uses: actions/setup-java@v1
         with:
-          java-version: 11.0.x
+          java-version: 17.0.x
       - name: Build with Maven
         run: mvn -B test jacoco:report
       - name: Upload to Codecov
@@ -230,10 +230,10 @@ see a code coverage report by doing one of two things:
 
    Then you should be able to see a report for the `main` branch here:
 
-   * <https://codecov.io/gh/ucsb-cs156-f20/REPO-NAME-HERE>
+   * <https://codecov.io/gh/ucsb-cs156-w22/REPO-NAME-HERE>
 
    To see a report for another branch, use:
-   * <https://codecov.io/gh/ucsb-cs156-f20/REPO-NAME-HERE/branch/BRANCH-NAME-HERE>
+   * <https://codecov.io/gh/ucsb-cs156-w22/REPO-NAME-HERE/branch/BRANCH-NAME-HERE>
 
 Here's a link to an example report:
 * <https://codecov.io/gh/ucsb-cs156/student-tutorial/src/ex06/src/main/java/Student.java>

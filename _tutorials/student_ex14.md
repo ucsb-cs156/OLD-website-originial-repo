@@ -11,6 +11,7 @@ code_branch: ex14
 
 {% include student_tutorial_header.html %}
 
+# NOTE: NOT YET UPDATED FOR JAVA 17 and JUNIT 5 (TODO for W22, 01/05/22)
 
 
 In earlier CS courses, you probably learned about algorithms to sort arrays, including:

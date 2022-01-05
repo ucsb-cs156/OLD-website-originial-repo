@@ -10,6 +10,8 @@ code_branch: ex11
 
 {% include student_tutorial_header.html %}
 
+
+
 # Overview
 
 In this example we show how to write a static method

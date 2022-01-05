@@ -24,6 +24,12 @@ If you have already cloned this repo and are at the command line, you can switch
 
 * `git checkout ex02`
 
+# Note: this branch uses simple directory structure
+
+Note that the `ex01` branch used the full Maven directory structure.  By constrast, this branch uses a simple plain directory structure, for contrast.
+
+In `ex03` we'll explain more about the Maven directory structure.  For this branch, you can compile and run with with the simple `javac/java` commands explained in the `ex01` branch of the tutorial.
+
 # Overriding `toString`
 
 The problem we are trying to solve is that the code:

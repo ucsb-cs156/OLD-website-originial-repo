@@ -10,6 +10,7 @@ code_branch: ex13
 
 {% include student_tutorial_header.html %}
 
+# NOTE: NOT YET UPDATED FOR JAVA 17 and JUNIT 5 (TODO for W22, 01/05/22)
 
 
 In this exercise we show how to read a list of students from a text file
