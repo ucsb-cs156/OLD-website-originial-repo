@@ -10,7 +10,6 @@ code_branch: ex11
 
 {% include student_tutorial_header.html %}
 
-# NOTE: NOT YET UPDATED FOR JAVA 17 and JUNIT 5 (TODO for W22, 01/05/22)
 
 
 # Overview
