@@ -10,6 +10,7 @@ code_branch: ex15
 
 {% include student_tutorial_header.html %}
 
+# NOTE: NOT YET UPDATED FOR JAVA 17 and JUNIT 5 (TODO for W22, 01/05/22)
 
 
 In ex14, we looked at implementing the `java.lang.Comparable<T>` interface.  This allows us to define what Java calls a *natural order* for a class.   
