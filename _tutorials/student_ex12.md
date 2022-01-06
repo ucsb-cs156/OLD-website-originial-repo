@@ -106,27 +106,16 @@ it says this about this line.  Hover over the 4 and you'll see a pop up.
 
 <table>
 <tr>
-<td class='covered'><a name='org.pitest.mutationtest.report.html.SourceFile@63814bbe_35'/>35</td>
-<td class='survived'><span class='pop'><a href='#grouporg.pitest.mutationtest.report.html.SourceFile@63814bbe_35'>4</a><span>
-1. validPerm : changed conditional boundary &rarr; SURVIVED<br/>
-2. validPerm : changed conditional boundary &rarr; KILLED<br/>
-3. validPerm : negated conditional &rarr; KILLED<br/>
-4. validPerm : negated conditional &rarr; KILLED<br/>
+<td class='covered'><a>35</a></td>
+<td class='survived'><span class='pop'><span>
+1. changed conditional boundary → KILLED <br/>
+<span style="background-color: pink;">2. changed conditional boundary → SURVIVED </span><br/>
+3. negated conditional → KILLED <br/>
+4. negated conditional → KILLED <br/>
 </span></span></td>
-<td class='covered'>
-<pre><span  class='survived'>if (perm &#60; 1 || perm &#62; 9999999) {</span></pre>
-</td>
 </tr>
 </table>
 
-The pop up looks like this:
-
-<p style="font-family: monospace">
-1. validPerm : changed conditional boundary &rarr; SURVIVED<br/>
-2. validPerm : changed conditional boundary &rarr; KILLED<br/>
-3. validPerm : negated conditional &rarr; KILLED<br/>
-4. validPerm : negated conditional &rarr; KILLED<br/>
-</p>
 
 This shows us that the mutation that survived is one where the mutation was `changed conditional boundary`.  This  means changing:
 
