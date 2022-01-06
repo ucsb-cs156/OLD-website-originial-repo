@@ -101,21 +101,20 @@ Consider this line:
         if (perm < 1 || perm > 9999999) {    // RED
 ```
 
-Looking at the mutation report more closely, we see what
-it says this about this line.  Hover over the 4 and you'll see a pop up.
+Looking at the mutation report more closely, we can see what
+it says this about this line.  Next to line 35, there is a 4 that, if you hover over it, brings up a pop up.
 
-<table>
-<tr>
-<td class='covered'><a>35</a></td>
-<td class='survived'><span class='pop'><span>
-1. changed conditional boundary → KILLED <br/>
-<span style="background-color: pink;">2. changed conditional boundary → SURVIVED </span><br/>
-3. negated conditional → KILLED <br/>
-4. negated conditional → KILLED <br/>
-</span></span></td>
-</tr>
-</table>
+The 4 means that there were four different mutations of this line of code; and the fact that the line is red and not green, means that
+at least one of those mutants survived.  We can see which one, exactly, by hovering over the 4 and looking at the pop up:
 
+The popup looks like this:
+
+```
+1. changed conditional boundary → KILLED 
+2. changed conditional boundary → SURVIVED
+3. negated conditional → KILLED 
+4. negated conditional → KILLED
+```
 
 This shows us that the mutation that survived is one where the mutation was `changed conditional boundary`.  This  means changing:
 
