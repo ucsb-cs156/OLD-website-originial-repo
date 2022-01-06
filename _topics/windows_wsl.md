@@ -123,7 +123,7 @@ The projects in this class use Maven 3.8.x, which is necessary for Java 17.
 
 The `apt` package manager does not yet have Maven 3.8.x, so we need to manually download and extract Maven.
 
-Here are two links that have been reported to work for downloadig Maven 3.8.4 (the only difference is `downloads` vs. `dlcdn`)
+Here are two links that have been reported to work for downloading Maven 3.8.4 (the only difference is `downloads` vs. `dlcdn`)
 * <https://downloads.apache.org/maven/maven-3/3.8.4/binaries/apache-maven-3.8.4-bin.tar.gz>
 * <https://dlcdn.apache.org/maven/maven-3/3.8.4/binaries/apache-maven-3.8.4-bin.tar.gz>
 
