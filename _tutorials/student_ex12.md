@@ -4,14 +4,13 @@ desc: "Adding more test coverage"
 indent: true
 code_repo: https://github.com/ucsb-cs156/student-tutorial
 code_branch: ex12
+pit_report: target/pit-reports/202201051554
 ---
 
 # {{page.topic}} - {{page.desc}}
 
 {% include student_tutorial_header.html %}
 
-
-# NOTE: NOT YET UPDATED FOR JAVA 17 and JUNIT 5 (TODO for W22, 01/05/22)
 
 
 <style>
@@ -74,12 +73,12 @@ For this exercise, we focus on the report from ex11, and what needs to be done t
 
 A snapshot of the mutation coverage report can be found here:
 
-* [`../student_ex11/target/pit-reports/202010201607/index.html`](../student_ex11/target/pit-reports/202010201607/index.html)
+* [`../student_ex11/target/{{page.pit_report}}/index.html`](../student_ex11/{{page.pit_report}}/index.html)
 
 
 # Uncovered lines in `Student.java` 
 
-We can see that there are three places in `Student.java` that are not covered by tests; we've marked those lines with comments `//RED` below, based on the [report for `Student.java`](../student_ex11/target/pit-reports/202010201607/edu.ucsb.cs156.student/Student.java.html)
+We can see that there are three places in `Student.java` that are not covered by tests; we've marked those lines with comments `//RED` below, based on the [report for `Student.java`](../student_ex11/target/{{page.pit_report}}/edu.ucsb.cs156.student/Student.java.html)
 
 
 ```java
