@@ -9,6 +9,8 @@ This page is not intended to be a full React tutorial, but a brief overview of s
 most important things you need to have at your finger tips when working with React code.
 
 
+For a good React tutorial, visit: <https://beta.reactjs.org/learn>
+
 # What is a React Component?
 
 * A React Component is portion of a User Interface.
