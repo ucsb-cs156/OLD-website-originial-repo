@@ -11,6 +11,7 @@ There are different conventions on different systems for line endings.
 |--------|------|-----------------|---------------------|--------------|
 | CR     | Carriage Return | `\r` | 13 | `^M` | 
 | LF     | Line Feed | `\n` | 10 | `^J` | 
+{:.table .table-sm .table-striped .table-bordered}
 
 * Mac and Linux systems usually just put a LF character at the end of every line.
 * Windows systems usually put a CR followed by an LF at the end of every line.
