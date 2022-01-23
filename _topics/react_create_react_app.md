@@ -33,3 +33,18 @@ The only modification is to add a few lines to the top of the `README.md` explai
 
 The `README.md` file in that repo explains how to start up the application on `http://localhost:3000`.
 
+# Modified versions of the Create-React-App base
+
+The staff of CMPSC 156 have created several modified version of the basic `Create React App` application
+that illlustrate how to incorporate additional conventions and tools into the basic structure.
+
+* <https://github.com/ucsb-cs156-w22/demo-cra-customized> adds:
+  - directory structure with everything in `frontend` so that it can live inside a repo that follows Maven 
+    directory conventions
+  - has a directory structure mirroring that of Maven (with separation of `main` and `test`) for consistency
+    between front and backend code.
+  - has GitHub actions scripts for tests (Jest), test coverage (also Jest), and linting (ESLint).
+
+Later versions also add 
+- Storybook
+- Stryker Mutation testing
