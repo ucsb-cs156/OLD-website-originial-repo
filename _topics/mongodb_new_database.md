@@ -25,8 +25,20 @@ a database can have many collections, and a collection can have many documents.
   - Project (e.g. `demo-mongodb-project-01`)
     - Database (e.g. `database01`)
       - Collection (e.g. `reddit_posts`)
-        - Document (e.g. the JSON representation of a specific reddit post.
+        - Document (e.g. the JSON representation of a specific reddit post, e.g. )
  
  
       
- 
+Once you have navigated to an organization and have created a new project, you'll see this screen where it is possible to create your first database.
+
+
+<img alt="Create Database" src="https://user-images.githubusercontent.com/1119017/152082399-445e96ae-f6dc-412d-8ed4-3bafe26612c2.png" width="800" />
+
+
+
+
+
+<img alt="" src="" width="800" />
+<img alt="" src="" width="800" />
+<img alt="" src="" width="800" />
+<img alt="" src="" width="800" />
