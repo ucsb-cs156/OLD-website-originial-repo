@@ -50,6 +50,9 @@ After taking the defaults (or configuring to your hearts content), click the gre
 <img alt="Create Cluster" src="https://user-images.githubusercontent.com/1119017/152082831-3cef6f74-42bf-4bfd-b89b-035960fa7175.png" width="800" />
 
 
+The next choice involves some security choices.
+
+![image](https://user-images.githubusercontent.com/1119017/152082978-2de192d6-b4f9-480e-b79e-e0e015cd12b1.png)
 
 
 <img alt="" src="" width="800" />
