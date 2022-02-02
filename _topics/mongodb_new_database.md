@@ -41,6 +41,14 @@ if you are building something for your own use, and are prepared to pay for it, 
 
 <img alt="Deployment options, choose FREE" src="https://user-images.githubusercontent.com/1119017/152082540-5caa8846-fb98-491b-a45c-dadeaa5ce7d6.png" width="800" />
 
+The next choice you will make is which cloud provider to use, as well as various other options.  I suggest taking the defaults.
+(It could be argued that there might be some marginal benefit to using `us-west-2` instead of `us-east-1`, just because
+of geographical proximity to California, and if you have a reason to prefer Google Cloud or Microsoft Azure over Amazon AWS, feel free.)
+
+After taking the defaults (or configuring to your hearts content), click the green "Create Cluster" button.
+
+<img alt="Create Cluster" src="https://user-images.githubusercontent.com/1119017/152082831-3cef6f74-42bf-4bfd-b89b-035960fa7175.png" width="800" />
+
 
 
 
