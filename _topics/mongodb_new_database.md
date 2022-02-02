@@ -35,6 +35,12 @@ Once you have navigated to an organization and have created a new project, you'l
 <img alt="Create Database" src="https://user-images.githubusercontent.com/1119017/152082399-445e96ae-f6dc-412d-8ed4-3bafe26612c2.png" width="800" />
 
 
+The next choice you need to make is what kind of deployment.  Clearly, we are going to choose the *FREE* option for this course, but
+if you are building something for your own use, and are prepared to pay for it, you might make a different choice.
+
+
+<img alt="Deployment options, choose FREE" src="https://user-images.githubusercontent.com/1119017/152082540-5caa8846-fb98-491b-a45c-dadeaa5ce7d6.png" width="800" />
+
 
 
 
