@@ -139,6 +139,10 @@ Enter these values then click `Create`:
 
 <img alt="Create first db and collection" src="https://user-images.githubusercontent.com/1119017/152413242-2fb8adc2-b2c5-4108-8668-ce944e7bd891.png" width="800" />
 
+Your `Collections` tab now looks like this:
+
+
+<img alt="Collections after creating first db and collection" src="https://user-images.githubusercontent.com/1119017/152413369-737e51b1-7764-40f0-b0f6-d073702863db.png" width="800" />
 
 
 
