@@ -108,6 +108,15 @@ the place where your Database lives in the cloud.
 
 <img alt="Databases" src="https://user-images.githubusercontent.com/1119017/152410884-2cfeb760-ce31-4777-8ac8-14909c0b54b7.png" width="800" />
 
+Click on the blue text that says `Cluster 0`, and you land at this page:
+
+<img alt="Cluster 0 details" src="https://user-images.githubusercontent.com/1119017/152411112-68d5eb9f-c254-42e3-810c-787e05953111.png" width="800" />
+
+The `Collections` tab is the place where we start to define collections and enter some data.  So click on the `Collections` tab:
+
+The first time you land there, it will look like this:
+
+<img alt="Collections tab, first time" src="https://user-images.githubusercontent.com/1119017/152411693-93adb87c-8410-489f-a0c5-9009d38bfb59.png" width="800" />
 
 
 
