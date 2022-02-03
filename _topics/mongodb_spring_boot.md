@@ -128,7 +128,64 @@ The place that you are supposed to set up Mongo DB Connection URI is in `.env` f
 
 Here's where to get the value of `MONGODB_URI`:
 
+In the left hand navigation on the <https://cloud.mongodb.com> site, find `Database` in the left nav, and get to this page:
 
+![image](https://user-images.githubusercontent.com/1119017/152425255-6e4eab59-21b1-41cf-98da-980485acd58f.png)
+
+Then, click where it says `Connect`.  That brings up this Modal. Click the "Connect Your Application" link:
+
+![image](https://user-images.githubusercontent.com/1119017/152425352-46061aa0-81a6-4f9e-8d2b-0cbca1b57e1b.png)
+
+That brings up this.  *Do not worry about setting the programming language and version*.  
+* That matters only if you are looking for example code, and it turns out the code the MongoDB site offers for Java is low level code that is not appropriate for Spring Boot anyway.
+* The part that does matter, the connection string, is the same across all programming languages.
+
+![image](https://user-images.githubusercontent.com/1119017/152425583-f6cbc7f7-8db0-45b1-bf46-e3fbb5b21486.png)
+
+Copy the connection string, and paste it in as the value for `MONGODB_URI`.  *But you are not finished*.  There is still the step of filling in the password, and replacing the `myFirstDatabase` with the correct name of the database.
+
+```
+MONGODB_URI=mongodb+srv://readWrite01:<password>@cluster0.v6z4u.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+```
+
+First, let's deal with the database, since that's easy.  If you called your database `database`, then just change `myFirstDatabase` to `database`, like this:
+
+```
+MONGODB_URI=mongodb+srv://readWrite01:<password>@cluster0.v6z4u.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+```
+
+Now, that places where it says `<password>` needs to be replaced with the correct password.  To do this, navigate back to `Database Access` in the left nav:
+
+![image](https://user-images.githubusercontent.com/1119017/152426093-6ca3dd27-8067-4d28-89b1-16c1d341ad30.png)
+
+Click `Edit` beside the user you are going to use.  
+
+As an aside: note that you can have multiple users with different privilege levels, so if your application only needs read access to the data, it may be better to configure a read only user for your web app, and the upload data using a different user with a script.  (We'll provide an example of an uploader script in a different article.)  For now, though, we'll use a user with both read and write privileges.
+
+Clicking `Edit` next to a user brings up this:
+
+![image](https://user-images.githubusercontent.com/1119017/152426402-1a705f86-daec-4fe9-a5bf-a9d5fb0846d3.png)
+
+Click where it says "Edit password".  That opens up this:
+
+![image](https://user-images.githubusercontent.com/1119017/152426476-891c5c8c-eda1-4d1a-846c-c70096c0b666.png)
+
+Note that it is *not possible to look up the password, only to change it.*  So, we are going to autogenerate a new-password, and then
+paste it into our `.env` file in place of `password`.  (Note that example I'm using here is a fake one; so don't bother trying to hack with it.)
+
+Click Autogenerate, then Show, so you see something like this:
+
+![image](https://user-images.githubusercontent.com/1119017/152426627-3cef0f02-5647-4c75-8f96-4c1fc7c386f4.png)
+
+Now copy the value `BkZGP3TZZJG0dAfE` and paste it into your `.env` file in place of the password.  Do not include the `<>` around `<password>`
+
+* Correct:  `MONGODB_URI=mongodb+srv://readWrite01:BkZGP3TZZJG0dAfE@cluster0.v6z4u.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`
+* Incorrect: `MONGODB_URI=mongodb+srv://readWrite01:<BkZGP3TZZJG0dAfE>@cluster0.v6z4u.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`
+
+Now, the part that everyone always forgets:  Do not just click the X or navigate away from the window!  The password is not saved unless you
+scroll down to the bottom of the modal and click `Update User`!
+
+![image](https://user-images.githubusercontent.com/1119017/152427199-b636b13b-ac41-4dcf-95d0-87d31ea8e459.png)
 
 
 ## But the documentation says `spring.data.mongodb.uri` ?
