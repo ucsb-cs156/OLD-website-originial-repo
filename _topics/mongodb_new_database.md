@@ -118,6 +118,26 @@ The first time you land there, it will look like this:
 
 <img alt="Collections tab, first time" src="https://user-images.githubusercontent.com/1119017/152411693-93adb87c-8410-489f-a0c5-9009d38bfb59.png" width="800" />
 
+Choose "Add your own data".  That will prompt you with this Modal:
+
+<img alt="Create database/collection modal" src="https://user-images.githubusercontent.com/1119017/152412002-38c3dbbb-15b2-4b75-a0de-0a0269aa5e1e.png" width="400" />
+
+Enter these values:
+* For `Database`, let's keep it simple: we suggest `database`.  If you need more than one database per project, you can come up with a better naming convention then, e.g. `proj1db`, `proj2db`, etc.   
+* For `Collection`, enter the name of the first collection you want to create.  
+  * For this example, we'll use Reddit posts as our data (because it is relatively easy to get JSON data from Reddit).
+  * So, for this example, we'll enter `posts` as the name of the collection.
+  * If you were storing data for courses, you might use `courses` as the name of the collection.
+* Usually, do not check `Capped Collection`
+  - The only exception woudld be if there is a case where you want a collection that keeps only the most recent 5MB worth of data, 
+    for example, and the oldest data should automatically be deleted.
+  - An example would be "log data" of some kind, where you always want to keep the most recent few days or weeks of data, but you don't want the 
+    collection to grow arbitrarily large. 
+  - There is more information here: [Capped Collection Documentation](https://docs.mongodb.com/manual/core/capped-collections/)
+ 
+Enter these values then click `Create`:
+
+<img alt="Create first db and collection" src="(https://user-images.githubusercontent.com/1119017/152413076-5b99aff6-9893-46dc-aa95-17fd0740656e.png" width="800" />
 
 
 <img alt="" src="" width="800" />
