@@ -134,8 +134,15 @@ Suppose we have a simple JSON object, such as the following JSON object represen
 }
 ```
 
-In this case, it is straightforward to make a class `Student.java` that represents objects of this type:
+In this case, it is straightforward to make a class `Student.java` that represents objects of this type. But our first step will be to create a directory under `src/main/java/` that is a sibling of our `controllers`, `services`, `entities`, etc. called `documents`, like this:
 
-```
 
-```
+| Before | After |
+|-|-|
+| ![image](https://user-images.githubusercontent.com/1119017/152420561-712a7d15-a367-4622-90eb-ad33c8acd8e0.png) | ![image](https://user-images.githubusercontent.com/1119017/152420645-96628f71-45b2-4f3d-b029-57c715f3846e.png) |
+{:.table .table-sm .table-bordered}
+
+
+
+
+
