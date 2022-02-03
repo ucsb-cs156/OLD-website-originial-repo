@@ -118,6 +118,43 @@ Enter `students` as the name of the second collection:
 Now we have a database named `database` and two collections: `reddit_posts` and `students`.  We are ready to start doing Java coding.
 
 
+
+
+# Configuration for a connection to MongoDB
+
+
+The place that you are supposed to set up Mongo DB Connection URI is in `.env` file (copied from `.env.SAMPLE`) as the value of the variable
+`MONGODB_URI`.
+
+Here's where to get the value of `MONGODB_URI`:
+
+
+
+
+## But the documentation says `spring.data.mongodb.uri` ?
+
+You may wonder: why `MONGODB_URI` when the Spring Boot documentation (and/or various tutorials) say that it should be set via `spring.data.mongodb.uri`?
+
+The place to set up the connection string is indeed the application property `spring.data.mongodb.uri`; *however*, it is a *bad* idea to hard code
+usernames and passwords in the application.property file:
+
+```
+spring.data.mongodb.uri=DO-NOT-HARD-CODE-THE-URI-HERE
+```
+
+Instead, we set it up to pick up the value from an environment variable `MONGODB_URI` and put in a fake default value that can be used as a fallback so that
+the code will at least run to some extent if/when we fail to set a value:
+
+```
+spring.data.mongodb.uri=${MONGODB_URI:${env.MONGODB_URI:mongodb+srv://fakeUsername:fakePassword@cluster0.ulqcw.mongodb.net/fakeDatabase?retryWrites=true&w=majority}}
+```
+
+This says: try to get a property `MONGODB_URI`; failing that, try to get `MONGODB_URI` from the environment, failing that, use this hard coded fake default.
+
+Note that the application will at least start up with fake values for the username, password, and database, but if the host in the URI does not exist, you
+may get a fatal error on startup (i.e. at the `mvn spring-boot:run` stage.)
+
+
 # Setting up a Document class
 
 A MongoDB document is a representation of a JSON object.  As such, it can be nested arbitrarily deep.
