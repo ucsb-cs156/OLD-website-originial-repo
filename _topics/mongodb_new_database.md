@@ -98,11 +98,19 @@ After entering `0.0.0.0/0` and `Anywhere`, and clicking `Add Entry`, it should l
 <img alt="After entering 0.0.0.0/0" src="https://user-images.githubusercontent.com/1119017/152410267-ef8f5f9c-33d4-4e60-bdca-c96be00d80ef.png" width="800" />
 
 
-At this point, you may click `Finish and Close`
+At this point, you may click `Finish and Close`.  That will bring up this Modal:
+
+
+<img alt="Finishing Modal" src="https://user-images.githubusercontent.com/1119017/152410756-0dd2e410-cc2c-4acf-bd33-4bb20ed0f552.png" width="800" />
+
+Clicking the "Take me to Database" brings you to this screen.  The terminology may be a bit confusing, but `Cluster 0` is your *Database deployment*, i.e
+the place where your Database lives in the cloud.
+
+<img alt="Databases" src="https://user-images.githubusercontent.com/1119017/152410884-2cfeb760-ce31-4777-8ac8-14909c0b54b7.png" width="800" />
 
 
 
-<img alt="" src="" width="800" />
+
 <img alt="" src="" width="800" />
 <img alt="" src="" width="800" />
 <img alt="" src="" width="800" />
