@@ -53,13 +53,52 @@ After taking the defaults (or configuring to your hearts content), click the gre
 <img alt="Create Cluster" src="https://user-images.githubusercontent.com/1119017/152082831-3cef6f74-42bf-4bfd-b89b-035960fa7175.png" width="800" />
 
 
-The next choice involves some security choices.
+The next choice involves some security choices; you are asked to create a username and password.
+* This username/password will be put into configuration files such as `.env`, so it is important to *NOT* use a password that you use for
+  other applications, and it does *NOT* need to be a password that you can remember and type.
+* Therefore, do not think in terms of a *personal* username and password such as `cgaucho` and `cutePuppies@23`
+* Instead, think of a *functional* username such as `readOnly01` or `readWrite07`.
+* Let the the `Autogenerate Secure Password` button select a password for you.
 
 <img alt="security setup" src="https://user-images.githubusercontent.com/1119017/152082978-2de192d6-b4f9-480e-b79e-e0e015cd12b1.png" width="400" />
 
+Enter a username (we suggest `readWrite01` as your first username), click `Autogenerate Secure Password`, then click `Create User`:
+
+
+<img alt="Entering username" src="https://user-images.githubusercontent.com/1119017/152408962-b949c9c4-497c-43e4-9cec-37c14d689bcc.png" width="800" />
+
+
+Then, you'll see a result like this one:
+
+
+<img alt="After entering username" src="https://user-images.githubusercontent.com/1119017/152409048-a9ba8556-9e88-4e3e-9c4c-0c9749da71da.png" width="800" />
+
+
+At a later stage, we'll use those credentials to connect to the database. Don't worry about copying down the password now.
+
+
+The next step involves setting up network access.  Fill in the box with `0.0.0.0/0`, which is a way of specifying "Any IP address at all", i.e.
+any host anywhere on the internet.
+
+*From a security standpoint, this is not ideal*; in a real world situation, we would want to be much more specific about which IP address ranges
+have access to our MongoDB database.  Unfortunately, the reality for students and professors is that:
+* For localhost access: we work from campus, we work from home, we work from coffee shops: and the IP address range of our laptop is not very predictable.
+* For Heroku access: even here, on the *free* plan, the IP address range is not very predictable. (On paid plans, you can solve this.)
+
+
+So, regrettably, for convenience, I suggest going with `0.0.0.0/0` here.   Just be advised that if, in later life, you are securing a database in a situation where the client has resources to pay, that there are ways of ensuring that you have a stable address range (e.g. using a VPN for your laptop, and using a paid cloud hosting plan where the IP address range is predictable and stable.)
+
+<img alt="Entering 0.0.0.0/0" src="https://user-images.githubusercontent.com/1119017/152409242-3b4f310d-e7a4-4545-8d92-f5eaaf81d1b2.png" width="800" />
+
+
+After entering `0.0.0.0/0` and `Anywhere`, and clicking `Add Entry`, it should look like this:
 
 
 
+<img alt="After entering 0.0.0.0/0" src="https://user-images.githubusercontent.com/1119017/152410267-ef8f5f9c-33d4-4e60-bdca-c96be00d80ef.png" width="800" />
+
+
+At this point, you may click `Finish and Close`
 
 
 
