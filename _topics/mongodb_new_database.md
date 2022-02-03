@@ -137,7 +137,9 @@ Enter these values:
  
 Enter these values then click `Create`:
 
-<img alt="Create first db and collection" src="(https://user-images.githubusercontent.com/1119017/152413076-5b99aff6-9893-46dc-aa95-17fd0740656e.png" width="800" />
+<img alt="Create first db and collection" src="https://user-images.githubusercontent.com/1119017/152413242-2fb8adc2-b2c5-4108-8668-ce944e7bd891.png" width="800" />
+
+
 
 
 <img alt="" src="" width="800" />
