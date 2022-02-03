@@ -240,7 +240,31 @@ In this case, it is straightforward to make a class `Student.java` that represen
 Under that folder, create `Student.java` like this:
 
 ```java
-// TODO: Paste code here
+package edu.ucsb.cs156.example.documents;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+@Document(collection = "students")
+public class Student {
+    @Id
+    private String id;
+
+    private String firstName;
+    private String lastName;
+    private int perm;
+}
+
 ```
 
 Then, create a folder called `collections`:
@@ -250,9 +274,130 @@ Then, create a folder called `collections`:
 In that folder, create a file `StudentCollection.java` like this:
 
 ```java
-// TODO: Paste code here
+package edu.ucsb.cs156.example.collections;
 
+import java.util.Optional;
+
+import org.bson.types.ObjectId;
+import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.stereotype.Repository;
+
+import edu.ucsb.cs156.example.documents.Student;
+
+@Repository
+public interface StudentCollection extends MongoRepository<Student, ObjectId> {
+  Optional<Student> findOneByPerm(int perm);
+  Optional<Student> findOneByFirstNameAndLastName(String firstName, String lastName);
+}
 ```
+
+
+Finally, we can create a controller, `StudentsController.java`
+
+```java
+package edu.ucsb.cs156.example.controllers;
+
+import edu.ucsb.cs156.example.collections.StudentCollection;
+import edu.ucsb.cs156.example.documents.Student;
+
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
+import lombok.extern.slf4j.Slf4j;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+
+@Api(description = "Students")
+@RequestMapping("/api/students")
+@RestController
+@Slf4j
+public class StudentsController extends ApiController {
+
+    @Autowired
+    StudentCollection studentCollection;
+
+    @Autowired
+    ObjectMapper mapper;
+
+    @ApiOperation(value = "List all students")
+    @PreAuthorize("hasRole('ROLE_USER')")
+    @GetMapping("/all")
+    public Iterable<Student> allStudents() {
+        loggingService.logMethod();
+        Iterable<Student> students = studentCollection.findAll();
+        return students;
+    }
+
+    @ApiOperation(value = "Add a Student to the collection")
+    @PreAuthorize("hasRole('ROLE_USER')")
+    @PostMapping("/post")
+    public Student postStudent(
+            @ApiParam("firstName") @RequestParam String firstName,
+            @ApiParam("lastName") @RequestParam String lastName,
+            @ApiParam("perm") @RequestParam int perm) {
+        loggingService.logMethod();
+
+        Student student = new Student();
+        student.setFirstName(firstName);
+        student.setLastName(lastName);
+        student.setPerm(perm);
+
+        // OR
+
+        // Student student = Student.builder()
+        //         .firstName(firstName)
+        //         .lastName(lastName)
+        //         .perm(perm)
+        //         .build();
+
+        Student savedStudent = studentCollection.save(student);
+        return savedStudent;
+    }
+
+}
+```
+
+This will give us endpoints that we can test with Swagger:
+
+![image](https://user-images.githubusercontent.com/1119017/152430009-460d64ff-5709-4b85-8e70-12890a4175cc.png)
+
+A POST gives us a new Student:
+
+![image](https://user-images.githubusercontent.com/1119017/152430358-704024a1-4cc8-4c04-bde1-d9e2c5c9c7da.png)
+
+![image](https://user-images.githubusercontent.com/1119017/152430387-1fd51583-9fed-4640-9fe7-4f5253609207.png)
+
+
+And a GET shows that the student was added to the Collection:
+
+![image](https://user-images.githubusercontent.com/1119017/152430425-daa45949-2715-426a-88bf-2e819d80ed58.png)
+
+![image](https://user-images.githubusercontent.com/1119017/152430454-9bf32183-93d7-444e-9614-33c80ac71b30.png)
+
+Finally, we can navigate to our Collection on <https://cloud.mongodb.com> and see that the data is in the Collection:
+
+![image](https://user-images.githubusercontent.com/1119017/152430567-abb685ab-8fb4-4116-b9cc-be93b187a8a6.png)
+
+# Next steps: A more complex collection
+
+As you can see by the code above, it is relatively straightforward to set up a Document and a Collection for a simple flat JSON object.
+
+However, for simple flat object with no nesting, an SQL database may be a better choice anyway.  The power of MongoDB is really for representing
+hierarchical nested JSON data.
+
+So in the next article, we'll look at RedditPosts, which have several layers of complexity, and describe how to set up a Java class hierarchy to 
+represent these objects.
+
 
 
 
