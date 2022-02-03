@@ -144,8 +144,7 @@ Your `Collections` tab now looks like this:
 
 <img alt="Collections after creating first db and collection" src="https://user-images.githubusercontent.com/1119017/152413369-737e51b1-7764-40f0-b0f6-d073702863db.png" width="800" />
 
+We are now ready to start setting up access to the collection from Java code.
 
+We'll do that in a separate article.
 
-<img alt="" src="" width="800" />
-<img alt="" src="" width="800" />
-<img alt="" src="" width="800" />
