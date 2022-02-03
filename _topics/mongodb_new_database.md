@@ -31,8 +31,11 @@ a database can have many collections, and a collection can have many documents.
       
 Once you have navigated to an organization and have created a new project, you'll see this screen where it is possible to create your first database.
 
+<img alt="Create Database, first time" src="https://user-images.githubusercontent.com/1119017/152082399-445e96ae-f6dc-412d-8ed4-3bafe26612c2.png" width="800" />
 
-<img alt="Create Database" src="https://user-images.githubusercontent.com/1119017/152082399-445e96ae-f6dc-412d-8ed4-3bafe26612c2.png" width="800" />
+If you already have a database created, instead, you'll see a page like this, with the `Create Database` button at the upper right:
+
+<img alt="Create Database, subsequent times" src="https://user-images.githubusercontent.com/1119017/152407582-97ae3066-5133-4d44-b537-4bbb5eee72c0.png" width="800" />
 
 
 The next choice you need to make is what kind of deployment.  Clearly, we are going to choose the *FREE* option for this course, but
@@ -52,7 +55,12 @@ After taking the defaults (or configuring to your hearts content), click the gre
 
 The next choice involves some security choices.
 
-![image](https://user-images.githubusercontent.com/1119017/152082978-2de192d6-b4f9-480e-b79e-e0e015cd12b1.png)
+<img alt="security setup" src="https://user-images.githubusercontent.com/1119017/152082978-2de192d6-b4f9-480e-b79e-e0e015cd12b1.png" width="400" />
+
+
+
+
+
 
 
 <img alt="" src="" width="800" />
