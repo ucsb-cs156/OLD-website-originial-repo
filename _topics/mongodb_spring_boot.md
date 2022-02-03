@@ -143,6 +143,22 @@ In this case, it is straightforward to make a class `Student.java` that represen
 {:.table .table-sm .table-bordered}
 
 
+Under that folder, create `Student.java` like this:
+
+```java
+// TODO: Paste code here
+```
+
+Then, create a folder called `collections`:
+
+![image](https://user-images.githubusercontent.com/1119017/152421273-0c11dd49-fb29-4c5f-bb5b-91b2cf9357aa.png)
+
+In that folder, create a file `StudentCollection.java` like this:
+
+```java
+// TODO: Paste code here
+
+```
 
 
 
