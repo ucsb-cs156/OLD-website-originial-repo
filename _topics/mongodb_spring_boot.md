@@ -47,6 +47,77 @@ be determined by the version in the `<parent>` element:
 
 Otherwise consult the URL in the comment to determine the latest version to use.
 
+# Adjusting our collections
+
+If you followed the  [MongoDB: New Database](https://ucsb-cs156.github.io/topics/mongodb_new_database/)  to set up your database, you
+have:
+* a database named `database`
+* in that database, a collection named `posts`
+
+To see that, here are the navigation steps you need:
+* Select your organization:
+
+  ![image](https://user-images.githubusercontent.com/1119017/152418744-43db11db-8d17-43ca-ad1d-a4feda301e73.png)
+
+* Select your project:
+
+  ![image](https://user-images.githubusercontent.com/1119017/152418808-cc834de9-d9ae-4cc7-8292-2875cbf802c7.png)
+  
+* When you see the cluster where your project is deployed, you can either click the `Browse Collections` button:
+
+  ![image](https://user-images.githubusercontent.com/1119017/152418932-ee46623d-179b-4095-913a-5e62ce528552.png)
+
+  Or you can click into the cluster, and then select the Collections tab:
+  
+  ![image](https://user-images.githubusercontent.com/1119017/152419023-81067c84-08ac-49e4-af44-0ef78efb46e3.png)
+
+When you get there, you see this:
+
+![image](https://user-images.githubusercontent.com/1119017/152419327-0d354c2f-68e2-4792-ad44-c39c5efa1a52.png)
+
+# Renaming a collection
+
+The first thing we will try to do is rename `posts` to `reddit_posts`.
+
+Note that as far as I can tell, at the current time, there is no way to rename a collection in the web user interface.
+
+Fortunately, since our collection is empty, we can just drop it and recreate it.  
+
+To drop the collection posts, hover over `posts` and you'll see a trash can icon pop up:
+
+![image](https://user-images.githubusercontent.com/1119017/152419662-632e4ca0-6b5b-4294-bef7-e9947b1ffe64.png)
+
+
+Then, click the trash can and a confirmation modal appears. Type in `posts` and click `Drop`
+
+![image](https://user-images.githubusercontent.com/1119017/152419763-ef4a07a5-20c1-4c4e-bd8d-1dc8195686ab.png)
+
+That returns us to a state of having no collections, which looks like this:
+
+![image](https://user-images.githubusercontent.com/1119017/152419854-6840051e-c57c-4d39-b4e2-1b5b2095a7e8.png)
+
+From here, we'll click `Add your own data` and create two collections: `reddit_posts` and `students`. The user interface
+here is a bit tricky, so I'll walk you through it.  First click `Add my own data` which gets us here, where you can fill in `database` and `reddit_posts`
+
+![image](https://user-images.githubusercontent.com/1119017/152420104-e0d5bf9f-453c-494b-bd10-cba019e2b96f.png)
+
+That results in this:
+
+![image](https://user-images.githubusercontent.com/1119017/152420205-571cb9ce-01e8-493b-90c0-cc465628a5b3.png)
+
+
+Then, to create the second collection (or additional ones after that), hover over the name `database`, and you'll see a plus sign pop up.  Click that to 
+add the second collection.
+
+![image](https://user-images.githubusercontent.com/1119017/152420224-7dd408c0-ef0f-421a-bc19-4c4a7f31e532.png)
+
+Enter `students` as the name of the second collection:
+
+![image](https://user-images.githubusercontent.com/1119017/152420283-cab197bd-d759-4b9a-9b3b-b07d796f49e3.png)
+
+Now we have a database named `database` and two collections: `reddit_posts` and `students`.  We are ready to start doing Java coding.
+
+
 # Setting up a Document class
 
 A MongoDB document is a representation of a JSON object.  As such, it can be nested arbitrarily deep.
