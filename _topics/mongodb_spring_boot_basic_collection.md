@@ -1,5 +1,5 @@
 ---
-topic: "MongoDB: Spring Boot"
+topic: "MongoDB: Spring Boot - Basic Collection"
 desc: "Accessing a MongoDB collection from Spring Boot"
 category_prefix	: "MongoDB: "
 indent: true
