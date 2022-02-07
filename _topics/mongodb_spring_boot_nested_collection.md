@@ -89,15 +89,13 @@ each of which is an object with `kind` of `"t3"` and a `data` object.
 ```json
 [
   { 
-    kind: "t3",
-    data: { … }
+    "kind": "t3",
+    "data": { … }
   },
   { 
-    kind: "t3",
-    data: { … }
+    "kind": "t3",
+    "data": { … }
   }
-
-
 ]
 ```
 
@@ -284,6 +282,7 @@ So, for example, suppose that we only care about a few fields in the post.  Let'
 
 | Field name | Type | Explanation |
 |------------|------|-------------|
+| `id` | `String` | Identifier for this post on reddit (e.g. `li4ob`) |
 | `subreddit` | `String` | Subreddit where post appeared, e.g. `UCSantaBarbara` |
 | `selftext` | `String` | The text of the post in plain text |
 | `selftext_html` | `String` | The text of the post, formatted in HTML |
@@ -298,7 +297,7 @@ So our next move is to make a simple Java class that represents an object with t
 
 Since this class, `RedditPost` is the one that will form the basis of our MongoDB collection, we will also:
 * mark this class  with the `@Document(collection = "reddit_posts")` annotation, and
-* add an `id` field of type String, with the `@Id` annotation:
+* add an `_id` field of type String, with the `@Id` annotation. This is different from the `id` field, which is a field in the actual data.  The `_id` field is the MongoDB identifier for the document.
 
 
 ```java
@@ -319,8 +318,8 @@ import java.util.List;
 @AllArgsConstructor
 @Builder
 public class RedditPost {
-
     @Id
+    private String _id;    
     private String id;
     private String subreddit;
     private String selftext;
@@ -332,7 +331,7 @@ public class RedditPost {
 }
 ```
 
-Now this will form the basis of our MongoDB collection.  But if we want to be able to populate our database from
+Now the `RedditPost` class will form the basis of our MongoDB collection.  But if we want to be able to populate our database from
 data that comes from the Reddit API, we will need to create classes that correspond to the JSON structure above this level.
 
 So, let's go back and look at the top level object again:
@@ -397,7 +396,7 @@ Now that we have a Java object to represent one element in the `children` array,
 }
 ```
 
-The `children` field will be represented as a `List<RedditT3>`.  But we need an object to represent the `data` field.  We'll call this a `RedditListing`.  Most of the imports are the same, but we do also need now to import `java.util.List`:
+The `children` field will be represented as a `List<RedditT3>`.  But we need an object to represent the `data` field.  We'll call this a `RedditListingData`.  Most of the imports are the same, but we do also need now to import `java.util.List`:
 
 ```java
 // imports fron RedditPost omitted
@@ -407,7 +406,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class RedditListing {
+public class RedditListingData {
     private String after;
     private int dist;
     // leaving out "geo_filter" to illustrated that we can leave things out    
@@ -416,8 +415,91 @@ public class RedditListing {
 }
 ```
 
-Now we are finally ready to write a class that represents the top level JSON we get directly from Reddit:
+Now we are finally ready to write a class that represents the top level JSON we get directly from Reddit.  We'll call this a `RedditListing`, taking our cue from the `kind` field in the object:
 
 ```java
+package edu.ucsb.cs156.example.documents;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class RedditListing {
+    private String kind;
+    private RedditListingData data;
+}
 ```
+
+Now that we have all of these classes, what can we do with them?
+
+First, lets define a collection class for our `RedditPost` objects.  
+
+```java
+package edu.ucsb.cs156.example.collections;
+
+import org.bson.types.ObjectId;
+import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.stereotype.Repository;
+
+import edu.ucsb.cs156.example.documents.RedditPost;
+
+@Repository
+public interface RedditPostsCollection extends MongoRepository<RedditPost, ObjectId> {
+ 
+}
+```
+
+Next, we'll define a controller method that will allow us to see all of the objects in the collection:
+
+```java
+package edu.ucsb.cs156.example.controllers;
+
+import edu.ucsb.cs156.example.collections.RedditPostsCollection;
+import edu.ucsb.cs156.example.documents.RedditPost;
+
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import lombok.extern.slf4j.Slf4j;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+
+@Api(description = "Reddit Posts")
+@RequestMapping("/api/redditposts")
+@RestController
+@Slf4j
+public class RedditPostsController extends ApiController {
+
+    @Autowired
+    RedditPostsCollection redditPostsCollection;
+
+    @Autowired
+    ObjectMapper mapper;
+
+    @ApiOperation(value = "List all posts")
+    @GetMapping("/all")
+    public Iterable<RedditPost> allPosts() {
+        loggingService.logMethod();
+        Iterable<RedditPost> posts = redditPostsCollection.findAll();
+        return posts;
+    }
+}
+```
+
+But without any way to get object *into* the collection, this isn't going to do us much good.
+
+So, we'll add a special controller method; a post method that:
+* Will take a subreddit name as a parameter
+* Go to that subreddit and just grab the first post
+* Store that post in the collection if it is not already there; but it if is there, we update the values.  This is called an `upsert` (as opposed to an `insert`)
+
