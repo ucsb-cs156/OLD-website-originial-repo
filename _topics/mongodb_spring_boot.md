@@ -57,23 +57,23 @@ have:
 To see that, here are the navigation steps you need:
 * Select your organization:
 
-  ![image](https://user-images.githubusercontent.com/1119017/152418744-43db11db-8d17-43ca-ad1d-a4feda301e73.png)
+  <img alt="" src="https://user-images.githubusercontent.com/1119017/152418744-43db11db-8d17-43ca-ad1d-a4feda301e73.png" width="800" />)
 
 * Select your project:
 
-  ![image](https://user-images.githubusercontent.com/1119017/152418808-cc834de9-d9ae-4cc7-8292-2875cbf802c7.png)
+  <img alt="" src="https://user-images.githubusercontent.com/1119017/152418808-cc834de9-d9ae-4cc7-8292-2875cbf802c7.png" width="800" />)
   
 * When you see the cluster where your project is deployed, you can either click the `Browse Collections` button:
 
-  ![image](https://user-images.githubusercontent.com/1119017/152418932-ee46623d-179b-4095-913a-5e62ce528552.png)
+  <img alt="" src="https://user-images.githubusercontent.com/1119017/152418932-ee46623d-179b-4095-913a-5e62ce528552.png" width="800" />)
 
   Or you can click into the cluster, and then select the Collections tab:
   
-  ![image](https://user-images.githubusercontent.com/1119017/152419023-81067c84-08ac-49e4-af44-0ef78efb46e3.png)
+  <img alt="" src="https://user-images.githubusercontent.com/1119017/152419023-81067c84-08ac-49e4-af44-0ef78efb46e3.png" width="800" />)
 
 When you get there, you see this:
 
-![image](https://user-images.githubusercontent.com/1119017/152419327-0d354c2f-68e2-4792-ad44-c39c5efa1a52.png)
+<img alt="" src="https://user-images.githubusercontent.com/1119017/152419327-0d354c2f-68e2-4792-ad44-c39c5efa1a52.png" width="800" />)
 
 # Renaming a collection
 
@@ -85,35 +85,35 @@ Fortunately, since our collection is empty, we can just drop it and recreate it.
 
 To drop the collection posts, hover over `posts` and you'll see a trash can icon pop up:
 
-![image](https://user-images.githubusercontent.com/1119017/152419662-632e4ca0-6b5b-4294-bef7-e9947b1ffe64.png)
+<img alt="" src="https://user-images.githubusercontent.com/1119017/152419662-632e4ca0-6b5b-4294-bef7-e9947b1ffe64.png" width="800" />)
 
 
 Then, click the trash can and a confirmation modal appears. Type in `posts` and click `Drop`
 
-![image](https://user-images.githubusercontent.com/1119017/152419763-ef4a07a5-20c1-4c4e-bd8d-1dc8195686ab.png)
+<img alt="" src="https://user-images.githubusercontent.com/1119017/152419763-ef4a07a5-20c1-4c4e-bd8d-1dc8195686ab.png" width="800" />)
 
 That returns us to a state of having no collections, which looks like this:
 
-![image](https://user-images.githubusercontent.com/1119017/152419854-6840051e-c57c-4d39-b4e2-1b5b2095a7e8.png)
+<img alt="" src="https://user-images.githubusercontent.com/1119017/152419854-6840051e-c57c-4d39-b4e2-1b5b2095a7e8.png" width="800" />)
 
 From here, we'll click `Add your own data` and create two collections: `reddit_posts` and `students`. The user interface
 here is a bit tricky, so I'll walk you through it.  First click `Add my own data` which gets us here, where you can fill in `database` and `reddit_posts`
 
-![image](https://user-images.githubusercontent.com/1119017/152420104-e0d5bf9f-453c-494b-bd10-cba019e2b96f.png)
+<img alt="" src="https://user-images.githubusercontent.com/1119017/152420104-e0d5bf9f-453c-494b-bd10-cba019e2b96f.png" width="800" />)
 
 That results in this:
 
-![image](https://user-images.githubusercontent.com/1119017/152420205-571cb9ce-01e8-493b-90c0-cc465628a5b3.png)
+<img alt="" src="https://user-images.githubusercontent.com/1119017/152420205-571cb9ce-01e8-493b-90c0-cc465628a5b3.png" width="800" />)
 
 
 Then, to create the second collection (or additional ones after that), hover over the name `database`, and you'll see a plus sign pop up.  Click that to 
 add the second collection.
 
-![image](https://user-images.githubusercontent.com/1119017/152420224-7dd408c0-ef0f-421a-bc19-4c4a7f31e532.png)
+<img alt="" src="https://user-images.githubusercontent.com/1119017/152420224-7dd408c0-ef0f-421a-bc19-4c4a7f31e532.png" width="800" />)
 
 Enter `students` as the name of the second collection:
 
-![image](https://user-images.githubusercontent.com/1119017/152420283-cab197bd-d759-4b9a-9b3b-b07d796f49e3.png)
+<img alt="" src="https://user-images.githubusercontent.com/1119017/152420283-cab197bd-d759-4b9a-9b3b-b07d796f49e3.png" width="800" />)
 
 Now we have a database named `database` and two collections: `reddit_posts` and `students`.  We are ready to start doing Java coding.
 
@@ -130,17 +130,17 @@ Here's where to get the value of `MONGODB_URI`:
 
 In the left hand navigation on the <https://cloud.mongodb.com> site, find `Database` in the left nav, and get to this page:
 
-![image](https://user-images.githubusercontent.com/1119017/152425255-6e4eab59-21b1-41cf-98da-980485acd58f.png)
+<img alt="" src="https://user-images.githubusercontent.com/1119017/152425255-6e4eab59-21b1-41cf-98da-980485acd58f.png" width="800" />)
 
 Then, click where it says `Connect`.  That brings up this Modal. Click the "Connect Your Application" link:
 
-![image](https://user-images.githubusercontent.com/1119017/152425352-46061aa0-81a6-4f9e-8d2b-0cbca1b57e1b.png)
+<img alt="" src="https://user-images.githubusercontent.com/1119017/152425352-46061aa0-81a6-4f9e-8d2b-0cbca1b57e1b.png" width="800" />)
 
 That brings up this.  *Do not worry about setting the programming language and version*.  
 * That matters only if you are looking for example code, and it turns out the code the MongoDB site offers for Java is low level code that is not appropriate for Spring Boot anyway.
 * The part that does matter, the connection string, is the same across all programming languages.
 
-![image](https://user-images.githubusercontent.com/1119017/152425583-f6cbc7f7-8db0-45b1-bf46-e3fbb5b21486.png)
+<img alt="" src="https://user-images.githubusercontent.com/1119017/152425583-f6cbc7f7-8db0-45b1-bf46-e3fbb5b21486.png" width="800" />)
 
 Copy the connection string, and paste it in as the value for `MONGODB_URI`.  *But you are not finished*.  There is still the step of filling in the password, and replacing the `myFirstDatabase` with the correct name of the database.
 
@@ -156,7 +156,7 @@ MONGODB_URI=mongodb+srv://readWrite01:<password>@cluster0.v6z4u.mongodb.net/myFi
 
 Now, that places where it says `<password>` needs to be replaced with the correct password.  To do this, navigate back to `Database Access` in the left nav:
 
-![image](https://user-images.githubusercontent.com/1119017/152426093-6ca3dd27-8067-4d28-89b1-16c1d341ad30.png)
+<img alt="" src="https://user-images.githubusercontent.com/1119017/152426093-6ca3dd27-8067-4d28-89b1-16c1d341ad30.png" width="800" />)
 
 Click `Edit` beside the user you are going to use.  
 
@@ -164,18 +164,18 @@ As an aside: note that you can have multiple users with different privilege leve
 
 Clicking `Edit` next to a user brings up this:
 
-![image](https://user-images.githubusercontent.com/1119017/152426402-1a705f86-daec-4fe9-a5bf-a9d5fb0846d3.png)
+<img alt="" src="https://user-images.githubusercontent.com/1119017/152426402-1a705f86-daec-4fe9-a5bf-a9d5fb0846d3.png" width="800" />)
 
 Click where it says "Edit password".  That opens up this:
 
-![image](https://user-images.githubusercontent.com/1119017/152426476-891c5c8c-eda1-4d1a-846c-c70096c0b666.png)
+<img alt="" src="https://user-images.githubusercontent.com/1119017/152426476-891c5c8c-eda1-4d1a-846c-c70096c0b666.png" width="800" />)
 
 Note that it is *not possible to look up the password, only to change it.*  So, we are going to autogenerate a new-password, and then
 paste it into our `.env` file in place of `password`.  (Note that example I'm using here is a fake one; so don't bother trying to hack with it.)
 
 Click Autogenerate, then Show, so you see something like this:
 
-![image](https://user-images.githubusercontent.com/1119017/152426627-3cef0f02-5647-4c75-8f96-4c1fc7c386f4.png)
+<img alt="" src="https://user-images.githubusercontent.com/1119017/152426627-3cef0f02-5647-4c75-8f96-4c1fc7c386f4.png" width="800" />)
 
 Now copy the value `BkZGP3TZZJG0dAfE` and paste it into your `.env` file in place of the password.  Do not include the `<>` around `<password>`
 
@@ -185,7 +185,7 @@ Now copy the value `BkZGP3TZZJG0dAfE` and paste it into your `.env` file in plac
 Now, the part that everyone always forgets:  Do not just click the X or navigate away from the window!  The password is not saved unless you
 scroll down to the bottom of the modal and click `Update User`!
 
-![image](https://user-images.githubusercontent.com/1119017/152427199-b636b13b-ac41-4dcf-95d0-87d31ea8e459.png)
+<img alt="" src="https://user-images.githubusercontent.com/1119017/152427199-b636b13b-ac41-4dcf-95d0-87d31ea8e459.png" width="800" />)
 
 
 ## But the documentation says `spring.data.mongodb.uri` ?
@@ -233,7 +233,7 @@ In this case, it is straightforward to make a class `Student.java` that represen
 
 | Before | After |
 |-|-|
-| ![image](https://user-images.githubusercontent.com/1119017/152420561-712a7d15-a367-4622-90eb-ad33c8acd8e0.png) | ![image](https://user-images.githubusercontent.com/1119017/152420645-96628f71-45b2-4f3d-b029-57c715f3846e.png) |
+| <img alt="" src="https://user-images.githubusercontent.com/1119017/152420561-712a7d15-a367-4622-90eb-ad33c8acd8e0.png" width="800" />) | <img alt="" src="https://user-images.githubusercontent.com/1119017/152420645-96628f71-45b2-4f3d-b029-57c715f3846e.png" width="800" />) |
 {:.table .table-sm .table-bordered}
 
 
@@ -269,7 +269,7 @@ public class Student {
 
 Then, create a folder called `collections`:
 
-![image](https://user-images.githubusercontent.com/1119017/152421273-0c11dd49-fb29-4c5f-bb5b-91b2cf9357aa.png)
+<img alt="" src="https://user-images.githubusercontent.com/1119017/152421273-0c11dd49-fb29-4c5f-bb5b-91b2cf9357aa.png" width="800" />)
 
 In that folder, create a file `StudentCollection.java` like this:
 
@@ -369,24 +369,24 @@ public class StudentsController extends ApiController {
 
 This will give us endpoints that we can test with Swagger:
 
-![image](https://user-images.githubusercontent.com/1119017/152430009-460d64ff-5709-4b85-8e70-12890a4175cc.png)
+<img alt="" src="https://user-images.githubusercontent.com/1119017/152430009-460d64ff-5709-4b85-8e70-12890a4175cc.png" width="800" />)
 
 A POST gives us a new Student:
 
-![image](https://user-images.githubusercontent.com/1119017/152430358-704024a1-4cc8-4c04-bde1-d9e2c5c9c7da.png)
+<img alt="" src="https://user-images.githubusercontent.com/1119017/152430358-704024a1-4cc8-4c04-bde1-d9e2c5c9c7da.png" width="800" />)
 
-![image](https://user-images.githubusercontent.com/1119017/152430387-1fd51583-9fed-4640-9fe7-4f5253609207.png)
+<img alt="" src="https://user-images.githubusercontent.com/1119017/152430387-1fd51583-9fed-4640-9fe7-4f5253609207.png" width="800" />)
 
 
 And a GET shows that the student was added to the Collection:
 
-![image](https://user-images.githubusercontent.com/1119017/152430425-daa45949-2715-426a-88bf-2e819d80ed58.png)
+<img alt="" src="https://user-images.githubusercontent.com/1119017/152430425-daa45949-2715-426a-88bf-2e819d80ed58.png" width="800" />)
 
-![image](https://user-images.githubusercontent.com/1119017/152430454-9bf32183-93d7-444e-9614-33c80ac71b30.png)
+<img alt="" src="https://user-images.githubusercontent.com/1119017/152430454-9bf32183-93d7-444e-9614-33c80ac71b30.png" width="800" />)
 
 Finally, we can navigate to our Collection on <https://cloud.mongodb.com> and see that the data is in the Collection:
 
-![image](https://user-images.githubusercontent.com/1119017/152430567-abb685ab-8fb4-4116-b9cc-be93b187a8a6.png)
+<img alt="" src="https://user-images.githubusercontent.com/1119017/152430567-abb685ab-8fb4-4116-b9cc-be93b187a8a6.png" width="800" />)
 
 # Next steps: A more complex collection
 
