@@ -94,6 +94,7 @@ Here is the complete list; here I've gone ahead and substituted `Long` for `ID`,
 | `Optional<T>	findById(ID id)` | Retrieves an entity by its id. |
 | `<S extends T> S	save(S entity)` | Saves a given entity. |
 | `<S extends T> Iterable<S>	saveAll(Iterable<S> entities)` | Saves all given entities. |
+{:.table .table-sm .table-striped .table-bordered}
 
 However, you can also add your own methods, as long as:
 * The Entity class follows the *Java Bean* naming conventions (which the Lombok `@Data` gives you for free)
