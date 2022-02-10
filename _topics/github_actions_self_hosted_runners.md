@@ -18,3 +18,12 @@ You can also monitor when you are getting close here:
 ![image](https://user-images.githubusercontent.com/1119017/153475496-9ecc6b7f-ec0a-4e5a-a79f-589f9f5baace.png)
 
 
+Self Hosted Runners can be either on your own hardware, or on a platform such as AWS
+
+# Setting up a self hosted runner on your own hardware
+
+TODO
+
+# Setting up a self hosted runner on AWS
+
+TODO
