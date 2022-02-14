@@ -3,6 +3,14 @@ topic: "eslint"
 desc: "Linting (checking for style and frequent errors) in ECMAScript (i.e. JavaScript)"
 ---
 
+
+# NOTE: `eslint` currently disabled.
+
+Eslint is currently disabled in the W22 example repo `demo-spring-react-example-v2`.  
+* [This issue explains why](https://github.com/ucsb-cs156-w22/demo-spring-react-example-v2/issues/76), and proposes that someone fix the problem.
+
+# About `eslint`
+
 The utility `eslint` is used in many of our projects to do *linting* of our JavaScript/ECMAScript code.
 
 
