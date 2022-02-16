@@ -119,7 +119,8 @@ Here's how you go about resolving it.
     npm install
     ```
     
-   
-
+    Don't be surprised if the `rm -rf node_modules` step takes a good long time, as evidenced by this cartoon:
+    
+    <img src="https://user-images.githubusercontent.com/1119017/154366826-37cb26f0-e040-4661-bbd2-cbab834307fe.png" alt="Heaviest objects in universe, showing sun, black hole, and node_modules as the heaviest." width="800" />
 
     
