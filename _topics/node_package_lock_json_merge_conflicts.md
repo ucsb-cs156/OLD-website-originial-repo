@@ -87,6 +87,39 @@ Here's how you go about resolving it.
     pconrad@169-231-112-36 team03-w22-7pm-2 % 
     ```
     
+5.  Now, let's take stock of what's happening here.
+
+    The file `package-lock.json` is a file that is produced whenever we type `npm install`.  What it represents is the *transitive closure* (yes, in the CS40, CS138 Math 8 discrete math sense of *transitive closure*) of the dependencies that you have listed in `package.json`.  
+
+    For example, if your package.json listed these three dependencies:
     
+    ```
+    "axios": "^0.21.1",
+    "babel-loader": "8.1.0",
+    "bootstrap": "^5.0.0-beta3",
+    ```
+    
+    Each of these may depend on something else which in turn depends on something else, and so on, and so on.
+    
+    The transitive closure is the set of all things that `axios`, `babel-loader` and `bootstrap` depend on, either directly, or transitiveily.  It's computed by continuing to calculate the dependency graph until nothing new is added to the set.
+    
+    At that point, you have the list of dependencies, *and* you have the specific versions that `npm` went out and found.   
+    
+    THAT is what is listed in the `package-lock.json`.
+    
+    So, when you have a merge conflict in `package-lock.json`, rather than trying to resolve it the usual way, which is to go line by line, and try to 
+    choose between the `incoming` and `current` change, it is better to just regenerate it from scrtach.
+    
+    The manual way is to do this:
+    
+    ```
+    cd frontend
+    rm package-lock.json
+    rm -rf node_modules
+    npm install
+    ```
+    
+   
+
 
     
