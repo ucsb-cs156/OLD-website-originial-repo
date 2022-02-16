@@ -84,7 +84,19 @@ Under `data` we have another object:
 ```
 
 And under `children` we have an array.  Here's what the content of that array look like.  There are 25 elements indexed 0..24,
-each of which is an object with `kind` of `"t3"` and a `data` object.
+each of which is an object with `kind` of `"t3"` and a `data` object.  (Incidentally, if you are wondering what the `t3` stands for, you can
+consult the [Reddit API Documentation](https://www.reddit.com/dev/api/), but the short version is: 
+
+| Type | Explanation |
+|------|-------------|
+|`t1_` | Comment |
+|`t2_` | Account |
+|`t3_` | Link |
+|`t4_` | 	Message | 
+|`t5_` | Subreddit |
+|`t6_` | Award |
+{:.table .table-sm .table-striped .table-bordered}
+
 
 ```json
 [
