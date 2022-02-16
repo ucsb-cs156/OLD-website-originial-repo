@@ -61,4 +61,32 @@ Here's how you go about resolving it.
     To abort and get back to the state before "git rebase", run "git rebase --abort".
     pconrad@169-231-112-36 team03-w22-7pm-2 % 
     ```
+4.  Next, type `git status` and you should see that the conflicted files are in red, while the non-conflicted files are in green:
+
+    ```
+    pconrad@169-231-112-36 team03-w22-7pm-2 % git status
+    rebase in progress; onto da679f5
+    You are currently rebasing branch 'rh-subjects_menu_page' on 'da679f5'.
+      (fix conflicts and then run "git rebase --continue")
+      (use "git rebase --skip" to skip this patch)
+      (use "git rebase --abort" to check out the original branch)
+
+    Changes to be committed:
+      (use "git restore --staged <file>..." to unstage)
+        modified:   frontend/src/App.js
+        modified:   frontend/src/main/components/Nav/AppNavbar.js
+        modified:   frontend/src/main/pages/Todos/TodosIndexPage.js
+        new file:   frontend/src/main/pages/UCSBSubjects/UCSBSubjectsCreatePage.js
+        new file:   frontend/src/main/pages/UCSBSubjects/UCSBSubjectsIndexPage.js
+
+    Unmerged paths:
+      (use "git restore --staged <file>..." to unstage)
+      (use "git add <file>..." to mark resolution)
+        both modified:   frontend/package-lock.json
+
+    pconrad@169-231-112-36 team03-w22-7pm-2 % 
+    ```
+    
+    
+
     
