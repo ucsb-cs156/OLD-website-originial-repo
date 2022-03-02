@@ -12,7 +12,8 @@ This indicates a merge conflict that must be resolved before you can merge the P
 
 In this case, it is a merge conflict in the file `package-lock.json`, which, as we'll see, is a bit of a special case. 
 
-It is so much a special case, that we are going to devote a whole separate page to it.  (TODO: Link to that page.)
+It is so much a special case, that we are going to devote a whole separate page to it, here:
+* <https://ucsb-cs156.github.io/topics/node_package_lock_json_merge_conflicts/>
 
 This video illustrates how to resolve a basic merge conflict: <https://youtu.be/gVQd3jTEUwU>
 
