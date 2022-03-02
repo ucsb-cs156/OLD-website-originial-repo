@@ -2,6 +2,7 @@
 topic: "git: merge conflicts"
 desc: "Not nearly as scary as you may have been told"
 indent: true
+category_prefix: "git: "
 ---
 
 Sometimes you are going to merge a pull request, and you see this:
