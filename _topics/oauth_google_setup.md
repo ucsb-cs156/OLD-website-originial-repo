@@ -54,3 +54,13 @@ You can click to select the first two basic scopes; that should be sufficient. T
 It should then look like this; click "Save and Continue":
 
 <img width="652" alt="image" src="https://user-images.githubusercontent.com/1119017/159813845-72f300d4-093d-4d89-be7e-db29bd1a6421.png">
+
+
+**Test Users** It is possible to restrict the users that can access your app to a small subset.  We typically don't do that for our
+apps in CMPSC 156, so I suggest just clicking "Save and Continue"
+
+<img width="558" alt="image" src="https://user-images.githubusercontent.com/1119017/159813939-04063b66-e0ce-4421-b608-3dd2a7134265.png">
+
+That should bring us to this summary page showing all of the data we entered.  At this point, you are finished, and can return to setting up new OAuth Credentials:
+
+<img width="737" alt="image" src="https://user-images.githubusercontent.com/1119017/159814035-2a88ee69-ca50-47f8-8f29-6de8983d711b.png">
