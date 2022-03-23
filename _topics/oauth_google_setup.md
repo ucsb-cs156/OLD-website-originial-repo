@@ -51,3 +51,6 @@ You can click to select the first two basic scopes; that should be sufficient. T
 
 <img width="597" alt="image" src="https://user-images.githubusercontent.com/1119017/159813741-754b1f6b-4f92-4647-a369-823d316e9a8d.png">
 
+It should then look like this; click "Save and Continue":
+
+<img width="652" alt="image" src="https://user-images.githubusercontent.com/1119017/159813845-72f300d4-093d-4d89-be7e-db29bd1a6421.png">
