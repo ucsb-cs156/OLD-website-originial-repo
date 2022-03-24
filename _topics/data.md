@@ -27,3 +27,7 @@ desc: "Various sources for datasets to build applications with"
 
 * <https://mixedanalytics.com/blog/list-actually-free-open-no-auth-needed-apis/>
 * <https://github.com/public-api-lists/public-api-lists>
+
+# Dataset
+
+* <https://github.com/rtora/UCSB_Grades> 

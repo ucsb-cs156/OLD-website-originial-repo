@@ -3,6 +3,12 @@ topic: "Thymeleaf"
 desc: "A Templating Engine for Spring Boot"
 ---
 
+# NOTE: This page is obsolete
+
+The CMPSC 156 code bases no longer use Thymeleaf.  Thymeleaf is a templating engine for when the Java Spring Boot backend handles the formatting of the client HTML, and there it little to no JavaScript code.   We have moved all frontend processing to the client side using React.
+
+This page is here only for historical reasons, in case we need to decipher an older code base that uses Thymeleaf.
+
 # Introduction to Thymeleaf
 
 In web applications, we typically need to render HTML pages that are a mixture of static HTML plus computed data.

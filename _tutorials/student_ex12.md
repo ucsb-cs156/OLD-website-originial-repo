@@ -4,14 +4,13 @@ desc: "Adding more test coverage"
 indent: true
 code_repo: https://github.com/ucsb-cs156/student-tutorial
 code_branch: ex12
+pit_report: target/pit-reports/202201051554
 ---
 
 # {{page.topic}} - {{page.desc}}
 
 {% include student_tutorial_header.html %}
 
-
-# NOTE: NOT YET UPDATED FOR JAVA 17 and JUNIT 5 (TODO for W22, 01/05/22)
 
 
 <style>
@@ -74,12 +73,12 @@ For this exercise, we focus on the report from ex11, and what needs to be done t
 
 A snapshot of the mutation coverage report can be found here:
 
-* [`../student_ex11/target/pit-reports/202010201607/index.html`](../student_ex11/target/pit-reports/202010201607/index.html)
+* [`../student_ex11/target/{{page.pit_report}}/index.html`](../student_ex11/{{page.pit_report}}/index.html)
 
 
 # Uncovered lines in `Student.java` 
 
-We can see that there are three places in `Student.java` that are not covered by tests; we've marked those lines with comments `//RED` below, based on the [report for `Student.java`](../student_ex11/target/pit-reports/202010201607/edu.ucsb.cs156.student/Student.java.html)
+We can see that there are three places in `Student.java` that are not covered by tests; we've marked those lines with comments `//RED` below, based on the [report for `Student.java`](../student_ex11/target/{{page.pit_report}}/edu.ucsb.cs156.student/Student.java.html)
 
 
 ```java
@@ -102,32 +101,20 @@ Consider this line:
         if (perm < 1 || perm > 9999999) {    // RED
 ```
 
-Looking at the mutation report more closely, we see what
-it says this about this line.  Hover over the 4 and you'll see a pop up.
+Looking at the mutation report more closely, we can see what
+it says this about this line.  Next to line 35, there is a 4 that, if you hover over it, brings up a pop up.
 
-<table>
-<tr>
-<td class='covered'><a name='org.pitest.mutationtest.report.html.SourceFile@63814bbe_35'/>35</td>
-<td class='survived'><span class='pop'><a href='#grouporg.pitest.mutationtest.report.html.SourceFile@63814bbe_35'>4</a><span>
-1. validPerm : changed conditional boundary &rarr; SURVIVED<br/>
-2. validPerm : changed conditional boundary &rarr; KILLED<br/>
-3. validPerm : negated conditional &rarr; KILLED<br/>
-4. validPerm : negated conditional &rarr; KILLED<br/>
-</span></span></td>
-<td class='covered'>
-<pre><span  class='survived'>if (perm &#60; 1 || perm &#62; 9999999) {</span></pre>
-</td>
-</tr>
-</table>
+The 4 means that there were four different mutations of this line of code; and the fact that the line is red and not green, means that
+at least one of those mutants survived.  We can see which one, exactly, by hovering over the 4 and looking at the pop up:
 
-The pop up looks like this:
+The popup looks like this:
 
-<p style="font-family: monospace">
-1. validPerm : changed conditional boundary &rarr; SURVIVED<br/>
-2. validPerm : changed conditional boundary &rarr; KILLED<br/>
-3. validPerm : negated conditional &rarr; KILLED<br/>
-4. validPerm : negated conditional &rarr; KILLED<br/>
-</p>
+```
+1. changed conditional boundary → KILLED 
+2. changed conditional boundary → SURVIVED
+3. negated conditional → KILLED 
+4. negated conditional → KILLED
+```
 
 This shows us that the mutation that survived is one where the mutation was `changed conditional boundary`.  This  means changing:
 

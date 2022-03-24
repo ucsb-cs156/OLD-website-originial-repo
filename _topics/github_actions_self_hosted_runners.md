@@ -1,10 +1,28 @@
 ---
-topic: "github: setting up a self-hosted runner"
-desc: "Setup Guide for GitHub Actions Self-Hosted Runners"
+topic: "github: actions self hosted runners"
+desc: "If you run out of GitHub minutes, you can set up your own servers"
 indent: true
 ---
 
-# GitHub Actions Self-Hosted Runner Setup
+If you run out of GitHub actions minutes, you can set up your own servers until the minutes reset.
+
+# How do I know if I'm out of minutes
+
+You'll see something like this on your organization's billing page:
+
+![image](https://user-images.githubusercontent.com/1119017/153475562-d40f0135-7960-4388-9db3-f2a40b99610c.png)
+
+
+You can also monitor when you are getting close here:
+
+![image](https://user-images.githubusercontent.com/1119017/153475496-9ecc6b7f-ec0a-4e5a-a79f-589f9f5baace.png)
+
+
+Self Hosted Runners can be either on your own hardware, or on a platform such as AWS
+
+# Setting up a self hosted runner on your own hardware
+
+TODO: Update this for java 17, and other version changes...  Perhaps make it generic to say "version of X being used in the course".
 
 ## Prerequisites
 
@@ -174,3 +192,7 @@ tail -f output.txt
 ```
 
 You now have an Actions runner that runs on its own!
+
+# Setting up a self hosted runner on AWS
+
+TODO
