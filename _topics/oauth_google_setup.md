@@ -61,6 +61,18 @@ apps in CMPSC 156, so I suggest just clicking "Save and Continue"
 
 <img width="558" alt="image" src="https://user-images.githubusercontent.com/1119017/159813939-04063b66-e0ce-4421-b608-3dd2a7134265.png">
 
-That should bring us to this summary page showing all of the data we entered.  At this point, you are finished, and can return to setting up new OAuth Credentials:
+That should bring us to this summary page showing all of the data we entered. There is one more step; we see that this app is in 
+"testing mode".
 
-<img width="737" alt="image" src="https://user-images.githubusercontent.com/1119017/159814035-2a88ee69-ca50-47f8-8f29-6de8983d711b.png">
+
+<img width="535" alt="image" src="https://user-images.githubusercontent.com/1119017/159960185-05c176d5-0cee-4800-bce3-b80c619f8f38.png">
+
+ Unless you want to restrict the app to specific users, change this to "production mode" by clicking "Publish App", and then "Confirm":
+ 
+ <img width="739" alt="image" src="https://user-images.githubusercontent.com/1119017/159960531-7911ba19-ccbe-465b-a37c-c46f98614c13.png">
+ 
+ That should change the screen to look like this.
+ 
+<img width="740" alt="image" src="https://user-images.githubusercontent.com/1119017/159813656-30755f02-d386-49ff-8efc-7908daf1b6ac.png">
+
+<img width="540" alt="image" src="https://user-images.githubusercontent.com/1119017/159960643-dc95bec9-bfd7-4a1d-87c6-4d0da32d6ab7.png">
