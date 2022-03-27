@@ -12,17 +12,24 @@ code_branch: ex05
 
 # Overview
 
-In this example we introduce GitHub Actions to 
-run JUnit tests.
+In this example we introduce GitHub Actions as a way to automate running a suite of JUnit tests.
 
 GitHub Actions is a platform for "continuous integration" of our
-code, i.e. automatically testing our *entire code base* after every commit
+code, i.e. automatically testing our *entire code base* after every commit.
 
-Continuous Integration (CI) is an industry standard practice for professional software development.   It’s called Continuous Integration because:
+In the top level of every GitHub repo, the developer can create a special directory called `.github` that contains files that configure special features of GitHub.  
+
+Under that `.github` directory, the developer can put files into a directory called `workflows` that define scripts that can be run when certain GitHub events occur.  For now, we'l focus on a workflow that runs any time code is pushed to any branch of the repo.
+
+As an example, we can define a script that will run all of the JUnit tests in the repo every time a push is made.
+
+This is part of a strategy commonly used in professional software development organizations called *Continuous Integration*.
+
+It’s called Continuous Integration because:
 
 * It’s *Continuous*: you do it as you push commits into your branch
 * It’s an Integration: you are looking at the impact of 
-  your    changes not just on the parts of the code base you think you are impacting, but on the entire code base as an integral whole.
+  your changes not just on the parts of the code base you think you are impacting, but on the entire code base as an integral whole.
 
 You can read more about CI systems here: <https://ucsb-cs156.github.io/topics/ci/>
 
