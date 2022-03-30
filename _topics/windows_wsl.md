@@ -61,7 +61,7 @@ sudo apt-get update
 sudo apt-get install git
 ```
 
-Successfully running the above commands should install the latest version of Git, which is 2.34.1 as of the time of writing. To verify that the install was successful, run the following command:
+Successfully running the above commands should install the latest version of Git, which is 2.35.1 as of the time of writing. To verify that the install was successful, run the following command:
 
 ```
 git --version
@@ -70,7 +70,7 @@ git --version
 Your output should look like this:
 
 ```
-git version 2.34.1
+git version 2.35.1
 ```
 
 You are now ready to set up your Git environment using the steps below.
@@ -112,9 +112,9 @@ java --version
 Your output should look something like this:
 
 ```
-openjdk 17.0.1 2021-10-19
-OpenJDK Runtime Environment (build 17.0.1+12-Ubuntu-118.04)
-OpenJDK 64-Bit Server VM (build 17.0.1+12-Ubuntu-118.04, mixed mode, sharing)
+openjdk 17.0.2 2022-01-18
+OpenJDK Runtime Environment (build 17.0.2+8-Ubuntu-120.04)
+OpenJDK 64-Bit Server VM (build 17.0.2+8-Ubuntu-120.04, mixed mode, sharing)
 ```
 
 ## Install Maven on WSL
@@ -123,14 +123,14 @@ The projects in this class use Maven 3.8.x, which is necessary for Java 17.
 
 The `apt` package manager does not yet have Maven 3.8.x, so we need to manually download and extract Maven.
 
-Here are two links that have been reported to work for downloading Maven 3.8.4 (the only difference is `downloads` vs. `dlcdn`)
-* <https://downloads.apache.org/maven/maven-3/3.8.4/binaries/apache-maven-3.8.4-bin.tar.gz>
-* <https://dlcdn.apache.org/maven/maven-3/3.8.4/binaries/apache-maven-3.8.4-bin.tar.gz>
+Here are two links that have been reported to work for downloading Maven 3.8.5 (the only difference is `downloads` vs. `dlcdn`)
+* <https://downloads.apache.org/maven/maven-3/3.8.5/binaries/apache-maven-3.8.5-bin.tar.gz>
+* <https://dlcdn.apache.org/maven/maven-3/3.8.5/binaries/apache-maven-3.8.5-bin.tar.gz>
 
 If the first one doesn't work, try the second.
 
 ```sh
-export MAVEN_VERSION=3.8.4
+export MAVEN_VERSION=3.8.5
 curl -O https://downloads.apache.org/maven/maven-3/${MAVEN_VERSION}/binaries/apache-maven-${MAVEN_VERSION}-bin.tar.gz
 tar -zxvf apache-maven-${MAVEN_VERSION}-bin.tar.gz
 mv apache-maven-${MAVEN_VERSION} /opt/maven
@@ -153,11 +153,11 @@ mvn --version
 Your output should look something like this:
 
 ```
-Apache Maven 3.8.4 (9b656c72d54e5bacbed989b64718c159fe39b537)
+Apache Maven 3.8.5 (3599d3414f046de2324203b78ddcf9b5e4388aa0)
 Maven home: /opt/maven
-Java version: 17.0.1, vendor: Private Build, runtime: /usr/lib/jvm/java-17-openjdk-amd64
+Java version: 17.0.2, vendor: Private Build, runtime: /usr/lib/jvm/java-17-openjdk-amd64
 Default locale: en_US, platform encoding: UTF-8
-OS name: "linux", version: "5.4.144+", arch: "amd64", family: "unix"
+OS name: "linux", version: "5.4.0-72-generic", arch: "amd64", family: "unix"
 ```
 
 ## Install nvm and Node on WSL
@@ -188,7 +188,7 @@ nvm -v
 
 Your output should say `0.39.1`.
 
-Now that we have `nvm` installed, we can use `nvm` to install the latest version of Node 14 with the following command. As of the time of writing, the latest version of Node 14 LTS is 14.18.2.
+Now that we have `nvm` installed, we can use `nvm` to install the latest version of Node 14 with the following command. As of the time of writing, the latest version of Node 14 LTS is 14.19.1.
 
 ```
 nvm install 14
@@ -200,25 +200,25 @@ Successfully running the above command should install the latest version of Node
 node -v
 ```
 
-Your output should say `v14.18.2` or something similar.
+Your output should say `v14.19.1` or something similar.
 
 ## Update npm on WSL
 
 Node Package Manager (`npm`) is a package / dependency manager for Node projects, similar to Maven for Java projects. `npm` comes bundled with Node, but the version of `npm` provided with Node 14 - version 6.14.15 - is too low for our project, due to some major changes introduced in `npm` version 7.
 
-Run the following command to update `npm` to the latest version (which is 8.3.0 as of the time of writing):
+Run the following command to update `npm` to the latest version (which is 8.5.5 as of the time of writing):
 
 ```
 npm install -g npm
 ```
 
-Successfully running the above command should install the latest version of Node 14. To verify that the install was successful, run the following command:
+Successfully running the above command should install the latest version of npm 8. To verify that the install was successful, run the following command:
 
 ```
 npm -v
 ```
 
-Your output should say `8.3.0` or something similar.
+Your output should say `8.5.5` or something similar.
 
 **Keep in mind that each version of Node installed through `nvm` has its own installation of `npm`.** This means that, whenever you install a new version of Node, you will need to update `npm` to the correct version. The pre-bundled versions of `npm` tend to be out-of-date.
 
@@ -238,7 +238,7 @@ Successfully running the above command should install the latest version of the 
 heroku --version
 ```
 
-Your output should say `heroku/7.59.2 linux-x64 node-v12.21.0` or something similar.
+Your output should say `heroku/7.59.4 linux-x64 node-v12.21.0` or something similar.
 
 Now that we have Heroku installed, we can log in. Run the following command to log in:
 
