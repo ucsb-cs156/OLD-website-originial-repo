@@ -3,6 +3,7 @@ topic: "Windows: WSL"
 desc: "Setting up a development environment under Windows Subsystem for Linux"
 indent: true
 category_prefix: "Windows: "
+maven_version: 3.8.5
 ---
 
 For advanced users who are looking to have a full Linux command-line interface on their Windows machine (which may be helpful for CMPSC 156 work), we recommend using Windows Subsystem for Linux (WSL). WSL is a tool that basically creates a separate Linux environment alongside your Windows environment, with access to your local filesystem. This will allow you to access package managers (such as `apt-get` for Ubuntu/Debian) and the full suite of UNIX commands.
@@ -122,6 +123,9 @@ OpenJDK 64-Bit Server VM (build 17.0.2+8-Ubuntu-120.04, mixed mode, sharing)
 The projects in this class use Maven 3.8.x, which is necessary for Java 17.
 
 The `apt` package manager does not yet have Maven 3.8.x, so we need to manually download and extract Maven.
+
+(As of this writing, the current version of Maven is 3.8.5; but it is possible that by the time you are reading
+these instructions, the current version may have been updated, and the links to this version will no longer work.  If the links appear broken, see if there is a newer version available.)
 
 Here are two links that have been reported to work for downloading Maven 3.8.5 (the only difference is `downloads` vs. `dlcdn`)
 * <https://downloads.apache.org/maven/maven-3/3.8.5/binaries/apache-maven-3.8.5-bin.tar.gz>
