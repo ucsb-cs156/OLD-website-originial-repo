@@ -80,5 +80,79 @@ We could.  But there's a better way.
 
 # Fixing it
 
-The first step in fixing it is to remove the old remote and redefine it as the correct one:
+The first step in fixing it is to remove the old remote:
 
+```
+pconrad@Phillips-MacBook-Pro jpa01-fakeStudent % git remote -v
+origin	git@github.com:ucsb-cs156-s22/jpa01-fakeStudent.git (fetch)
+origin	git@github.com:ucsb-cs156-s22/jpa01-fakeStudent.git (push)
+starter	git@github.com:ucsb-cs156-s22/STARTER-jpa00.git (fetch)
+starter	git@github.com:ucsb-cs156-s22/STARTER-jpa00.git (push)
+pconrad@Phillips-MacBook-Pro jpa01-fakeStudent % git remote remove starter
+pconrad@Phillips-MacBook-Pro jpa01-fakeStudent % git remote -v
+origin	git@github.com:ucsb-cs156-s22/jpa01-fakeStudent.git (fetch)
+origin	git@github.com:ucsb-cs156-s22/jpa01-fakeStudent.git (push)
+pconrad@Phillips-MacBook-Pro jpa01-fakeStudent % 
+```
+
+Now redfine it as the correct one:
+
+```
+pconrad@Phillips-MacBook-Pro jpa01-fakeStudent % git remote add starter git@github.com:ucsb-cs156-s22/STARTER-jpa01.git 
+pconrad@Phillips-MacBook-Pro jpa01-fakeStudent % git remote -v
+origin	git@github.com:ucsb-cs156-s22/jpa01-fakeStudent.git (fetch)
+origin	git@github.com:ucsb-cs156-s22/jpa01-fakeStudent.git (push)
+starter	git@github.com:ucsb-cs156-s22/STARTER-jpa01.git (fetch)
+starter	git@github.com:ucsb-cs156-s22/STARTER-jpa01.git (push)
+pconrad@Phillips-MacBook-Pro jpa01-fakeStudent % 
+```
+
+Hooray! The `starter` remote now points to the right place!
+
+# But I still have the wrong code?!?
+
+First, we need to be on the `main` branch:
+
+```
+git checkout main
+```
+
+Now we use three tools:
+
+* `git fetch starter` will update our local cache of where all of the branches in the `starter` remote point to.
+* `git reset --hard remote/branch` will allow us to reset our current branch to any `remote/branch`.  
+   * Think of it like a "pointer assignment".  
+   * The `--hard` part means that we are *also* going to update the file system to match
+* `git push origin main -f` will allow us to push the new, redfined `main` branch to GitHub,  overwriting the old values.
+
+Here's what that looks like:
+
+```
+pconrad@Phillips-MacBook-Pro jpa01-fakeStudent % git fetch starter
+remote: Enumerating objects: 109, done.
+remote: Counting objects: 100% (109/109), done.
+remote: Compressing objects: 100% (39/39), done.
+remote: Total 109 (delta 33), reused 109 (delta 33), pack-reused 0
+Receiving objects: 100% (109/109), 13.43 KiB | 6.71 MiB/s, done.
+Resolving deltas: 100% (33/33), done.
+From github.com:ucsb-cs156-s22/STARTER-jpa01
+ * [new branch]      main       -> starter/main
+pconrad@Phillips-MacBook-Pro jpa01-fakeStudent % git reset --hard starter/main
+HEAD is now at d5dec6b AL - Set Actions workflow timeout to 10 minutes
+pconrad@Phillips-MacBook-Pro jpa01-fakeStudent % ls 
+README.md	pom.xml		src
+pconrad@Phillips-MacBook-Pro jpa01-fakeStudent % git push origin main -f
+Enumerating objects: 109, done.
+Counting objects: 100% (109/109), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (39/39), done.
+Writing objects: 100% (109/109), 13.43 KiB | 13.43 MiB/s, done.
+Total 109 (delta 33), reused 109 (delta 33), pack-reused 0
+remote: Resolving deltas: 100% (33/33), done.
+To github.com:ucsb-cs156-s22/jpa01-fakeStudent.git
+ + 4167080...d5dec6b main -> main (forced update)
+pconrad@Phillips-MacBook-Pro jpa01-fakeStudent % 
+```
+
+And that is how we do that.   You now have the correct code, from the correct starter, as if you had done everything right in the first place,
+and no-one is the wiser.
