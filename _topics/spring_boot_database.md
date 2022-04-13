@@ -220,3 +220,26 @@ would have a field for `course_id`, which would be the `id` of a row in the `cou
   private Course course;
 ```
   
+# Timestamps on Database Rows
+
+It is possible for Spring Data's JPA to automatically put created at and last modified time stamps on database rows.
+
+Here's how you do it.
+
+1. On your main class (the one that has `SpringApplication.run` in it, and has `@SpringBootApplication` on it), add this annotation:
+
+   ```
+   @EnableJpaAuditing
+   ```
+   
+2. On your entity class, also add this annotation: `@EntityListeners(AuditingEntityListener.class)`
+
+3. On your entity class, add data members like these (the names `createdAt` and `updatedAt` are up to you,
+   but the annotations must be as shown here:
+
+   ```
+   @CreatedDate
+   private LocalDateTime createdAt;
+   @LastModifiedDate
+   private LocalDateTime updatedAt;
+   ```
