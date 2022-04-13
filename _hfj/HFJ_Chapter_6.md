@@ -6,4 +6,4 @@ textbook: HFJ
 desc:  "Get to Know the Java API: Using the Java Library"
 ---
 
-Content is here: <https://foo.cs.ucsb.edu/56wiki/index.php/HFJ:Chapter_6>
+Content is here: <https://mw-mysql-01.herokuapp.com/index.php?title=HFJ:Chapter_6>

@@ -6,4 +6,4 @@ textbook: HFJ
 desc:  "Releasing Your Code"
 ---
 
-Content is here: <https://foo.cs.ucsb.edu/56wiki/index.php/HFJ:Chapter_17>
+Content is here: <https://mw-mysql-01.herokuapp.com/index.php?title=HFJ:Chapter_17>
