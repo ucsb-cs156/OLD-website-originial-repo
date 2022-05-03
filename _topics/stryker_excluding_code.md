@@ -56,3 +56,15 @@ function max(a, b) {
 
 For more information, and a more detailed explanation, see:
 * <https://stryker-mutator.io/docs/stryker-js/disable-mutants>
+
+# More examples
+
+Here is an example where `"GET"` is the default.   Replacing it with empty string `""` results in an equivalent mutation:
+
+<img width="821" alt="image" src="https://user-images.githubusercontent.com/1119017/166524771-f61a52b7-66a6-4fa0-a7ea-e17c5d629642.png">
+
+The best option here is to exclude this mutation, like this:
+
+![Uploading image.png…]()
+
+  return a <= b ? b : a;
