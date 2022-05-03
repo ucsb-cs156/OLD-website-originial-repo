@@ -22,3 +22,13 @@ The detailed coverage report (with line-by-line reports for each source file) ca
 * `javascript/coverage/lcov-report/index.html`
 
 
+# Hiding the "Wall Of Red"
+
+When testing with Jest, especially when mocking 404 errors, you can get a wall of red error messages, even on a passing test, like this:
+
+<img width="1124" alt="image" src="https://user-images.githubusercontent.com/1119017/166522677-98da7cf9-f386-4691-b888-f14d6b7aa8c7.png">
+
+To avoid it, you can temporarily redirect the output of console.error.  Note that this can hide error messages that you might sometimes *need* to see,
+so use this sparingly.
+
+* <https://dev.to/martinemmert/hide-red-console-error-log-wall-while-testing-errors-with-jest-2bfn>
