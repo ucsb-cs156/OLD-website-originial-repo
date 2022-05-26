@@ -65,3 +65,19 @@ For refactorings:
 In this PR, we refactor the code so that (describe the refactoring here, and what benefits it is intended to acheive)
 ```
 
+# "This branch is out-of-date with the base branch"
+
+When you get this message, what do you do?
+
+<img width="921" alt="image" src="https://user-images.githubusercontent.com/1119017/170527624-909695cf-dfcb-48f1-ba3a-bbda9d97f208.png">
+
+Often, you can just do this:
+
+<img width="426" alt="image" src="https://user-images.githubusercontent.com/1119017/170527721-a7454ea5-ac8a-438e-9d36-e3f9f10ec845.png">
+
+Keep in mind that after you do this, if you continue working on the branch locally, you'll need to do another pull from github:
+
+```
+git pull origin my-branch
+```
+
