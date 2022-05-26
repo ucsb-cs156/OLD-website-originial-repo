@@ -6,7 +6,7 @@ indent: true
 ---
 
 There is another page that talks about the _content_ of a code review here:
-* <>
+* <https://ucsb-cs156.github.io/topics/code_reviews/>
 
 This page talks about the _process_ of doing a code review in GitHub, meaning the series of mouseclicks in the GitHub web interface that you need to 
 do so that the code review "counts".
