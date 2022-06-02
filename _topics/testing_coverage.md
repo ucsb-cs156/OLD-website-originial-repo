@@ -2,6 +2,7 @@
 topic: "Testing: Coverage"
 desc: "Line vs. Branch coverage, what does it mean?"
 category_prefix: "Testing: "
+indent: true
 ---
 
 # Test Coverage (aka Code Coverage)
