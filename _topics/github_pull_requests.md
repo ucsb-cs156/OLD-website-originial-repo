@@ -31,6 +31,34 @@ for example, a PR that adds a new kind of CRUD operation to an application might
 a developer wants to add a CRUD operation to the same product.   So having a good description, along with good commit messages is 
 key to helping the next wave of developers understand the changes that were made to the product.
 
+# What should be in a PR description?
+
+It depends on the type of PR, but here are a few specifics:
+
+## Backend only changes
+
+If you are adding a new API endpoint for the backend, include the urls and HTTP methods for the new endpoints.
+
+One easy way to do that is to put in a screenshot of the Swagger endpoint.  For example:
+
+<img width="1256" alt="image" src="https://user-images.githubusercontent.com/1119017/172028100-192f4b87-9ca5-4df5-976a-d5ec71e7eaab.png">
+
+It is also helpful to have a test plan. For example:
+
+1. Go to Personal Schedules List, and make sure there is at least one personal schedule.  If not, add one, and remember the id.
+2. to Courses List and make sure there are a couple of courses for that personal schedule id.
+3. Go to the endpoint in the screenshot above and enter the personal schedule id.  You should see the information for the course.s
+
+## New React Components (not yet available in the app)
+
+If the change is to add some new React components that have not yet been integrated into the app, then a good thing to put in the PR description is some screenshots, and links to the Storybook for the component.
+
+## Other Cases
+
+There are many cases, but there are a few things that are generally helpful where applicable:
+* "before and after" screenshots, or animated gifs produced with a tool such as [Licecap](https://www.cockos.com/licecap/) 
+* a test plan with step by step instructions 
+
 # PR Description Examples
 
 From: <https://github.com/ucsb-cs156-w21/proj-ucsb-courses-search/pull/132>
