@@ -27,6 +27,7 @@ Each team should decide its own norms. You should decide on your own norms, but 
 # More Resources
 
 * [Agile Alliance Guide to Daily Meeting](https://www.agilealliance.org/glossary/daily-meeting)
+* [6 basic things you shouldn't be doing during daily stand-up](https://techbeacon.com/app-dev-testing/6-basic-things-you-shouldnt-be-doing-during-daily-stand)
 
 # Video demonstrations 
 * [Agile Simulation - Part 20 The Daily Standup Agile Videos](https://www.youtube.com/watch?v=q_R9wQY4G5I)
