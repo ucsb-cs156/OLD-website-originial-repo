@@ -36,3 +36,6 @@ These websites advertise lists of free/open APIs (no authentication/payment need
 
 * <https://apipheny.io/free-api/>
 * <https://mixedanalytics.com/blog/list-actually-free-open-no-auth-needed-apis/>
+
+Here are some other list of APIs that may be of interest (note that these are not necessarily free, and/or may require authentication)
+* List of APIs for academic citations: <https://guides.lib.berkeley.edu/information-studies/apis>
